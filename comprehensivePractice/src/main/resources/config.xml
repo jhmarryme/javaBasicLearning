@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<config>
+    <womanType>w</womanType>
+    <manType>m</manType>
+    <rebotType>r</rebotType>
+
+    <fileLoggerFactory>designPatternLesson.factoryMethod.FileLoggerFactory</fileLoggerFactory>
+    <dataBaseLoggerFactory>designPatternLesson.factoryMethod.DataBaseLoggerFactory</dataBaseLoggerFactory>
+    <macFactory>designPatternLesson.abstractFactory.MacFactory</macFactory>
+    <pcFactory>designPatternLesson.abstractFactory.PcFactory</pcFactory>
+
+    <commandClassName>designPatternLesson.command.HelpCommand</commandClassName>
+</config>
+
+
+
+
+
+
+
+
