@@ -1,6 +1,5 @@
 package concurrentProgramming.basic;
 
-import jdk.internal.vm.annotation.Contended;
 
 /**
  * @author jhmarryme.cn

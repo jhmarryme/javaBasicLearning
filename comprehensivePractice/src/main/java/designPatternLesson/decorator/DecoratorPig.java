@@ -1,7 +1,7 @@
 package designPatternLesson.decorator;
 
 /**
- * 抽象装饰着
+ * 抽象装饰者
  * @author jhmarryme.cn
  * @date 2019/10/14 11:20
  */

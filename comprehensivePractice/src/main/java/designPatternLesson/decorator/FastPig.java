@@ -1,6 +1,7 @@
 package designPatternLesson.decorator;
 
 /**
+ * 被装饰之后的猪, 跑得快
  * @author jhmarryme.cn
  * @date 2019/10/14 11:36
  */

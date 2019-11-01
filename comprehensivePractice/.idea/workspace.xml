@@ -5,67 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88ee586b-8c32-45a7-8218-5649d9a52a74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/CreateThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactoryTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/CPU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacCPU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacRAM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcCPU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcRAM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/RAM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/adapter/EnumerationToIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/CommandTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/DisplayHelpClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/FunctionButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/command/SystemExitClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenApple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Pig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/ProtectedPig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/RedApple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/SwimPig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLoggerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FactoryMethodTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLoggerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/LoggerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForDeepClone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForShallowClone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForDeepClone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForShallowCLone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerProtoTypeTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWaTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/utils/XMLUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HFDesignPattern/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HFDesignPattern/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/FilterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfigAnotherWay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/filter/MyFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/pojo/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/service/HelloWorldService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/web/HelloWorldController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/resources/static/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/test/java/cn/jhmarryme/practiceproject/PracticeprojectApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/test/java/cn/jhmarryme/practiceproject/web/HelloWorldControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/TempClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/BuilderTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/HeroBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenuInterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/IteratorTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/MenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/ClassStudentTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Classmate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/ClassmateTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ControlCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ObserverTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/ClassroomTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Ring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/EmployeeList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FinanceDepartment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/HumanResourceDepartment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/PartTimeEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/VisitorTestDrive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HFDesignPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HFDesignPattern/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HFDesignPattern/src/main/java/decorator/Whip.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HFDesignPattern/src/main/java/decorator/Whip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TheSwordRefersToOffer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TheSwordRefersToOffer/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TheSwordRefersToOffer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TheSwordRefersToOffer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/temp/Tets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/temp/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/cyc2018.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/byteCode/ByteCodeSample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/byteCode/ByteCodeSample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/LoadClassDifference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/LoadClassDifference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoaderChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoaderChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/Rebot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/Rebot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/ReflectDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/ReflectDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenApple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenApple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Pig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Pig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/ProtectedPig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/ProtectedPig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/RedApple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/RedApple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/SwimPig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/SwimPig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/DecoratorTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/DecoratorTestDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/FastPig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/FastPig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/GreenApple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/GreenApple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Pig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Pig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/ProtectedPig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/ProtectedPig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/RedApple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/RedApple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/SwimPig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/SwimPig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/YellowApple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/YellowApple.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -94,87 +103,128 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForDeepClone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="297">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding>
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForShallowClone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="2569" column="7" lean-forward="true" selection-start-line="2569" selection-start-column="7" selection-end-line="2569" selection-end-column="7" />
+            <state relative-caret-position="189">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="181" column="9" lean-forward="true" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ThreadLocal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForDeepClone.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Actor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/HelpCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="507">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding>
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#289#290#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#298#299#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/HeroBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#216#217#0" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/BuilderTestDrive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForShallowCLone.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+              <folding>
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#363#364#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerProtoTypeTestDrive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -203,65 +253,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/Logger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLogger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLogger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/LoggerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLoggerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLoggerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FactoryMethodTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/abstractFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/CPU.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacCPU.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacRAM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcCPU.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcRAM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/RAM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactoryTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForDeepClone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForShallowCLone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWaTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForShallowClone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerProtoTypeTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/ProtectedPig.java" />
         <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/RedApple.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenApple.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java" />
         <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java" />
         <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Pig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenPig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenApple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/ProtectedPig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowPig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java" />
         <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/SwimPig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java" />
         <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/SystemExitClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/DisplayHelpClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/FunctionButton.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/CommandTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/ExitCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/command/HelpCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/adapter/EnumerationToIterator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/CreateThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/AnalyzeThreadLocal.java" />
         <option value="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/TempClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/interator/hf/MenuItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/interator/hf/DinerMenuInterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Iterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenuInterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/IteratorTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/ClassStudentTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ObserverTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FulltimeEmplyee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmplyee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Class.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ControlCenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Observer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/EmployeeList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/PartTimeEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/VisitorTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/HumanResourceDepartment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FinanceDepartment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Ring.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/ClassroomTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Classmate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/ClassmateTestDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/HeroBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Actor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/BuilderTestDrive.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="130" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -271,7 +321,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,8 +360,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrentProgramming" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="designPatternLesson" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="designPatternLesson" type="462c0819:PsiDirectoryNode" />
+              <item name="builder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
@@ -333,6 +390,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -352,15 +410,17 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="offer.tree" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\designPatternLesson\interator\hf" />
       <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\resources" />
       <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="designPatternLesson.iterator.lesson2" />
+      <recent name="offer.tree" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -375,13 +435,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreadInterruptTest">
-    <configuration name="CommandTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.command.CommandTestDrive" />
+  <component name="RunManager" selected="Application.BuilderTestDrive">
+    <configuration name="BuilderTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="designPatternLesson.builder.BuilderTestDrive" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.command.*" />
+          <option name="PATTERN" value="designPatternLesson.builder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -389,12 +449,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrentProgramming.basic.CreateThread" />
+    <configuration name="ClassmateTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="designPatternLesson.iterator.lesson2.ClassmateTestDrive" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrentProgramming.basic.*" />
+          <option name="PATTERN" value="designPatternLesson.iterator.lesson2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -402,12 +462,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerProtoTypeTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.protoType.CustomerProtoTypeTestDrive" />
+    <configuration name="ClassroomTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="designPatternLesson.observer.lesson2.ClassroomTestDrive" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.protoType.*" />
+          <option name="PATTERN" value="designPatternLesson.observer.lesson2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -415,12 +475,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecoratorTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.decorator.DecoratorTestDrive" />
+    <configuration name="ObserverTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="designPatternLesson.observer.lesson.ObserverTestDrive" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.decorator.*" />
+          <option name="PATTERN" value="designPatternLesson.observer.lesson.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -428,13 +488,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadInterruptTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrentProgramming.basic.ThreadInterruptTest" />
+    <configuration name="VisitorTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="designPatternLesson.visitor.VisitorTestDrive" />
       <module name="comprehensivePractice" />
-      <option name="VM_PARAMETERS" value="-XX:-RestrictContended" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrentProgramming.basic.*" />
+          <option name="PATTERN" value="designPatternLesson.visitor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -443,19 +502,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CommandTestDrive" />
-      <item itemvalue="Application.CreateThread" />
-      <item itemvalue="Application.CustomerProtoTypeTestDrive" />
-      <item itemvalue="Application.DecoratorTestDrive" />
-      <item itemvalue="Application.ThreadInterruptTest" />
+      <item itemvalue="Application.ObserverTestDrive" />
+      <item itemvalue="Application.VisitorTestDrive" />
+      <item itemvalue="Application.ClassroomTestDrive" />
+      <item itemvalue="Application.ClassmateTestDrive" />
+      <item itemvalue="Application.BuilderTestDrive" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreadInterruptTest" />
-        <item itemvalue="Application.CreateThread" />
-        <item itemvalue="Application.CommandTestDrive" />
-        <item itemvalue="Application.DecoratorTestDrive" />
-        <item itemvalue="Application.CustomerProtoTypeTestDrive" />
+        <item itemvalue="Application.BuilderTestDrive" />
+        <item itemvalue="Application.ClassmateTestDrive" />
+        <item itemvalue="Application.ClassroomTestDrive" />
+        <item itemvalue="Application.VisitorTestDrive" />
+        <item itemvalue="Application.ObserverTestDrive" />
       </list>
     </recent_temporary>
   </component>
@@ -512,11 +571,21 @@
       <workItem from="1571279394164" duration="4962000" />
       <workItem from="1571291642743" duration="2953000" />
       <workItem from="1571383000939" duration="7406000" />
+      <workItem from="1571463943137" duration="4651000" />
+      <workItem from="1571489817542" duration="1408000" />
+      <workItem from="1571624071364" duration="1612000" />
+      <workItem from="1571626488031" duration="378000" />
+      <workItem from="1571626913103" duration="43000" />
+      <workItem from="1571634021964" duration="2753000" />
+      <workItem from="1572075888795" duration="2651000" />
+      <workItem from="1572151855086" duration="10225000" />
+      <workItem from="1572229684084" duration="3145000" />
+      <workItem from="1572598158642" duration="4274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180426000" />
+    <option name="totallyTimeSpent" value="211566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,10 +597,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5993538" visible="true" weight="0.16311301" />
-      <window_info id="Structure" order="1" sideWeight="0.4006462" side_tool="true" visible="true" weight="0.16311301" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72667396" visible="true" weight="0.20245726" />
+      <window_info id="Structure" order="1" sideWeight="0.273326" side_tool="true" visible="true" weight="0.20245726" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -539,7 +609,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34273317" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39077938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32212582" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -547,7 +617,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.16468039" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286334" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Tail" order="13" />
@@ -587,220 +657,46 @@
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLogger.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/FunctionButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FactoryMethodTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLoggerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="59" column="6" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/CPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacCPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="7" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="486">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacRAM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" lean-forward="true" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcCPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/PcRAM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/RAM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="3" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactoryTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForDeepClone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForShallowClone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" selection-start-line="2" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWaTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForShallowCLone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="23" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerProtoTypeTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForDeepClone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/GreenApple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/RedApple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/SwimPig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/ExitCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/ProtectedPig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/DisplayHelpClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Pig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="243">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/HelpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -812,188 +708,365 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/FunctionButton.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/utils/XMLUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/CommandTestDrive.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/ExitCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/DisplayHelpClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/SystemExitClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="189">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="27">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrentProgramming.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrentProgramming/basic.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/adapter/EnumerationToIterator.java">
+    <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/IteratorTestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenuInterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="162">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ControlCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="22" column="13" lean-forward="true" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ObserverTestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="3" lean-forward="true" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="8" lean-forward="true" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/EmployeeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="23" lean-forward="true" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="12" lean-forward="true" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FinanceDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="13" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/HumanResourceDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Student.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/VisitorTestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Ring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/ClassroomTestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="44" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Classmate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="46" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/ClassStudentTestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="12" column="4" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/PartTimeEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="3" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/ClassmateTestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForDeepClone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/AddressForShallowClone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/CreateThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForShallowCLone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="372">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/FastPig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerProtoTypeTestDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="345">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/protoType/CustomerForDeepClone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/HelpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="189">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="181" column="9" lean-forward="true" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+        <state relative-caret-position="351">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ThreadLocal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+        <state relative-caret-position="507">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/AnalyzeThreadLocal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/HeroBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="513">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/jdk/internal/vm/annotation/Contended.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/builder/BuilderTestDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="2569" column="7" lean-forward="true" selection-start-line="2569" selection-start-column="7" selection-end-line="2569" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="351">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

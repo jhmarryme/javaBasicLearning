@@ -1,6 +1,7 @@
 package designPatternLesson.decorator;
 
 /**
+ * 抽象动物类
  * @author jhmarryme.cn
  * @date 2019/10/14 11:11
  */

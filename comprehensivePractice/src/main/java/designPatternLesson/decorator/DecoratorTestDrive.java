@@ -10,22 +10,36 @@ package designPatternLesson.decorator;
 public class DecoratorTestDrive {
     public static void main(String[] args) {
 
+        // 小猪佩奇
         final Pig page = new Pig();
-
+        System.out.println("我是小猪佩奇");
         page.run();
         page.beBiiten();
+        System.out.println();
+        System.out.println();
 
+        // 小猪吃了红苹果   包装佩奇
         final RedApple redApple = new RedApple();
         final Animal superPage = redApple.getSuperPowerPig(page);
+        System.out.println("佩奇吃了一个红苹果, 变身超神佩奇");
         superPage.run();
         superPage.beBiiten();
-
+        System.out.println();
+        System.out.println();
+        // 再次包装佩奇
         final Animal superSuperPage = new GreenApple().getSuperPowerPig(superPage);
+        System.out.println("佩奇吃了一个绿苹果, 变身无敌佩奇");
         superSuperPage.run();
         superSuperPage.beBiiten();
-
-        final Animal godPage = new YellowApple().getSuperPowerPig(superSuperPage);
+        System.out.println();
+        System.out.println();
+        // 再次包装佩奇 无敌佩奇
+        final SwimPig godPage = new YellowApple().getSuperPowerPig(superSuperPage);
+        System.out.println("佩奇吃了一个黄苹果, 佩奇成神了");
         godPage.run();
         godPage.beBiiten();
+        godPage.swim();
+        System.out.println();
+        System.out.println();
     }
 }
