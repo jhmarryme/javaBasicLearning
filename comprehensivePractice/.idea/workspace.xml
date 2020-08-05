@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88ee586b-8c32-45a7-8218-5649d9a52a74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/TestTemp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/LocalFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/PanServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/PanServerTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/utils/HashUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HFDesignPattern/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HFDesignPattern/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfigAnotherWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfigAnotherWay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/var/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/var/log/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/var/log/test.log.2019-10-23.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,103 +37,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1101">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FactoryMethodTestDrive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/IteratorTestDrive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Class.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Classmate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLogger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLoggerFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/Logger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/LoggerFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -155,132 +56,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/YellowApple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/ThreadInterruptTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrentProgramming/basic/TempClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/interator/hf/MenuItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/interator/hf/DinerMenuInterator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Menu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Iterator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenuInterator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/IteratorTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/ClassStudentTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ObserverTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FulltimeEmplyee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmplyee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Department.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Class.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ControlCenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Subject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Observer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/EmployeeList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmployee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/PartTimeEmployee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/VisitorTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/HumanResourceDepartment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FinanceDepartment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Ring.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/ClassroomTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Classmate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/ClassmateTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/HeroBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/ActorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/Actor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/builder/BuilderTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/utils/HashUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/LocalFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/PanServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/Resource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/File.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/flyweight/PanServerTestDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/TestTemp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/MenuItem.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1932" />
-    <option name="height" value="1045" />
-  </component>
+  <component name="ProjectId" id="1fgUEgEax54E8w0vip8d92bXfCT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrentProgramming" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comprehensivePractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comprehensivePractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -288,7 +69,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nowCoderAlgorithm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/core-java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -298,30 +79,19 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="designPatternLesson.iterator.lesson2" />
-      <recent name="offer.tree" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\designPatternLesson\interator\hf" />
       <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\resources" />
       <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="designPatternLesson.iterator.lesson2" />
+      <recent name="offer.tree" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\core-java" />
+      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.TestTemp">
     <configuration name="BuilderTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -474,11 +244,11 @@
       <workItem from="1573225446553" duration="289000" />
       <workItem from="1573461360564" duration="1500000" />
       <workItem from="1573559674981" duration="1733000" />
+      <workItem from="1574317510973" duration="40000" />
+      <workItem from="1596639136283" duration="69000" />
+      <workItem from="1596639577272" duration="934000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224028000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,45 +259,8 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7200878" visible="true" weight="0.21314102" />
-      <window_info id="Structure" order="1" sideWeight="0.27991217" side_tool="true" visible="true" weight="0.21314102" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39077938" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32212582" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.16468039" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32821077" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Tail" order="13" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32936078" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -541,406 +274,15 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/javaBase/Test.java</url>
           <line>40</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/ReflectDemo.java</url>
           <line>19</line>
-          <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/utils/HashUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/TestTemp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/ClassroomTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenuInterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/CommandTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/DisplayHelpClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/ExitCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/SystemExitClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/HelpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/command/FunctionButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Apple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/decorator/DecoratorPig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FinanceDepartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/HumanResourceDepartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/EmployeeList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/PartTimeEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/VisitorTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/visitor/FullTimeEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Ring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson2/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ObserverTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/observer/lesson/ControlCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/simpleFactory/NvWa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/CPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/RAM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacCPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/MacFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/abstractFactory/AbstractFactoryTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/DataBaseLoggerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FileLoggerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/LoggerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/factoryMethod/FactoryMethodTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/IteratorTestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/lesson2/Classmate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/designPatternLesson/iterator/hf/DinerMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1101">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
