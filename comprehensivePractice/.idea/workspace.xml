@@ -3,17 +3,101 @@
   <component name="AnalysisUIOptions">
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="88ee586b-8c32-45a7-8218-5649d9a52a74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../HFDesignPattern/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HFDesignPattern/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfigAnotherWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/java/cn/jhmarryme/practiceproject/config/JdbcConfigAnotherWay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/var/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/var/log/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBootLearning/practiceproject/var/log/test.log.2019-10-23.0.gz" beforeDir="false" />
+    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="enumMap简单应用">
+      <change afterPath="$PROJECT_DIR$/src/main/java/coreJava/reflect/ReflectExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/LoadClassDifference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/LoadClassDifference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/Rebot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/ReflectDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/ReflectDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/comprehensivePractice.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/comprehensivePractice.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/CreateThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/CreateThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/TempClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/TempClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/ThreadInterruptTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/ThreadInterruptTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/IntegerCacheStudy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dataType/IntegerCacheStudy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/PanServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/PanServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/IteratorTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/IteratorTestDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson/Class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson2/Classmate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson2/Classmate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson2/ClassmateTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson2/ClassmateTestDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/ControlCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/ControlCenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerForShallowCLone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerForShallowCLone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerProtoTypeTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerProtoTypeTestDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/NvWaTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/NvWaTestDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/utils/HashUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/utils/HashUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/utils/XMLUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/utils/XMLUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/EmployeeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/FinanceDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/FinanceDepartment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/HumanResourceDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/HumanResourceDepartment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/gc/Finalization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/gc/Finalization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/model/InternDifference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/model/InternDifference.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/LoadClassDifference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/LoadClassDifference.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/Rebot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/ReflectDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/ReflectDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/CalculateDaysOfBorn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/CalculateDaysOfBorn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/IteratorStudy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/IteratorStudy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/CreateFileDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/CreateFileDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByByteStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByByteStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByCharactorStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByCharactorStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByConversionStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByConversionStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadByBufferdStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadByBufferdStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/ObjectSerializable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/File/ObjectSerializable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/StreamAndFunctionalInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/Stream/StreamAndFunctionalInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/StreamStudy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/Stream/StreamStudy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/lambdaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/Stream/lambdaTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/equals/FloatEquals.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/equals/FloatEquals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/DelayForLambda/DelayForLambdaDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/DelayForLambda/DelayForLambdaDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForComparatorDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForComparatorDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForConsumerDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForConsumerDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForFunctionDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForFunctionDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForPredicateDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForPredicateDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForSupplierDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForSupplierDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/ComparatorWithLambda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/lambda/ComparatorWithLambda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/InvokeCalcDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/lambda/InvokeCalcDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/PersonForComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/lambda/PersonForComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/RunnableForLambdaDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/lambda/RunnableForLambdaDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/recursion/PrintAllDirs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/recursion/PrintAllDirs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/socket/TcpCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/socket/TcpCommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/socket/fileUpload/FileUploadClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/socket/fileUpload/FileUploadClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/socket/fileUpload/FileUploadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/socket/fileUpload/FileUploadServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/CreateThreadFinalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/CreateThreadFinalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadPool/RunnableForPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadPool/RunnableForPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/Tickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/Tickets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Consumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Producer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/array/数组中出现次数超过一半的数字.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/offer/array/数组中出现次数超过一半的数字.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/linkedList/倒数第k个结点.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/offer/linkedList/倒数第k个结点.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/stackAndQueue/两个栈实现队列.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/offer/stackAndQueue/两个栈实现队列.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/string/替换空格.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/offer/string/替换空格.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/斐波那契数列.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/offer/斐波那契数列.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/最小的K个数.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/offer/最小的K个数.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +124,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="XML Properties File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -56,6 +140,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../dev/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1fgUEgEax54E8w0vip8d92bXfCT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -67,39 +161,40 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/core-java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\designPatternLesson\interator\hf" />
-      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\resources" />
-      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\core-java" />
+      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="designPatternLesson.iterator.lesson2" />
       <recent name="offer.tree" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\core-java" />
-      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\designPatternLesson\interator\hf" />
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\resources" />
+      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestTemp">
-    <configuration name="BuilderTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.builder.BuilderTestDrive" />
+  <component name="RunManager" selected="JUnit.ReflectExample.reflectForRobot">
+    <configuration name="PizzaWithEnumMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaBase.enumBase.enumLearning.PizzaWithEnumMap" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.builder.*" />
+          <option name="PATTERN" value="javaBase.enumBase.enumLearning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +202,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassmateTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.iterator.lesson2.ClassmateTestDrive" />
+    <configuration name="PizzaWithEnumSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaBase.enumBase.enumLearning.PizzaWithEnumSet" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.iterator.lesson2.*" />
+          <option name="PATTERN" value="javaBase.enumBase.enumLearning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +215,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassroomTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.observer.lesson2.ClassroomTestDrive" />
+    <configuration name="ReflectDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="imooc.javaBasic.reflect.ReflectDemo" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.observer.lesson2.*" />
+          <option name="PATTERN" value="imooc.javaBasic.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +228,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PanServerTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.flyweight.PanServerTestDrive" />
+    <configuration name="ReflectExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="coreJava.reflect.ReflectExample" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.flyweight.*" />
+          <option name="PATTERN" value="coreJava.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,33 +241,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTemp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designPatternLesson.TestTemp" />
+    <configuration name="ReflectExample.reflectForRobot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="designPatternLesson.*" />
+          <option name="PATTERN" value="coreJava.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="coreJava.reflect" />
+      <option name="MAIN_CLASS_NAME" value="coreJava.reflect.ReflectExample" />
+      <option name="METHOD_NAME" value="reflectForRobot" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ClassroomTestDrive" />
-      <item itemvalue="Application.ClassmateTestDrive" />
-      <item itemvalue="Application.BuilderTestDrive" />
-      <item itemvalue="Application.PanServerTestDrive" />
-      <item itemvalue="Application.TestTemp" />
+      <item itemvalue="Application.PizzaWithEnumSet" />
+      <item itemvalue="Application.PizzaWithEnumMap" />
+      <item itemvalue="Application.ReflectExample" />
+      <item itemvalue="Application.ReflectDemo" />
+      <item itemvalue="JUnit.ReflectExample.reflectForRobot" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestTemp" />
-        <item itemvalue="Application.PanServerTestDrive" />
-        <item itemvalue="Application.BuilderTestDrive" />
-        <item itemvalue="Application.ClassmateTestDrive" />
-        <item itemvalue="Application.ClassroomTestDrive" />
+        <item itemvalue="JUnit.ReflectExample.reflectForRobot" />
+        <item itemvalue="Application.ReflectExample" />
+        <item itemvalue="Application.ReflectDemo" />
+        <item itemvalue="Application.PizzaWithEnumMap" />
+        <item itemvalue="Application.PizzaWithEnumSet" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +282,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="88ee586b-8c32-45a7-8218-5649d9a52a74" name="Default Changelist" comment="" />
+      <changelist id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="枚举实现单例模式" />
       <created>1561082972974</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -247,7 +345,25 @@
       <workItem from="1574317510973" duration="40000" />
       <workItem from="1596639136283" duration="69000" />
       <workItem from="1596639577272" duration="934000" />
+      <workItem from="1597279909673" duration="1020000" />
+      <workItem from="1597281694801" duration="29000" />
+      <workItem from="1597282924099" duration="7732000" />
     </task>
+    <task id="LOCAL-00001" summary="枚举实现单例模式">
+      <created>1597203237395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597203237395</updated>
+    </task>
+    <task id="LOCAL-00002" summary="enumMap简单应用">
+      <created>1597283812980</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597283812980</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -262,11 +378,104 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/../../.." />
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="枚举实现单例模式" />
+    <MESSAGE value="enumMap简单应用" />
+    <option name="LAST_COMMIT_MESSAGE" value="enumMap简单应用" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1056" y="210" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1597287071748">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1056" y="210" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597287071748" />
+    <state x="553" y="105" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597296398325">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="553" y="105" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597296398325" />
+    <state x="1060" y="274" key="FileChooserDialogImpl" timestamp="1597287374662">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1060" y="274" key="FileChooserDialogImpl/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597287374662" />
+    <state width="1258" height="348" key="GridCell.Tab.0.bottom" timestamp="1597297629404">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.0.bottom/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
+    <state width="1258" height="348" key="GridCell.Tab.0.center" timestamp="1597297629403">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.0.center/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
+    <state width="1258" height="348" key="GridCell.Tab.0.left" timestamp="1597297629403">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.0.left/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
+    <state width="1258" height="348" key="GridCell.Tab.0.right" timestamp="1597297629403">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.0.right/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
+    <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1597297629404">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.bottom/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
+    <state width="1258" height="348" key="GridCell.Tab.1.center" timestamp="1597297629404">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.center/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
+    <state width="1258" height="348" key="GridCell.Tab.1.left" timestamp="1597297629404">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.left/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
+    <state width="1258" height="348" key="GridCell.Tab.1.right" timestamp="1597297629404">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.right/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
+    <state x="810" y="174" key="Maven.ArtifactSearchDialog" timestamp="1597288351092">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="810" y="174" key="Maven.ArtifactSearchDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597288351092" />
+    <state x="955" y="239" key="RollbackChangesDialog" timestamp="1597199646768">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="955" y="239" key="RollbackChangesDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597199646768" />
+    <state x="680" y="147" key="SettingsEditor" timestamp="1597296466933">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="680" y="147" key="SettingsEditor/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597296466933" />
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2" timestamp="1597199683482">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597199683482" />
+    <state x="855" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597283267126">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="855" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597283267126" />
+    <state x="825" y="333" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597286984108">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="825" y="333" key="com.intellij.testIntegration.createTest.CreateTestDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597286984108" />
+    <state x="1010" y="265" key="extract.method.dialog" timestamp="1597283280350">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1010" y="265" key="extract.method.dialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597283280350" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597288305573">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597288305573" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -276,100 +485,7 @@
           <line>40</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/ReflectDemo.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>comprehensivePractice</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: org.projectlombok:lombok:1.18.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
