@@ -29,9 +29,221 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="enumMap简单应用">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/comprehensivePractice.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/CreateThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/CreateThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/ExtendThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/ExtendThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/TempClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/TempClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/ThreadInterruptTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/ThreadInterruptTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/implCallableThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/implCallableThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/implRunnableThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/concurrentProgramming/basic/implRunnableThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coreJava/bigDecimal/BigDecimalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/coreJava/bigDecimal/BigDecimalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coreJava/lambda/JhFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/coreJava/lambda/JhFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coreJava/lambda/MethodReferences.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/coreJava/lambda/MethodReferences.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coreJava/reflect/ReflectExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/AbstractTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/ClassTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/IntegerCacheStudy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/InterfaceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/SuperExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataType/SuperExtendExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/Convert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/Parent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/Son.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/TestTemp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/AbstractFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/AbstractFactoryTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/CPU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/MacCPU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/MacFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/MacRAM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/PcCPU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/PcFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/PcRAM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/abstractFactory/RAM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/adapter/EnumerationToIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/builder/Actor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/builder/ActorBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/builder/ActorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/builder/BuilderTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/builder/HeroBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/CommandTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/DisplayHelpClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/ExitCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/FunctionButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/HelpCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/command/SystemExitClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Apple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/DecoratorPig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/DecoratorTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/FastPig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/GreenApple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/Pig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/ProtectedPig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/RedApple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/SwimPig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/decorator/YellowApple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/DataBaseLogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/DataBaseLoggerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/FactoryMethodTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/FileLogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/FileLoggerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/factoryMethod/LoggerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/File.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/LocalFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/PanServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/PanServerTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/flyweight/Resource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/DinerMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/DinerMenuInterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/IteratorTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/hf/MenuItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson/ClassStudentTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson2/Classmate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/iterator/lesson2/ClassmateTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/ControlCenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/ObserverTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson2/ClassroomTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson2/Ring.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson2/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/observer/lesson2/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/AddressForDeepClone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/AddressForShallowClone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerForDeepClone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerForShallowCLone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/protoType/CustomerProtoTypeTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/Man.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/NvWa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/NvWaTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/simpleFactory/Woman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/singleton/SingletonExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/utils/HashUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/utils/XMLUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/EmployeeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/FinanceDepartment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/FullTimeEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/HumanResourceDepartment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/PartTimeEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/designPatternLesson/visitor/VisitorTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/byteCode/ByteCodeSample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/gc/Finalization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/model/ByteCodeSample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/jvm/model/InternDifference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/LoadClassDifference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/MyClassLoaderChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/ReflectDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imooc/javabasic/reflect/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/CalculateDaysOfBorn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/CalendarTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/GenericMethodDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/IteratorStudy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/ApiBase/MyGenericMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/C.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/F.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/CreateFileDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByByteStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByCharactorStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadAndWriteByConversionStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/FileReadByBufferdStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/ObjectSerializable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/File/TestPrintStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/Cook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/StreamAndFunctionalInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/StreamStudy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Stream/lambdaTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/T.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/EnumTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/Pizza$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/Pizza$PizzaStatus$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/Pizza$PizzaStatus$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/Pizza$PizzaStatus$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/Pizza$PizzaStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/Pizza.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumSet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumSet$PizzaStatusWithEnumSet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumSet$PizzaStatusWithEnumSet$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumSet$PizzaStatusWithEnumSet$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumSet$PizzaStatusWithEnumSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/enumBase/enumLearning/PizzaWithEnumSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/equals/FloatEquals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/DelayForLambda/DelayForLambdaDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/DelayForLambda/MessageBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForComparatorDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForConsumerDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForFunctionDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForPredicateDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/functionalInterface/functionalInterfaceDemo/LambdaForSupplierDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/CalcForLambda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/ComparatorWithLambda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/CookForLambda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/InvokeCalcDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/PersonForComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/lambda/RunnableForLambdaDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/methodReference/Calcable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/methodReference/MethodRefObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/methodReference/MethodReferenceDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/methodReference/TestInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/recursion/PrintAllDirs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/recursion/SimpleRecursionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/socket/TcpCommunication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/socket/fileUpload/FileUploadClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/socket/fileUpload/FileUploadServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/CreateThreadFinalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/MyThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/Thread2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadPool/RunnableForPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadPool/ThreadPoolDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadSafeFinalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadSyschronizedFinalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/ThreadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/Tickets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/PCDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javaBase/thread/producerAndConsumer/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/array/二维数组中的查找.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/array/数组中出现次数超过一半的数字.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/array/旋转数组的最小数字.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/linkedList/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/linkedList/从尾到头打印链表.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/linkedList/倒数第k个结点.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/stackAndQueue/两个栈实现队列.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/string/替换空格.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/tree/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/tree/树的子结构.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/二进制中一的个数.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/数值的整数次方.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/斐波那契数列.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/最小的K个数.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/offer/跳台阶.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/temp/Test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,22 +363,9 @@
       <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectExample.reflectForRobot">
+  <component name="RunManager" selected="JUnit.ObjectCopyExample.shallowCopy">
     <configuration name="PizzaWithEnumMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javaBase.enumBase.enumLearning.PizzaWithEnumMap" />
-      <module name="comprehensivePractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaBase.enumBase.enumLearning.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PizzaWithEnumSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaBase.enumBase.enumLearning.PizzaWithEnumSet" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
@@ -204,6 +403,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ObjectCopyExample.shallowCopy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="comprehensivePractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaBase.copy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="javaBase.copy" />
+      <option name="MAIN_CLASS_NAME" value="javaBase.copy.ObjectCopyExample" />
+      <option name="METHOD_NAME" value="shallowCopy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectExample.reflectForRobot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="comprehensivePractice" />
       <extension name="coverage">
@@ -221,19 +436,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PizzaWithEnumSet" />
       <item itemvalue="Application.PizzaWithEnumMap" />
       <item itemvalue="Application.ReflectExample" />
       <item itemvalue="Application.ReflectDemo" />
       <item itemvalue="JUnit.ReflectExample.reflectForRobot" />
+      <item itemvalue="JUnit.ObjectCopyExample.shallowCopy" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ObjectCopyExample.shallowCopy" />
         <item itemvalue="JUnit.ReflectExample.reflectForRobot" />
         <item itemvalue="Application.ReflectDemo" />
         <item itemvalue="Application.ReflectExample" />
         <item itemvalue="Application.PizzaWithEnumMap" />
-        <item itemvalue="Application.PizzaWithEnumSet" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598503194522</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1598503691025</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598503691025</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -395,22 +617,26 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1060" y="274" key="FileChooserDialogImpl/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597287374662" />
-    <state width="1258" height="348" key="GridCell.Tab.0.bottom" timestamp="1597297629404">
+    <state width="2517" height="308" key="GridCell.Tab.0.bottom" timestamp="1598503803974">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.bottom/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
-    <state width="1258" height="348" key="GridCell.Tab.0.center" timestamp="1597297629403">
+    <state width="2517" height="308" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803974" />
+    <state width="2517" height="308" key="GridCell.Tab.0.center" timestamp="1598503803973">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.center/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
-    <state width="1258" height="348" key="GridCell.Tab.0.left" timestamp="1597297629403">
+    <state width="2517" height="308" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803973" />
+    <state width="2517" height="308" key="GridCell.Tab.0.left" timestamp="1598503803973">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.left/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
-    <state width="1258" height="348" key="GridCell.Tab.0.right" timestamp="1597297629403">
+    <state width="2517" height="308" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803973" />
+    <state width="2517" height="308" key="GridCell.Tab.0.right" timestamp="1598503803974">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.right/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
+    <state width="2517" height="308" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803974" />
     <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1597297629404">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -443,11 +669,11 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="988" y="234" key="VCS.ChangeListViewerDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1598503298143" />
-    <state x="872" y="252" key="Vcs.Push.Dialog.v2" timestamp="1598503202167">
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2" timestamp="1598503767001">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="872" y="252" key="Vcs.Push.Dialog.v2/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597199683482" />
-    <state x="872" y="252" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1598503202167" />
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1598503767001" />
     <state x="855" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597283267126">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
