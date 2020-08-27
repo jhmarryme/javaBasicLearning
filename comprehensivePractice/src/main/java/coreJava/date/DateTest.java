@@ -63,9 +63,12 @@ public class DateTest {
         LocalDateTime now1 = LocalDateTime.now();
         LocalDateTime time = now.minusDays(2);
 
+        // 获取两个时间之前的差
         Duration between = Duration.between(time, now1);
         System.out.println("between.toDays() = " + between.toDays());
         System.out.println("between.toHours() = " + between.toHours());
         System.out.println("between.toMinutes() = " + between.toMinutes());
+
+        System.out.println("Duration.between(LocalTime.now().minusMinutes(14), LocalTime.now()).toMinutes() = " + Duration.between(LocalTime.now().minusMinutes(14), LocalTime.now()).toMinutes());
     }
 }
