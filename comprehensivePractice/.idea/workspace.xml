@@ -29,14 +29,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="合并书中案例">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/javaBase/copy/ObjectCopyExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/javaBase/copy/create/Major.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/javaBase/copy/create/Student.java" afterDir="false" />
+    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coreJava/lambda/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coreJava/lambda/LambdaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coreJava/lambda/MethodReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coreJava/lambda/MethodReferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coreJava/callback/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coreJava/callback/TimerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coreJava/stream/StreamMethodsUse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coreJava/stream/StreamMethodsUse.java" afterDir="false" />
     </list>
     <list id="3848d7b2-4216-4a81-9976-5edf21c04d44" name="temp" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +98,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -114,18 +113,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\designPatternLesson\interator\hf" />
-      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\resources" />
-      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\core-java" />
+      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="designPatternLesson.iterator.lesson2" />
       <recent name="offer.tree" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\core-java" />
-      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\reflect" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\java\designPatternLesson\interator\hf" />
+      <recent name="D:\WJH-workSpace\code\java\basic\comprehensivePractice\src\main\resources" />
+      <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ReflectExample.reflectForRobot">

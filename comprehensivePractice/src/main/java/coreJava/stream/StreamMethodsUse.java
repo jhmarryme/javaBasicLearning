@@ -171,7 +171,7 @@ public class StreamMethodsUse {
 
         // distinct 去重
         Stream<String> distinctStream = Stream.of("a", "b", "c", "a").distinct();
-        Assert.assertEquals(3, distinctStream.count());
+//        Assert.assertEquals(3, distinctStream.count());
 
         // peek 建立一个通道，在这个通道中对 Stream 的每个元素执行对应的操作，对应 Consumer<T>的函数式接口
         // 这是一个消费者函数式接口，顾名思义，它是用来消费 Stream 元素的
@@ -333,7 +333,7 @@ public class StreamMethodsUse {
                         User::getGender,
                         user -> Collections.singleton(user.getUserName()),
                         (a, b) -> {
-                            var union = new HashSet<String>(a);
+                            HashSet<String> union = new HashSet<>(a);
                             union.addAll(b);
                             return union;
                         }));
