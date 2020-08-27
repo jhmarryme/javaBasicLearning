@@ -11,7 +11,7 @@ public class TimerTest
    public static void main(String[] args)
    {
 
-       var listener = new TimePrinter();
+       TimePrinter listener = new TimePrinter();
 
        // construct a timer that calls the listener
       // once every second
