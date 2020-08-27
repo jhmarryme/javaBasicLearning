@@ -2,6 +2,11 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="nexusproxy.paas.x" />
+      <option name="name" value="nexusproxy.paas.x" />
+      <option name="url" value="http://nexusproxy.paas.x/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="maven.aliyun.com" />
       <option name="name" value="maven.aliyun.com" />
       <option name="url" value="http://nexusproxy.paas.x/repository/maven-public/" />
