@@ -31,7 +31,12 @@ public class ObjectCopyExample {
 
         System.out.println("student = " + student);
         System.out.println("student1 = " + student1);
-
     }
 
+
+    @SneakyThrows
+    @Test
+    public void deepCopy() {
+
+    }
 }
