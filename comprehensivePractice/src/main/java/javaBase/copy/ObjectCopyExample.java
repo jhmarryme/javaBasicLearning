@@ -1,7 +1,7 @@
 package javaBase.copy;
 
-import javaBase.copy.create.Major;
-import javaBase.copy.create.Student;
+import javaBase.copy.shallow.Major;
+import javaBase.copy.shallow.Student;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
