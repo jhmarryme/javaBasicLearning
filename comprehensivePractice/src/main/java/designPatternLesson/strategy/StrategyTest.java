@@ -41,6 +41,7 @@ public class StrategyTest {
 
     /**
      *  使用接口模拟可扩展的枚举
+     *  虽然不能编写可扩展的枚举类型，但是你可以编写一个接口来配合实现接口的基本的枚举类型，来对它进行模拟。
      *
      * @Param: []
      * @Return: void
@@ -57,8 +58,8 @@ public class StrategyTest {
     }
 
     /**
-     *   遍历ExtendedOperation中的apply
-     *   通过ExtendedOperation.values()获取所有的枚举值进行遍历
+     * 遍历ExtendedOperation 调用apply
+     * 通过ExtendedOperation.values()获取所有的枚举值进行遍历
      * @Param: [opSet, x, y]
      * @Return: void
      * @Author: Wjh
@@ -72,8 +73,8 @@ public class StrategyTest {
     }
 
     /**
-     *  遍历BasicOperation中的apply
-     *  通过BasicOperation.class 获取到所有的枚举值进行遍历
+     * 遍历BasicOperation 调用apply
+     * 通过BasicOperation.class 获取到所有的枚举值进行遍历
      *
      * @Param: [enumType, x, y]
      * @Return: void

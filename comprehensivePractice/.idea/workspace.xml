@@ -29,17 +29,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="注释添加">
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/StrategyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/BasicOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/ExtendedOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/traditional/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/traditional/ConcreteStrategyAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/traditional/ConcreteStrategySub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/traditional/IStrategy.java" afterDir="false" />
+    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="策略模式的两种实现: 1.传统模式 2. 枚举实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/ReflectDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imooc/javaBasic/reflect/ReflectDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/StrategyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/StrategyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/BasicOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/BasicOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/ExtendedOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/ExtendedOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/designPatternLesson/strategy/enumeration/Operation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598923817267</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="策略模式的两种实现: 1.传统模式 2. 枚举实现">
+      <created>1598942786508</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598942786509</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -448,7 +450,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="对象拷贝" />
     <MESSAGE value="注释添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="注释添加" />
+    <MESSAGE value="策略模式的两种实现: 1.传统模式 2. 枚举实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="策略模式的两种实现: 1.传统模式 2. 枚举实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1164" y="314" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1598928849401">

@@ -3,7 +3,7 @@ package designPatternLesson.strategy.enumeration;
 import lombok.Getter;
 
 /**
- * description:
+ * description: 模拟拓展枚举
  *
  * @Author: Wjh
  * @Date: 2020/9/1 11:36

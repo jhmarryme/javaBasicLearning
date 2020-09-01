@@ -1,7 +1,7 @@
 package designPatternLesson.strategy.enumeration;
 
 /**
- * description:
+ * description: 抽象策略
  *
  * @Author: Wjh
  * @Date: 2020/9/1 11:34
