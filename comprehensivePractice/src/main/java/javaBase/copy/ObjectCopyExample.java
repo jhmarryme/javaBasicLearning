@@ -6,7 +6,10 @@ import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
 /**
- * description:
+ * description: 深拷贝、浅拷贝
+ * 基本类型一般采取的则是值传递的方式
+ * 数组、类Class、枚举Enum、Integer包装类等等，是引用类型，操作时一般采用的是引用传递的方式；
+ * 值类型的字段会复制一份，而引用类型的字段拷贝的仅仅是引用地址
  *
  * @Author: Wjh
  * @Date: 2020/8/27 10:52
