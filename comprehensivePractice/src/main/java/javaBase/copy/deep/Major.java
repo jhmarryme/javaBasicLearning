@@ -3,6 +3,8 @@ package javaBase.copy.deep;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * description:
  *
@@ -12,7 +14,8 @@ import lombok.Data;
  */
 @AllArgsConstructor
 @Data
-public class Major {
+public class Major implements Serializable {
+    private static final long serialVersionUID = -189841902559819400L;
     private String majorName; // 专业名称
     private long majorId;     // 专业代号
 }

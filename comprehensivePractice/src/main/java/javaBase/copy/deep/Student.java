@@ -7,13 +7,14 @@ import java.io.*;
 
 @Data
 @AllArgsConstructor
-public class Student implements Cloneable{
+public class Student implements Serializable{
+    private static final long serialVersionUID = 2126589683969837883L;
     private String name;  // 姓名
     private int age;      // 年龄
     private Major major;  // 所学专业
 
     /**
-     *  对象的深拷贝
+     *  对象的深拷贝方法, 需要实现Serializable
      *
      * @Param: []
      * @Return: javaBase.copy.deep.Student
