@@ -30,7 +30,9 @@ public class ObjectCopyExample {
         major.setMajorId(1);
         major.setMajorName("wjh");
 
+        // majorName=wjh, majorId=1
         System.out.println("student = " + student);
+        // majorName=wjh, majorId=1
         System.out.println("student1 = " + student1);
     }
 
@@ -53,7 +55,9 @@ public class ObjectCopyExample {
         major.setMajorId(1);
         major.setMajorName("wjh");
 
+        // majorName=wjh, majorId=1
         System.out.println("student = " + student);
+        // majorName=jhmarryme, majorId=0
         System.out.println("student1 = " + student1);
     }
 }
