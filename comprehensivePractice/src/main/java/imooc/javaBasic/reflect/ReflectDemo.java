@@ -18,6 +18,7 @@ public class ReflectDemo {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, NoSuchFieldException, InstantiationException {
 
         Class<?> rc = Class.forName("imooc.javaBasic.reflect.Robot");
+        // Class.getDeclaredConstructor(...).newInstance(...) 替换 newInstance
         Robot r = (Robot) rc.newInstance();
         //getDeclaredMethod可以获取到包括私有, 但是不包括继承来的所有方法
         Method throwHello = rc.getDeclaredMethod("throwHello", String.class);
