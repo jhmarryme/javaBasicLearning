@@ -29,11 +29,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javaBase/copy/ObjectCopyExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javaBase/copy/ObjectCopyExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javaBase/copy/create/Major.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javaBase/copy/create/Student.java" beforeDir="false" />
+    <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="对象拷贝">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -460,11 +457,11 @@
     </state>
     <state x="955" y="239" key="RollbackChangesDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597199646768" />
     <state x="955" y="239" key="RollbackChangesDialog/0.0.2560.1040/-1366.310.1366.728@0.0.2560.1040" timestamp="1598920847164" />
-    <state x="949" y="129" key="SettingsEditor" timestamp="1598920936684">
+    <state x="949" y="129" key="SettingsEditor" timestamp="1598921530501">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="680" y="147" key="SettingsEditor/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597296466933" />
-    <state x="949" y="129" key="SettingsEditor/0.0.2560.1040/-1366.310.1366.728@0.0.2560.1040" timestamp="1598920936684" />
+    <state x="949" y="129" key="SettingsEditor/0.0.2560.1040/-1366.310.1366.728@0.0.2560.1040" timestamp="1598921530501" />
     <state x="988" y="234" key="VCS.ChangeListViewerDialog" timestamp="1598503298143">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
