@@ -1,7 +1,7 @@
 package javaBase.copy;
 
-import javaBase.copy.create.Major;
-import javaBase.copy.create.Student;
+import javaBase.copy.shallow.Major;
+import javaBase.copy.shallow.Student;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +31,12 @@ public class ObjectCopyExample {
 
         System.out.println("student = " + student);
         System.out.println("student1 = " + student1);
-
     }
 
+
+    @SneakyThrows
+    @Test
+    public void deepCopy() {
+
+    }
 }

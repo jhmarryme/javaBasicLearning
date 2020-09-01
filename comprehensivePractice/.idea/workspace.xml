@@ -30,13 +30,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="532c81c7-4c39-4011-858b-4698f8430990" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coreJava/callback/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coreJava/callback/TimerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coreJava/stream/StreamMethodsUse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coreJava/stream/StreamMethodsUse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javaBase/copy/ObjectCopyExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javaBase/copy/ObjectCopyExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javaBase/copy/create/Major.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javaBase/copy/create/Student.java" beforeDir="false" />
     </list>
-    <list id="3848d7b2-4216-4a81-9976-5edf21c04d44" name="temp" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,10 +74,38 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev_travelsky_hp_0.01" />
+                    <option name="lastUsedInstant" value="1598503344" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1598503260" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/.." />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -98,7 +124,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/main/java/javaBase/copy/deep/Student.java&#10;D:/jhmarryme/JavaBasicLearning/comprehensivePractice/.gitignore" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -107,10 +133,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -127,22 +153,9 @@
       <recent name="D:\WJH-workSpace\code\java\new\reading\cyc2018\src\main\java\imooc\javaBasic\byteCode" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectExample.reflectForRobot">
+  <component name="RunManager" selected="JUnit.ObjectCopyExample.shallowCopy">
     <configuration name="PizzaWithEnumMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javaBase.enumBase.enumLearning.PizzaWithEnumMap" />
-      <module name="comprehensivePractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaBase.enumBase.enumLearning.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PizzaWithEnumSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaBase.enumBase.enumLearning.PizzaWithEnumSet" />
       <module name="comprehensivePractice" />
       <extension name="coverage">
         <pattern>
@@ -180,6 +193,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ObjectCopyExample.shallowCopy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="comprehensivePractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaBase.copy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="javaBase.copy" />
+      <option name="MAIN_CLASS_NAME" value="javaBase.copy.ObjectCopyExample" />
+      <option name="METHOD_NAME" value="shallowCopy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectExample.reflectForRobot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="comprehensivePractice" />
       <extension name="coverage">
@@ -197,19 +226,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PizzaWithEnumSet" />
       <item itemvalue="Application.PizzaWithEnumMap" />
       <item itemvalue="Application.ReflectExample" />
       <item itemvalue="Application.ReflectDemo" />
       <item itemvalue="JUnit.ReflectExample.reflectForRobot" />
+      <item itemvalue="JUnit.ObjectCopyExample.shallowCopy" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ObjectCopyExample.shallowCopy" />
         <item itemvalue="JUnit.ReflectExample.reflectForRobot" />
-        <item itemvalue="Application.ReflectExample" />
         <item itemvalue="Application.ReflectDemo" />
+        <item itemvalue="Application.ReflectExample" />
         <item itemvalue="Application.PizzaWithEnumMap" />
-        <item itemvalue="Application.PizzaWithEnumSet" />
       </list>
     </recent_temporary>
   </component>
@@ -287,6 +316,7 @@
       <workItem from="1597279909673" duration="1020000" />
       <workItem from="1597281694801" duration="29000" />
       <workItem from="1597282924099" duration="7732000" />
+      <workItem from="1598920702765" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="枚举实现单例模式">
       <created>1597203237395</created>
@@ -302,7 +332,28 @@
       <option name="project" value="LOCAL" />
       <updated>1597283812980</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1598503194522</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598503194522</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1598503691025</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598503691025</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1598920958019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598920958019</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -322,7 +373,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/dev_travelsky_hp_0.01" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -336,7 +399,8 @@
     </ignored-roots>
     <MESSAGE value="枚举实现单例模式" />
     <MESSAGE value="enumMap简单应用" />
-    <option name="LAST_COMMIT_MESSAGE" value="enumMap简单应用" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1056" y="210" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1597287071748">
@@ -351,22 +415,26 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1060" y="274" key="FileChooserDialogImpl/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597287374662" />
-    <state width="1258" height="348" key="GridCell.Tab.0.bottom" timestamp="1597297629404">
+    <state width="2517" height="308" key="GridCell.Tab.0.bottom" timestamp="1598503803974">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.bottom/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629404" />
-    <state width="1258" height="348" key="GridCell.Tab.0.center" timestamp="1597297629403">
+    <state width="2517" height="308" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803974" />
+    <state width="2517" height="308" key="GridCell.Tab.0.center" timestamp="1598503803973">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.center/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
-    <state width="1258" height="348" key="GridCell.Tab.0.left" timestamp="1597297629403">
+    <state width="2517" height="308" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803973" />
+    <state width="2517" height="308" key="GridCell.Tab.0.left" timestamp="1598503803973">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.left/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
-    <state width="1258" height="348" key="GridCell.Tab.0.right" timestamp="1597297629403">
+    <state width="2517" height="308" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803973" />
+    <state width="2517" height="308" key="GridCell.Tab.0.right" timestamp="1598503803974">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.0.right/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597297629403" />
+    <state width="2517" height="308" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1598503803974" />
     <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1597297629404">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -387,22 +455,34 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="810" y="174" key="Maven.ArtifactSearchDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597288351092" />
-    <state x="955" y="239" key="RollbackChangesDialog" timestamp="1597199646768">
+    <state x="955" y="239" key="RollbackChangesDialog" timestamp="1598920847164">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="955" y="239" key="RollbackChangesDialog/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597199646768" />
-    <state x="680" y="147" key="SettingsEditor" timestamp="1597296466933">
+    <state x="955" y="239" key="RollbackChangesDialog/0.0.2560.1040/-1366.310.1366.728@0.0.2560.1040" timestamp="1598920847164" />
+    <state x="949" y="129" key="SettingsEditor" timestamp="1598920936684">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="680" y="147" key="SettingsEditor/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597296466933" />
-    <state x="872" y="252" key="Vcs.Push.Dialog.v2" timestamp="1597199683482">
+    <state x="949" y="129" key="SettingsEditor/0.0.2560.1040/-1366.310.1366.728@0.0.2560.1040" timestamp="1598920936684" />
+    <state x="988" y="234" key="VCS.ChangeListViewerDialog" timestamp="1598503298143">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="988" y="234" key="VCS.ChangeListViewerDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1598503298143" />
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2" timestamp="1598920964059">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="872" y="252" key="Vcs.Push.Dialog.v2/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597199683482" />
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2/0.0.2560.1040/-1366.310.1366.728@0.0.2560.1040" timestamp="1598920964059" />
+    <state x="872" y="252" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1598503767001" />
     <state x="855" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597283267126">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="855" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1366.154.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1597283267126" />
+    <state x="1074" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598503355308">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1074" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1040@0.0.2560.1040" timestamp="1598503355308" />
     <state x="825" y="333" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597286984108">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
