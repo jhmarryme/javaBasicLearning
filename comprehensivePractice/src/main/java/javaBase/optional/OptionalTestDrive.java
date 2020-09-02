@@ -23,6 +23,8 @@ import java.util.stream.Stream;
 public class OptionalTestDrive {
 
     /**
+     * 创建Optional
+     *
      * 1.Optional.of(T value)，该方法通过一个非 null 的 value 来构造一个 Optional，
      *      返回的 Optional 包含了 value 这个值。对于该方法，传入的参数一定不能为 null，否则便会抛出 NullPointerException。
      *
@@ -55,6 +57,8 @@ public class OptionalTestDrive {
     }
 
     /**
+     * Optional操作
+     *
      * 1.ifPresent
      *      如果 Optional 中有值，则对该值调用 consumer.accept，否则什么也不做。
      *
