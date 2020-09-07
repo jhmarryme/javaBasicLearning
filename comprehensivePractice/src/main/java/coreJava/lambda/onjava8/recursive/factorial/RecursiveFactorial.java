@@ -17,6 +17,7 @@ public class RecursiveFactorial {
 
     @Test
     public void factorial() {
+        // 阶乘函数
         fact = n -> n == 0 ? 1 : n * fact.call(n - 1);
         IntStream.iterate(0, value -> value < 10, operand -> operand + 1)
                 .forEach(value -> {
