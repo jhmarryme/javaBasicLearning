@@ -1,4 +1,4 @@
-package coreJava.functional.functional;
+package coreJava.functional.functionalInterface;
 
 import org.junit.jupiter.api.Test;
 
