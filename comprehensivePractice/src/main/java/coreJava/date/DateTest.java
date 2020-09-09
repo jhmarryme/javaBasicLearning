@@ -2,11 +2,9 @@ package coreJava.date;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * description:
@@ -22,7 +20,7 @@ public class DateTest {
      * @Date: 2020/8/27 9:28
      */
     @Test
-    public void test() {
+    public void transform() {
         // 打印当前时间
         System.out.println("LocalTime.now() = " + LocalTime.now());
         // 打印当前日期
@@ -50,6 +48,11 @@ public class DateTest {
         // hh 12小时制, HH 24小时制
         System.out.println("LocalDateTime.parse(\"2019:08:29:14:22:01\", DateTimeFormatter.ofPattern(\"yyyy:MM:dd:HH:mm:ss\")) = "
                 + LocalDateTime.parse("2019:08:29:14:22:01", DateTimeFormatter.ofPattern("yyyy:MM:dd:HH:mm:ss")));
+
+
+
+        // 通过LocalDateTime 创建一个Date对象
+        Date dateFromLocalDateTime =  new Date(LocalDateTime.now().plusYears(1L).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
     }
 
     /*
@@ -58,7 +61,7 @@ public class DateTest {
      * @Date: 2020/8/27 9:28
      */
     @Test
-    public void test2() {
+    public void conpute() {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime now1 = LocalDateTime.now();
         LocalDateTime time = now.minusDays(2);
@@ -71,4 +74,5 @@ public class DateTest {
 
         System.out.println("Duration.between(LocalTime.now().minusMinutes(14), LocalTime.now()).toMinutes() = " + Duration.between(LocalTime.now().minusMinutes(14), LocalTime.now()).toMinutes());
     }
+
 }
