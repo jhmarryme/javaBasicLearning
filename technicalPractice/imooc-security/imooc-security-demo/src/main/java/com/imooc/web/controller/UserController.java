@@ -1,14 +1,19 @@
 package com.imooc.web.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.imooc.dto.User;
 import com.imooc.dto.UserQueryCondition;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +25,13 @@ import java.util.List;
  * @Modified By:
  */
 @RestController
+@RequestMapping("/user")
 public class UserController {
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public List<User> queryUser(UserQueryCondition condition, @PageableDefault(page = 1, size = 15, sort = "username", direction = Sort.Direction.DESC) Pageable pageable) {
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+    @GetMapping
+    @JsonView(User.UserSimpleView.class)
+    public List<User> query(UserQueryCondition condition, @PageableDefault(page = 1, size = 15, sort = "username", direction = Sort.Direction.DESC) Pageable pageable) {
 
         // 使用反射工具类打印condition
         System.out.println(ReflectionToStringBuilder.toString(condition, ToStringStyle.MULTI_LINE_STYLE));
@@ -38,11 +46,45 @@ public class UserController {
         return users;
     }
 
-    @RequestMapping(value = "/getInfo/{id:\\d+}", method = RequestMethod.GET)
+    @GetMapping("/{id:\\d+}")
+    @JsonView(User.UserDetailView.class)
     public User getInfo(@PathVariable(name = "id") String userId) {
         User user = new User();
         user.setUsername("wjh");
         user.setPassword("123");
         return user;
+    }
+
+    @PostMapping
+    @JsonView(User.UserSimpleView.class)
+    public User create(@Valid @RequestBody User user, BindingResult errors) {
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().forEach(objectError -> System.out.println(objectError.getDefaultMessage()));
+        }
+
+        System.out.println(ReflectionToStringBuilder.toString(user, ToStringStyle.MULTI_LINE_STYLE));
+
+        user.setId("1");
+        return user;
+    }
+
+    @PutMapping("/{id:\\d+}")
+    public User update(@Valid @RequestBody User user, BindingResult errors) {
+
+        LOGGER.info("update: {}", user);
+
+        if (errors.hasErrors()) {
+            errors.getFieldErrors().forEach(fieldError -> System.out.println(fieldError.getField() + " : " + fieldError.getDefaultMessage()));
+        }
+
+        System.out.println(ReflectionToStringBuilder.toString(user, ToStringStyle.MULTI_LINE_STYLE));
+
+        return user;
+    }
+
+    @DeleteMapping("/{id:\\d+}")
+    public void delete(@PathVariable String id) {
+        System.out.println(id);
     }
 }
