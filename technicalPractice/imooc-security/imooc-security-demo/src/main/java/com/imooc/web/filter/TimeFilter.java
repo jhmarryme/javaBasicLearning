@@ -21,11 +21,12 @@ public class TimeFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
+            ServletException {
         System.out.println("time filter start");
         long start = new Date().getTime();
         chain.doFilter(request, response);
-        System.out.println("time filter 耗时:"+ (new Date().getTime() - start));
+        System.out.println("time filter 耗时:" + (new Date().getTime() - start));
         System.out.println("time filter finish");
     }
 

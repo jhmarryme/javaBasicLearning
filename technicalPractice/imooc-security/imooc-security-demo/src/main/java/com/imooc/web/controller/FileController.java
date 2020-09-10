@@ -30,7 +30,6 @@ public class FileController {
     private String folder = "D:\\jhmarryme\\JavaBasicLearning\\technicalPractice\\imooc-security\\imooc-security-demo" +
             "\\src\\main\\java\\com\\imooc\\web\\controller";
 
-
     /**
      *  简单的文件上传
      *

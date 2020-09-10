@@ -24,9 +24,9 @@ public class TimeInterceptor implements HandlerInterceptor {
         System.out.println("preHandle");
 
         // 拦截的类名
-        System.out.println(((HandlerMethod)o).getBean().getClass().getName());
+        System.out.println(((HandlerMethod) o).getBean().getClass().getName());
         // 拦截的方法名
-        System.out.println(((HandlerMethod)o).getMethod().getName());
+        System.out.println(((HandlerMethod) o).getMethod().getName());
 
         // 在request 存入数据
         request.setAttribute("startTime", new Date().getTime());
@@ -39,7 +39,7 @@ public class TimeInterceptor implements HandlerInterceptor {
         System.out.println("postHandle");
         // 从request 取出数据
         Long start = (Long) request.getAttribute("startTime");
-        System.out.println("time interceptor 耗时:"+ (new Date().getTime() - start));
+        System.out.println("time interceptor 耗时:" + (new Date().getTime() - start));
     }
 
     @Override
@@ -47,8 +47,8 @@ public class TimeInterceptor implements HandlerInterceptor {
         System.out.println("afterCompletion");
         // 从request 取出数据
         Long start = (Long) request.getAttribute("startTime");
-        System.out.println("time interceptor 耗时:"+ (new Date().getTime() - start));
+        System.out.println("time interceptor 耗时:" + (new Date().getTime() - start));
         // 查看异常信息
-        System.out.println("e is "+e);
+        System.out.println("e is " + e);
     }
 }

@@ -35,9 +35,11 @@ import java.util.List;
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+
     @GetMapping
     @JsonView(User.UserSimpleView.class)
-    public List<User> query(UserQueryCondition condition, @PageableDefault(page = 1, size = 15, sort = "username", direction = Sort.Direction.DESC) Pageable pageable) {
+    public List<User> query(UserQueryCondition condition, @PageableDefault(page = 1, size = 15, sort = "username",
+            direction = Sort.Direction.DESC) Pageable pageable) {
 
         // 使用反射工具类打印condition
         System.out.println(ReflectionToStringBuilder.toString(condition, ToStringStyle.MULTI_LINE_STYLE));

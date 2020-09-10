@@ -12,22 +12,22 @@ import java.util.Map;
 
 /*
  * Description: 通用异常处理
- * @Author: Wjh 
+ * @Author: Wjh
  * @Date: 2020/9/10 17:50
  * Modified By:
  */
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
-	@ExceptionHandler(UserNotExistException.class)
-	@ResponseBody
-	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-	public Map<String, Object> handleUserNotExistException(UserNotExistException ex) {
-	    // 封装异常信息
-		Map<String, Object> result = new HashMap<>();
-		result.put("id", ex.getId());
-		result.put("message", ex.getMessage());
-		return result;
-	}
+    @ExceptionHandler(UserNotExistException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public Map<String, Object> handleUserNotExistException(UserNotExistException ex) {
+        // 封装异常信息
+        Map<String, Object> result = new HashMap<>();
+        result.put("id", ex.getId());
+        result.put("message", ex.getMessage());
+        return result;
+    }
 
 }

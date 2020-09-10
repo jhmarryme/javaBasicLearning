@@ -21,7 +21,6 @@ import java.util.ArrayList;
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-
     @Autowired
     private TimeInterceptor timeInterceptor;
 

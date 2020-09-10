@@ -31,7 +31,7 @@ public class TimeAspect {
         // 执行方法, 获取请求的结果
         Object o = point.proceed();
 
-        System.out.println("time aspect 耗时:"+ (new Date().getTime() - start));
+        System.out.println("time aspect 耗时:" + (new Date().getTime() - start));
         System.out.println("time aspect end");
 
         return o;

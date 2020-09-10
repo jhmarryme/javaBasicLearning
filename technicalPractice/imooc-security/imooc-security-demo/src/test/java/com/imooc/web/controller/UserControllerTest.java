@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -61,9 +60,11 @@ public class UserControllerTest {
     @Test
     public void whenGetInfoSuccess() {
         // get请求, 参数为Json类型(UTF-8), 期望返回码为200, 返回一个User对象, 期望username=wjh
-        String result = mockMvc.perform(MockMvcRequestBuilders.get("/user/1").contentType(MediaType.APPLICATION_JSON_UTF8))
-                .andExpect(MockMvcResultMatchers.status().isOk()).andExpect(MockMvcResultMatchers.jsonPath("$.username").value("wjh"))
-                .andReturn().getResponse().getContentAsString();
+        String result =
+                mockMvc.perform(MockMvcRequestBuilders.get("/user/1").contentType(MediaType.APPLICATION_JSON_UTF8))
+                        .andExpect(MockMvcResultMatchers.status().isOk()).andExpect(MockMvcResultMatchers.jsonPath("$" +
+                        ".username").value("wjh"))
+                        .andReturn().getResponse().getContentAsString();
         System.out.println(result);
     }
 
@@ -81,12 +82,13 @@ public class UserControllerTest {
         String content = "{\n" +
                 "  \"username\": \"wjh\",\n" +
                 "  \"password\": \"\",\n" +
-                "  \"birthday\":" +new Date().getTime()+"\n" +
+                "  \"birthday\":" + new Date().getTime() + "\n" +
                 "}";
-        String result = mockMvc.perform(MockMvcRequestBuilders.post("/user").content(content).contentType(MediaType.APPLICATION_JSON_UTF8))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("1"))
-                .andReturn().getResponse().getContentAsString();
+        String result =
+                mockMvc.perform(MockMvcRequestBuilders.post("/user").content(content).contentType(MediaType.APPLICATION_JSON_UTF8))
+                        .andExpect(MockMvcResultMatchers.status().isOk())
+                        .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("1"))
+                        .andReturn().getResponse().getContentAsString();
 
         System.out.println("result = " + result);
     }
@@ -94,14 +96,15 @@ public class UserControllerTest {
     @SneakyThrows
     @Test
     public void whenUpdateSuccess() {
-        Date date =  new Date(LocalDateTime.now().plusYears(1L).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+        Date date =
+                new Date(LocalDateTime.now().plusYears(1L).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
 
         //language=JSON
         String content = "{\n" +
                 "  \"id\": 1,\n" +
                 "  \"username\": \"wjh\",\n" +
                 "  \"password\": \"\",\n" +
-                "  \"birthday\":" + date.getTime()+"\n" +
+                "  \"birthday\":" + date.getTime() + "\n" +
                 "}";
         mockMvc.perform(MockMvcRequestBuilders.put("/user/1").content(content).contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(MockMvcResultMatchers.status().isOk());
@@ -112,14 +115,6 @@ public class UserControllerTest {
     @Test
     public void whenDeleteSuccess() {
         mockMvc.perform(MockMvcRequestBuilders.delete("/user/1").contentType(MediaType.APPLICATION_JSON_UTF8))
-                .andExpect(MockMvcResultMatchers.status().isOk());
-    }
-
-    @SneakyThrows
-    @Test
-    public void whenUploadFileSuccess() {
-        mockMvc.perform(MockMvcRequestBuilders.fileUpload("/file")
-                .file(new MockMultipartFile("file", "test.txt", "mutipart/form-data", "hello world".getBytes("UTF-8"))))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
