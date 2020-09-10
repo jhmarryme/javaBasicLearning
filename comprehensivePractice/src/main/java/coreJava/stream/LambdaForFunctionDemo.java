@@ -28,6 +28,7 @@ public class LambdaForFunctionDemo {
      */
     public static void method(Function<String, Integer> f1, Function<Integer, Integer> f2) {
 
+        // 执行完apply 继续执行andThen
         final Integer apply = f1.andThen(f2).apply("1");
         System.out.println(apply);
     }

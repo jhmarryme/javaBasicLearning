@@ -1,8 +1,10 @@
 package com.imooc.web.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.imooc.dto.FileInfo;
 import com.imooc.dto.User;
 import com.imooc.dto.UserQueryCondition;
+import com.imooc.exception.UserNotExistException;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.slf4j.Logger;
@@ -12,9 +14,13 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -49,6 +55,8 @@ public class UserController {
     @GetMapping("/{id:\\d+}")
     @JsonView(User.UserDetailView.class)
     public User getInfo(@PathVariable(name = "id") String userId) {
+
+        LOGGER.info("/user/{id} userId: {}", userId);
         User user = new User();
         user.setUsername("wjh");
         user.setPassword("123");
@@ -85,6 +93,9 @@ public class UserController {
 
     @DeleteMapping("/{id:\\d+}")
     public void delete(@PathVariable String id) {
-        System.out.println(id);
+
+        throw new UserNotExistException(id);
+//        System.out.println(id);
     }
+
 }
