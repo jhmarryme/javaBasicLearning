@@ -1,14 +1,7 @@
 server:
   port: 8060
 spring:
-  datasource:
-    url: jdbc:mysql://104.224.188.99:3307/imooc-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
-  #    暂时关闭session配置
-  session:
-    store-type: none
-security:
-  basic:
-    enabled: false
+  application:
+    name: imooc-secutity
+  profiles:
+    active: dev
