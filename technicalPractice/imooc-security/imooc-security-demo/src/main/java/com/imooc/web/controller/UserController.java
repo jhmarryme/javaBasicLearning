@@ -1,10 +1,10 @@
 package com.imooc.web.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.imooc.dto.FileInfo;
 import com.imooc.dto.User;
 import com.imooc.dto.UserQueryCondition;
 import com.imooc.exception.UserNotExistException;
+import io.swagger.annotations.*;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.slf4j.Logger;
@@ -14,13 +14,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,12 +28,19 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/user")
+@Api("User demo")
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping
     @JsonView(User.UserSimpleView.class)
+    @ApiOperation(value = "根据条件查询用户")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username", value = "用户名", required = true, type = "String"),
+            @ApiImplicitParam(name = "age", value = "起始年龄", required = true, type = "int"),
+            @ApiImplicitParam(name = "ageTo", value = "结束年龄", required = true, type = "int")
+    })
     public List<User> query(UserQueryCondition condition, @PageableDefault(page = 1, size = 15, sort = "username",
             direction = Sort.Direction.DESC) Pageable pageable) {
 
@@ -56,7 +59,8 @@ public class UserController {
 
     @GetMapping("/{id:\\d+}")
     @JsonView(User.UserDetailView.class)
-    public User getInfo(@PathVariable(name = "id") String userId) {
+    @ApiOperation(value = "获取指定用户详细信息")
+    public User getInfo(@ApiParam("用户id") @PathVariable(name = "id") String userId) {
 
         LOGGER.info("/user/{id} userId: {}", userId);
         User user = new User();
