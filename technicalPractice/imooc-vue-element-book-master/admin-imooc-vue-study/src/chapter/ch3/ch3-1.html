@@ -1,0 +1,53 @@
+<!------------------------------------------------------------
+  文件名:   ch3-1.html
+  第三章:   $emit 和 $on 用法
+------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$emit 和 $on</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <button @click="boost">触发事件</button>
+</div>
+<script>
+    new Vue({
+        el: '#root',
+        data() {
+            return {
+                message: 'hello vue'
+            }
+        },
+        created() {
+            this.$on('my_events', this.handleEvents1)
+            // 同一事件绑定多个函数
+            this.$on('my_events', this.handleEvents2)
+
+            // 同一函数绑定多个事件
+            this.$on(['my_events', 'my_events2'], this.handleEvents3)
+
+        },
+        methods: {
+            handleEvents1(e) {
+                console.log(this.message, e + ' from: handleEvents1')
+            },
+            handleEvents2(e) {
+                console.log(this.message, e + ' from: handleEvents2')
+            },
+            handleEvents3(e) {
+                console.log(this.message, e + ' from: handleEvents3')
+            },
+            boost() {
+                this.$emit('my_events', 'my params1')
+                this.$emit('my_events2', 'my params2')
+            }
+        }
+    })
+
+
+</script>
+</body>
+</html>
