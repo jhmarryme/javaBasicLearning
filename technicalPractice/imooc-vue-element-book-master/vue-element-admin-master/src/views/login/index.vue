@@ -65,21 +65,20 @@
 </template>
 
 <script>
-import { validUsername } from '@/utils/validate'
 
 export default {
   name: 'Login',
   data() {
     const validateUsername = (rule, value, callback) => {
-      if (!validUsername(value)) {
-        callback(new Error('请输入正确的用户名'))
+      if (!value || value.length === 0) {
+        callback(new Error('请输入用户名'))
       } else {
         callback()
       }
     }
     const validatePassword = (rule, value, callback) => {
-      if (value.length < 6) {
-        callback(new Error('密码不能少于6位'))
+      if (value.length < 4) {
+        callback(new Error('密码不能少于4位'))
       } else {
         callback()
       }
@@ -123,6 +122,12 @@ export default {
   methods: {
     checkCapslock(e) {
       const { key } = e
+      // 当按下大写键, 并且没有提示时, 打开提示
+      if (key === 'CapsLock' && !this.capsTooltip) {
+        this.capsTooltip = true
+        return
+      }
+      // 输入的字符是大写字符以外的时, 关闭提示
       this.capsTooltip = key && key.length === 1 && (key >= 'A' && key <= 'Z')
     },
     showPwd() {
@@ -131,6 +136,7 @@ export default {
       } else {
         this.passwordType = 'password'
       }
+      // 将回调延迟到下次DOM 更新循环之后执行 在修改数据之后立即使用它，然后等待DOM更新。
       this.$nextTick(() => {
         this.$refs.password.focus()
       })
@@ -154,8 +160,12 @@ export default {
       })
     },
     getOtherQuery(query) {
+      // query: {redirect: "/dashboard", a: "1", b: "3"}
+      // Object.keys(query) 为 ['redirect', 'a', 'b']
+      // acc初始值为{}, 最后acc为 {a: "1", b: "3"}
       return Object.keys(query).reduce((acc, cur) => {
         if (cur !== 'redirect') {
+          // 在acc对象中添加对应的属性 和 值
           acc[cur] = query[cur]
         }
         return acc

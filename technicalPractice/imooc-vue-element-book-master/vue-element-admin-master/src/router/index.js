@@ -39,6 +39,7 @@ export const constantRoutes = [
     hidden: true,
     children: [
       {
+        // /redirect/book/create 如果没有* 只能匹配到/redirect/book
         path: '/redirect/:path(.*)',
         component: () => import('@/views/redirect/index')
       }
