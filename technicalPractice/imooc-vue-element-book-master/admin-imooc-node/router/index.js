@@ -32,7 +32,7 @@ router.use((req, res, next) => {
  */
 router.use((err, req, res, next) => {
     const msg = (err && err.message) || '系统错误';
-    const statusCode = (err.output && err.output.statusCode);
+    const statusCode = (err.output && err.output.statusCode) || '500';
     const errorMsg = (err.output && err.output.payload && err.output.payload.error) || err.message;
 
     res.status(statusCode).json({
