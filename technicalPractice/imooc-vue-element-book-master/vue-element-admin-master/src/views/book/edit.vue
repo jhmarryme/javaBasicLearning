@@ -1,17 +1,15 @@
 <template>
-  <detail :is-edit="false" />
+  <detail is-edit />
 </template>
 
 <script>
 import Detail from '@/views/book/components/Detail'
 export default {
-  components: {
-    Detail
+  name: 'Edit',
+  comments: {
+
   },
-  data: function() {
-    return {
-    }
-  }
+  components: { Detail }
 }
 </script>
 
