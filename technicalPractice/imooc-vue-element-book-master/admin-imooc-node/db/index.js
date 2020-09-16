@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 const config = require('./config')
-const {debug} = require('../utils/constant')
+const { debug } = require('../utils/constant')
 
 function querySql(sql) {
   const conn = connect()
@@ -35,6 +35,23 @@ function connect() {
   })
 }
 
+function queryOne(sql) {
+  return new Promise((resolve, reject) => {
+    querySql(sql)
+      .then(results => {
+        if (results && results.length > 0) {
+          resolve(results[0])
+        } else {
+          resolve(null)
+        }
+      })
+      .catch(error => {
+        reject(error)
+      })
+  })
+}
+
 module.exports = {
-  querySql
+  querySql,
+  queryOne
 }

@@ -14,6 +14,6 @@ app.use('/vue-element-admin', router)
 
 
 const server = app.listen(5000, function () {
-    const { address, port} = server.address();
-    console.log('Http Server is running on http://%s:%s', address, port);
+  const { address, port } = server.address();
+  console.log('Http Server is running on http://%s:%s', address, port);
 })
