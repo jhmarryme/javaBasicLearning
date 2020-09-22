@@ -7,7 +7,7 @@ import { getToken } from '@/utils/auth'
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
-  timeout: 5000 // request timeout
+  timeout: 50000 // request timeout
 })
 
 // request interceptor
@@ -43,7 +43,6 @@ service.interceptors.response.use(
    */
   response => {
     const res = response.data
-
     // 成功的状态码为 0, 数据结构需要与自己实际情况返回的值对应
     if (res.code !== 0) {
       const errorMsg = res.msg || '请求失败'

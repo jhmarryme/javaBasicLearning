@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-form ref="postForm" :model="postForm">
+    <el-form ref="postForm" :model="postForm" :rules="rules">
       <sticky :class-name="'sub-navbar'">
         <el-button v-if="!isEdit" @click="showGuide">显示帮助</el-button>
         <el-button
@@ -33,7 +33,7 @@
             <div>
               <el-row>
                 <el-col :span="12" class="form-item-author">
-                  <el-form-item :label-width="labelWidth" label="作者：">
+                  <el-form-item prop="author" :label-width="labelWidth" label="作者：">
                     <el-input
                       v-model="postForm.author"
                       placeholder="作者"
@@ -42,7 +42,7 @@
                   </el-form-item>
                 </el-col>
                 <el-col :span="12">
-                  <el-form-item :label-width="labelWidth" label="出版社：">
+                  <el-form-item prop="publisher" :label-width="labelWidth" label="出版社：">
                     <el-input
                       v-model="postForm.publisher"
                       placeholder="出版社"
@@ -53,7 +53,7 @@
               </el-row>
               <el-row>
                 <el-col :span="12">
-                  <el-form-item :label-width="labelWidth" label="语言：">
+                  <el-form-item prop="language" :label-width="labelWidth" label="语言：">
                     <el-input
                       v-model="postForm.language"
                       placeholder="语言"
@@ -108,7 +108,7 @@
                 <el-col :span="12">
                   <el-form-item :label-width="labelWidth" label="文件名称：">
                     <el-input
-                      v-model="postForm.fileName"
+                      v-model="postForm.originalName"
                       placeholder="文件名称"
                       style="width: 100%"
                       disabled
@@ -153,6 +153,29 @@ import Sticky from '@/components/Sticky/index'
 import Warning from '@/views/book/components/Warning'
 import EbookUpload from '@/components/EbookUpload'
 import MDinput from '@/components/MDinput'
+import { createBook } from '@/api/book'
+
+const defaultForm = {
+  title: '', // 书名
+  author: '', // 作者
+  publisher: '', // 出版社
+  language: '', // 语种
+  rootFile: '', // 根文件路径
+  cover: '', // 封面图片URL
+  coverPath: '', // 封面图片路径
+  fileName: '', // 文件名
+  originalName: '', // 文件原始名称
+  filePath: '', // 文件所在路径
+  unzipPath: '', // 解压文件所在路径
+  contents: [] // 目录
+}
+
+const fields = {
+  title: '书名',
+  author: '作者',
+  publisher: '出版社',
+  language: '语种'
+}
 
 export default {
   name: 'Detail',
@@ -161,11 +184,34 @@ export default {
     isEdit: Boolean
   },
   data() {
+    const commonValidate = (rule, value, callback) => {
+      // console.log('rule, value', rule, value)
+      if (value.length === 0) {
+        callback(new Error(fields[rule.field] + '必须填写'))
+      } else {
+        callback()
+      }
+    }
     return {
       loading: false,
       postForm: {},
       fileList: [],
-      labelWidth: '120px'
+      labelWidth: '120px',
+      contentsTree: [],
+      rules: {
+        title: [
+          { validator: commonValidate, trigger: 'blur' }
+        ],
+        author: [
+          { validator: commonValidate, trigger: 'blur' }
+        ],
+        publisher: [
+          { validator: commonValidate, trigger: 'blur' }
+        ],
+        language: [
+          { validator: commonValidate, trigger: 'blur' }
+        ]
+      }
     }
   },
   methods: {
@@ -174,15 +220,88 @@ export default {
     },
     submitForm() {
       this.loading = true
-      setTimeout(() => {
-        this.loading = false
-      }, 1000)
+      this.$refs.postForm.validate((valid, fields) => {
+        if (valid) {
+          const book = { ...this.postForm }
+          delete book.contents
+          delete book.contentsTree
+          console.log(book)
+          if (!this.isEdit) {
+            createBook(book).then(res => {
+              const { msg } = res
+              this.$notify({
+                title: '操作成功',
+                message: msg,
+                type: 'success',
+                duration: 2000
+              })
+              this.loading = false
+              this.setDefault()
+            }).catch(() => {
+              this.loading = false
+            })
+          } else {
+            // updateBook(book)
+          }
+        } else {
+          const message = fields[Object.keys(fields)[0]][0].message
+          this.$message({ message, type: 'info' })
+          this.loading = false
+        }
+      })
     },
-    onUploadSuccess() {
-      console.log('onUploadSuccess')
+    onContentClick(data) {
+      const { text } = data
+      if (text) {
+        window.open(text)
+      }
+    },
+    setData(data) {
+      const {
+        title,
+        author,
+        publisher,
+        language,
+        rootFile,
+        cover,
+        originalName,
+        url,
+        contents,
+        contentsTree,
+        fileName,
+        coverPath,
+        filePath,
+        unzipPath
+      } = data
+      this.postForm = {
+        title,
+        author,
+        publisher,
+        language,
+        rootFile,
+        cover,
+        originalName,
+        url,
+        contents,
+        contentsTree,
+        fileName,
+        coverPath,
+        filePath,
+        unzipPath
+      }
+      this.contentsTree = contentsTree
+    },
+    setDefault() {
+      this.postForm = Object.assign({}, defaultForm)
+      this.contentsTree = []
+      this.fileList = []
+    },
+    onUploadSuccess(data) {
+      this.setData(data)
+      console.log('onUploadSuccess', data)
     },
     onUploadRemove() {
-      console.log('onUploadRemove')
+      this.setDefault()
     }
   }
 }
