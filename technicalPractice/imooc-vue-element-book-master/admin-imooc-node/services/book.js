@@ -126,27 +126,29 @@ function deleteBook(fileName) {
 }
 
 async function getBook(fileName) {
-  const bookSql = `select * from book where fileName='${fileName}'`
-  const contentsSql = `select * from contents where fileName='${fileName}' order by \`order\` asc`
-  const book = await db.queryOne(bookSql)
-  const contents = await db.querySql(contentsSql)
-  if (book) {
-    book.cover = Book.genCoverUrl(book)
-    book.contents = contents
-    book.contentsTree = []
-    contents.forEach(_ => _.children = [])
-    contents.forEach(c => {
-      if (c.pid === '') {
-        book.contentsTree.push(c)
-      } else {
-        const parent = contents.find(_ => _.navId === c.pid)
-        parent.children.push(c)
-      }
-    }) // 将目录转化为树状结构
-    return book
-  } else {
-    throw new Error('电子书不存在')
-  }
+  return new Promise(async (resolve, reject) => {
+    const bookSql = `select * from book where fileName='${fileName}'`
+    const contentsSql = `select * from contents where fileName='${fileName}' order by \`order\` asc`
+    const book = await db.queryOne(bookSql)
+    const contents = await db.querySql(contentsSql)
+    if (book) {
+      book.cover = Book.genCoverUrl(book)
+      book.contents = contents
+      book.contentsTree = []
+      contents.forEach(_ => _.children = [])
+      contents.forEach(c => {
+        if (c.pid === '') {
+          book.contentsTree.push(c)
+        } else {
+          const parent = contents.find(_ => _.navId === c.pid)
+          parent.children.push(c)
+        }
+      }) // 将目录转化为树状结构
+      resolve(book)
+    } else {
+      reject('电子书不存在')
+    }
+  })
 }
 
 function clearUploadDir() {

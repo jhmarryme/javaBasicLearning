@@ -153,7 +153,7 @@ import Sticky from '@/components/Sticky/index'
 import Warning from '@/views/book/components/Warning'
 import EbookUpload from '@/components/EbookUpload'
 import MDinput from '@/components/MDinput'
-import { createBook } from '@/api/book'
+import { createBook, getBook, updateBook } from '@/api/book'
 
 const defaultForm = {
   title: '', // 书名
@@ -214,41 +214,63 @@ export default {
       }
     }
   },
+  created() {
+    if (this.isEdit) {
+      const fileName = this.$route.params.fileName
+      this.getBookData(fileName)
+    }
+  },
   methods: {
+    getBookData(fileName) {
+      getBook(fileName).then(res => {
+        this.setData(res.data)
+      })
+    },
     showGuide() {
       console.log('showGuide')
     },
     submitForm() {
-      this.loading = true
-      this.$refs.postForm.validate((valid, fields) => {
-        if (valid) {
-          const book = { ...this.postForm }
-          delete book.contents
-          delete book.contentsTree
-          console.log(book)
-          if (!this.isEdit) {
-            createBook(book).then(res => {
-              const { msg } = res
-              this.$notify({
-                title: '操作成功',
-                message: msg,
-                type: 'success',
-                duration: 2000
+      const onSuccess = (res) => {
+        const { msg } = res
+        this.$notify({
+          title: '操作成功',
+          message: msg,
+          type: 'success',
+          duration: 2000
+        })
+        this.loading = false
+      }
+      if (!this.loading) {
+        this.loading = true
+        this.$refs.postForm.validate((valid, fields) => {
+          this.loading = true
+          if (valid) {
+            const book = { ...this.postForm }
+            delete book.contents
+            delete book.contentsTree
+            console.log(book)
+            if (!this.isEdit) {
+              createBook(book).then(res => {
+                onSuccess(res)
+                this.setDefault()
+              }).catch(() => {
+                this.loading = false
               })
-              this.loading = false
-              this.setDefault()
-            }).catch(() => {
-              this.loading = false
-            })
+            } else {
+              updateBook(book).then(res => {
+                onSuccess(res)
+                this.loading = false
+              }).catch(() => {
+                this.loading = false
+              })
+            }
           } else {
-            // updateBook(book)
+            const message = fields[Object.keys(fields)[0]][0].message
+            this.$message({ message, type: 'info' })
+            this.loading = false
           }
-        } else {
-          const message = fields[Object.keys(fields)[0]][0].message
-          this.$message({ message, type: 'info' })
-          this.loading = false
-        }
-      })
+        })
+      }
     },
     onContentClick(data) {
       const { text } = data
@@ -290,6 +312,7 @@ export default {
         unzipPath
       }
       this.contentsTree = contentsTree
+      this.fileList = [{ name: originalName || fileName, url }]
     },
     setDefault() {
       this.postForm = Object.assign({}, defaultForm)

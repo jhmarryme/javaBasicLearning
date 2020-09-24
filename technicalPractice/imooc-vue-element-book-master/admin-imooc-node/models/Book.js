@@ -1,12 +1,14 @@
 const fs = require('fs')
 const Epub = require('../utils/epub')
-const { UPDATE_TYPE_FROM_WEB } = require("../utils/constant");
 const xml2js = require('xml2js').parseString
 
 const {
   MIME_TYPE_EPUB,
   UPLOAD_URL,
-  UPLOAD_PATH } = require("../utils/constant");
+  UPLOAD_PATH,
+  OLD_UPLOAD_URL,
+  UPDATE_TYPE_FROM_WEB
+} = require("../utils/constant");
 
 class Book {
   constructor(file, data) {
@@ -125,8 +127,8 @@ class Book {
                 reject(err)
               } else {
                 const suffix = mimeType.split('/')[1]
-                const coverPath = `${UPLOAD_PATH}/img/${this.fileName}${suffix}`
-                const coverUrl = `${UPLOAD_URL}/img/${this.fileName}${suffix}`
+                const coverPath = `${UPLOAD_PATH}/img/${this.fileName}.${suffix}`
+                const coverUrl = `${UPLOAD_URL}/img/${this.fileName}.${suffix}`
                 fs.writeFileSync(coverPath, imgBuffer, 'binary')
                 this.coverPath = `/img/${this.fileName}.${suffix}`
                 this.cover = coverUrl
@@ -323,15 +325,20 @@ class Book {
   }
 
   reset() {
+    console.log('this', this)
+    console.log(Book.pathExists(this.path))
     if (this.path && Book.pathExists(this.path)) {
       fs.unlinkSync(Book.genPath(this.path))
     }
+    console.log(Book.pathExists(this.filePath))
     if (this.filePath && Book.pathExists(this.filePath)) {
       fs.unlinkSync(Book.genPath(this.filePath))
     }
+    console.log(Book.pathExists(this.coverPath))
     if (this.coverPath && Book.pathExists(this.coverPath)) {
       fs.unlinkSync(Book.genPath(this.coverPath))
     }
+    console.log(Book.pathExists(this.unzipPath))
     if (this.unzipPath && Book.pathExists(this.unzipPath)) {
       // 注意node低版本将不支持第二个属性
       fs.rmdirSync(Book.genPath(this.unzipPath), { recursive: true })

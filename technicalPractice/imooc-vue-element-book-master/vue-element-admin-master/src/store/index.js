@@ -14,6 +14,14 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
   const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
   const value = modulesFiles(modulePath)
   modules[moduleName] = value.default
+  // console.log(typeof modulesFiles)
+  // console.log('moduleName', moduleName)
+  // console.log('value', value)
+  // console.log('modules[moduleName]', modules[moduleName])
+  // console.log('modules', modules)
+  // console.log('modules', typeof modules)
+  // console.log('======================')
+  // console.log('\n')
   return modules
 }, {})
 
