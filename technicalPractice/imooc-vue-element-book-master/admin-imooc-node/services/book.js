@@ -169,6 +169,8 @@ async function clear() {
 }
 
 async function listBook(p) {
+
+  console.log(p)
   const {
     page = 1,
     pageSize = 20,

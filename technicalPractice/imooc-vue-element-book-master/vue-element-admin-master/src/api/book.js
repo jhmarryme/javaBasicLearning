@@ -30,3 +30,11 @@ export function getCategory() {
     method: 'get'
   })
 }
+
+export function getList(params) {
+  return request({
+    url: '/book/list',
+    method: 'get',
+    params
+  })
+}

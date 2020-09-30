@@ -68,14 +68,66 @@
       border
       fit
       highlight-current-row
-    />
+      @sort-change="sortChange"
+    >
+      <el-table-column
+        prop="id"
+        label="ID"
+        sortable="custom"
+        width="80"
+        align="center"
+      />
+      <el-table-column
+        label="书名"
+        width="150"
+        align="center"
+      >
+        <template v-slot="{ row : {title} }">
+          {{ title }}
+        </template>
+      </el-table-column>
+      <el-table-column
+        label="作者"
+        width="150"
+        align="center"
+        prop="author"
+      />
+      <el-table-column
+        label="作者"
+        width="150"
+        align="center"
+        prop="publisher"
+      />
+      <el-table-column
+        label="分类"
+        width="150"
+        align="center"
+        prop="categoryText"
+      />
+      <el-table-column
+        label="语言"
+        align="center"
+        prop="language"
+      />
+      <el-table-column
+        v-if="showCover"
+        label="封面"
+        align="center"
+      >
+        <template v-slot="{ row: { cover } }">
+          <a :href="cover" target="_blank">
+            <img :src="cover" style="width: 120px;height: 180px">
+          </a>
+        </template>
+      </el-table-column>
+    </el-table>
     <pagination :total="0" />
   </div>
 </template>
 
 <script>
 import Pagination from '@/components/Pagination/index'
-import { getCategory } from '@/api/book'
+import { getCategory, getList } from '@/api/book'
 
 export default {
   name: 'List',
@@ -87,13 +139,27 @@ export default {
       showCover: false,
       list: [],
       tableKey: 0,
-      isLoading: true
+      isLoading: false
     }
   },
   mounted() {
+    this.getList()
     this.getCategoryList()
   },
   methods: {
+    getList() {
+      this.loading = true
+      getList(this.listQuery).then(res => {
+        console.log('res.data', res.data)
+        this.list = res.data
+        this.loading = false
+      }).catch(() => {
+        this.loading = false
+      })
+    },
+    sortChange(data) {
+      console.log('sortChange', data)
+    },
     getCategoryList() {
       getCategory().then(res => {
         this.categoryList = res.data
@@ -101,6 +167,7 @@ export default {
     },
     handleFilter() {
       console.log('handleFilter')
+      this.getList()
     },
     handleCreate() {
       this.$router.push('/book/create')
