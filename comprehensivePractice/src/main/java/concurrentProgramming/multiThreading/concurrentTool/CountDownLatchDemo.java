@@ -22,6 +22,7 @@ public class CountDownLatchDemo {
 
     @Test
     public void demo() {
+        // 开启一个主线程, 当所有子线程都执行完毕后, 才会进行后续的操作
         new Thread(() -> {
             System.out.println("Teacher " + Thread.currentThread().getName() + " is starting");
             try {
@@ -33,10 +34,11 @@ public class CountDownLatchDemo {
             System.out.println("Teacher is running");
         }).start();
 
+        // 开启n个子线程
         Stream.iterate(0, integer -> integer + 1).limit(10).forEach(integer -> {
             new Thread(() -> {
                 System.out.println("Student " + Thread.currentThread().getName() + "is ready");
-                // 子线程发起就绪指令
+                // 执行完毕后, 子线程发起就绪指令
                 countDownLatch.countDown();
             }).start();
         });

@@ -22,11 +22,12 @@ public class CyclicBarrierDemo {
     @Test
     public void whenCyclicBarrierSuccess() {
 
+        // 创建一个CyclicBarrier, 等待所有子线程就绪后执行
         cyclicBarrier = new CyclicBarrier(WORKER_COUNT, () -> {
             System.out.println(WORKER_COUNT + "个工人已就位，可以开始干活了...");
         });
 
-        // 当所有子线程都就位, 子线程才会继续后续的工作
+        // 子线程相互等待, 当所有子线程都就位, 子线程才会继续后续的工作(先执行主线程)
         Stream.iterate(0, integer -> integer + 1).limit(WORKER_COUNT).forEach(integer -> {
             new Thread(() -> {
                 System.out.println(Thread.currentThread().getName() + " 就位");
@@ -35,6 +36,7 @@ public class CyclicBarrierDemo {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                // 在主线程后执行
                 System.out.println(Thread.currentThread().getName() + " 开始干活了");
             }).start();
         });

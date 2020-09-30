@@ -17,14 +17,22 @@ public class SemaphoreDemo {
     public static final Integer PERSON_NUMBER = 6;
 
     public static void main(String[] args) {
+        // 开启一个 拥有两个位置的电影院
         Cinema cinema = new Cinema(SETS_NUMBER);
 
+        // 6个人开始观看电影, 同时只能有两个人观看
         for (int i = 0; i < PERSON_NUMBER; i++) {
             new Thread(new Person(cinema)).start();
         }
     }
 }
 
+/**
+ * Description: 包含n个座位(信号量)的电影院
+ * @Author: Wjh
+ * @Date: 2020/9/30 10:46
+ * Modified By:
+ */
 class Cinema {
     private Semaphore semaphore;
 
@@ -35,8 +43,9 @@ class Cinema {
 
     public void watchMovie() {
         try {
-            // 获取到信号量后 执行后续步骤
+            // 只有获取到信号量后 才能执行后续步骤
             semaphore.acquire();
+            
             long time = (long) (Math.random() * 10 + 1);
             System.out.println(Thread.currentThread().getName() + "看了" + time + "秒的电影");
             Thread.sleep(time);
@@ -44,7 +53,7 @@ class Cinema {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            // 释放
+            // 释放信号量
             semaphore.release();
         }
     }
