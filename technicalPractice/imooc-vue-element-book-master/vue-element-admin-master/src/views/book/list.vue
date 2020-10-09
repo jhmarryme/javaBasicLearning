@@ -82,16 +82,19 @@
         width="150"
         align="center"
       >
-        <template v-slot="{ row : {title} }">
-          {{ title }}
+        <template v-slot="{ row : {titleWrapper} }">
+          <span v-html="titleWrapper" />
         </template>
       </el-table-column>
       <el-table-column
         label="作者"
         width="150"
         align="center"
-        prop="author"
-      />
+      >
+        <template v-slot="{ row : {authorWrapper} }">
+          <span v-html="authorWrapper" />
+        </template>
+      </el-table-column>
       <el-table-column
         label="作者"
         width="150"
@@ -120,18 +123,89 @@
           </a>
         </template>
       </el-table-column>
+      <el-table-column
+        width="120"
+        label="文件名"
+        prop="fileName"
+        align="center"
+      />
+      <el-table-column
+        width="120"
+        label="文件路径"
+        prop="filePath"
+        align="center"
+      >
+        <template v-slot="{ row : { filePath } }">
+          {{ filePath | valueFilter }}
+        </template>
+      </el-table-column>
+      <el-table-column
+        width="120"
+        label="封面路径"
+        prop="coverPath"
+        align="center"
+      />
+      <el-table-column
+        width="120"
+        label="解压路径"
+        prop="unzipPath"
+        align="center"
+      />
+      <el-table-column
+        width="120"
+        label="上传人"
+        prop="createUser"
+        align="center"
+      />
+      <el-table-column
+        width="120"
+        label="上传时间"
+        prop="createDt"
+        align="center"
+      >
+        <template v-slot="{ row : { createDt } }">
+          {{ createDt | timeFilter }}
+        </template>
+      </el-table-column>
+      <el-table-column
+        width="120"
+        label="操作"
+        align="center"
+        fixed="right"
+      >
+        <template v-slot="{ row }">
+          <el-button type="text" icon="el-icon-edit" @click="handleUpdate(row)" />
+          <el-button type="text" icon="el-icon-delete" @click="handleDelete(row)" />
+        </template>
+      </el-table-column>
     </el-table>
-    <pagination :total="0" />
+    <pagination
+      v-show="total > 0"
+      :total="total"
+      :page.sync="listQuery.page"
+      :limit.sync="listQuery.pageSize"
+      :auto-scroll="false"
+      @pagination="getList"
+    />
   </div>
 </template>
 
 <script>
 import Pagination from '@/components/Pagination/index'
-import { getCategory, getList } from '@/api/book'
+import { deleteBook, getCategory, getList } from '@/api/book'
+import { parseTime } from '@/utils'
 
 export default {
   name: 'List',
   components: { Pagination },
+  filters: {
+    valueFilter(value) {
+      return value || '/'
+    },
+    timeFilter(time) {
+      return time ? parseTime(time, '') : '/'
+    }
+  },
   data() {
     return {
       listQuery: {},
@@ -139,26 +213,75 @@ export default {
       showCover: false,
       list: [],
       tableKey: 0,
-      isLoading: false
+      isLoading: false,
+      total: 0
     }
+  },
+  created() {
+    this.parseQuery()
   },
   mounted() {
     this.getList()
     this.getCategoryList()
   },
   methods: {
+    parseQuery() {
+      const listQuery = {
+        page: 1,
+        pageSize: 20,
+        sort: '+id'
+      }
+      this.listQuery = { ...listQuery, ...this.listQuery }
+    },
+    /**
+       * 对listQuery里的查询内容 在结果中 进行 高亮显示
+       * @param k
+       * @param v
+       * @returns {*}
+       */
+    wrapperKeyword(k, v) {
+      // 高亮显示, 包装一层 带颜色的span
+      function highlight(value) {
+        return `<span style="color: #0a76a4">${value}</span>`
+      }
+
+      // 查询条件不为空时
+      if (!this.listQuery[k]) {
+        return v
+      } else {
+        // 从查询结果中找到 查询内容, 将其替换为 高亮显示
+        return v.replace(new RegExp(this.listQuery[k], 'ig'), v => highlight(v))
+      }
+    },
     getList() {
       this.loading = true
       getList(this.listQuery).then(res => {
         console.log('res.data', res.data)
         this.list = res.data
+        this.total = res.total
         this.loading = false
+        this.list.forEach(book => {
+          // 包装后的title 和 author, k 为 listQuery中的title, v 为 查询结果中的title字段
+          book.titleWrapper = this.wrapperKeyword('title', book.title)
+          book.authorWrapper = this.wrapperKeyword('author', book.author)
+        })
       }).catch(() => {
         this.loading = false
       })
     },
+    sortBy(prop, order) {
+      if (order === 'descending') {
+        this.listQuery.sort = `-${prop}`
+      } else {
+        this.listQuery.sort = `+${prop}`
+      }
+    },
     sortChange(data) {
       console.log('sortChange', data)
+
+      const { prop, order } = data
+      this.sortBy(prop, order)
+      this.handleFilter()
     },
     getCategoryList() {
       getCategory().then(res => {
@@ -171,6 +294,31 @@ export default {
     },
     handleCreate() {
       this.$router.push('/book/create')
+    },
+    handleUpdate(row) {
+      console.log('handleUpdate', row)
+      this.$router.push(`/book/edit/${row.fileName}`)
+    },
+    handleDelete(row) {
+      console.log('handleDelete', row)
+      this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        deleteBook(row.fileName).then(res => {
+          this.$message({
+            type: 'success',
+            message: '删除成功!'
+          })
+          this.getList()
+        })
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消删除'
+        })
+      })
     }
   }
 }

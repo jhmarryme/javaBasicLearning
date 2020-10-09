@@ -185,7 +185,7 @@ async function listBook(p) {
   let where = 'where'
   title && (where = db.andLike(where, 'title', title))
   author && (where = db.andLike(where, 'author', author))
-  category && (where = db.and(where, 'categoryText', category))
+  category && (where = db.and(where, 'category', category))
   if (where !== 'where') {
     bookSql = `${bookSql} ${where}`
   }
