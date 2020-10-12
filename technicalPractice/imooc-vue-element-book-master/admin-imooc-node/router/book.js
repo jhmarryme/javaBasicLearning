@@ -126,7 +126,7 @@ router.get('/clear', function(req, res, next) {
 
 router.get('/category', function(req, res, next) {
   bookService.getCategory().then(category => {
-    new Result(category).success(res)
+    new Result(category, "获取图书分类信息成功").success(res)
   }).catch(err => {
     next(boom.badImplementation(err))
   })

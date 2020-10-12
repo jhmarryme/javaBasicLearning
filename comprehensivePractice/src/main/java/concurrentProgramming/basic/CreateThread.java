@@ -1,7 +1,6 @@
 package concurrentProgramming.basic;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
@@ -19,7 +18,8 @@ public class CreateThread {
         }).start();
 
 
-        final FutureTask<String> futureTask = new FutureTask<>(new implCallableThread());
+        // 将Callable包装成FutureTask，FutureTask也是一种Runnable
+        final FutureTask<String> futureTask = new FutureTask<>(new ImplCallableThread());
         new Thread(futureTask).start();
         try {
             final String s = futureTask.get();
@@ -38,7 +38,7 @@ class ExtendThread extends Thread{
 }
 
 
-class implRunnableThread implements Runnable{
+class ImplRunnableThread implements Runnable{
 
     @Override
     public void run() {
@@ -46,7 +46,7 @@ class implRunnableThread implements Runnable{
     }
 }
 
-class implCallableThread implements Callable<String>{
+class ImplCallableThread implements Callable<String>{
 
 
     @Override

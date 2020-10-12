@@ -218,6 +218,8 @@ export default {
     if (this.isEdit) {
       const fileName = this.$route.params.fileName
       this.getBookData(fileName)
+    } else {
+      this.postForm = defaultForm
     }
   },
   methods: {
