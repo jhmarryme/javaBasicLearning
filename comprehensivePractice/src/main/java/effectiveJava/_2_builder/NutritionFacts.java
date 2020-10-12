@@ -2,7 +2,7 @@ package effectiveJava._2_builder;
 
 import lombok.*;
 
-/*
+/**
  * Description: 2.当构造方法参数过多时使用 builder 模式
  *  这里使用lombok的注解实现
  * @Author: Wjh

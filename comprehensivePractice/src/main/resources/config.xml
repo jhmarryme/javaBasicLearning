@@ -6,8 +6,8 @@
     <manType>m</manType>
     <rebotType>r</rebotType>
 
-    <fileLoggerFactory>designPatternLesson.factoryMethod.FileLoggerFactory</fileLoggerFactory>
-    <dataBaseLoggerFactory>designPatternLesson.factoryMethod.DataBaseLoggerFactory</dataBaseLoggerFactory>
+    <fileLoggerFactory>designPatternLesson.creational.factoryMethod.FileLoggerFactory</fileLoggerFactory>
+    <dataBaseLoggerFactory>designPatternLesson.creational.factoryMethod.DataBaseLoggerFactory</dataBaseLoggerFactory>
     <macFactory>designPatternLesson.abstractFactory.MacFactory</macFactory>
     <pcFactory>designPatternLesson.abstractFactory.PcFactory</pcFactory>
 

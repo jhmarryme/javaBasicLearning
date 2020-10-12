@@ -1,4 +1,4 @@
-package designPatternLesson.singleton;
+package designPatternLesson.creational.singleton;
 
 /**
  * description: effectiveJava 推荐的单例模式
@@ -8,6 +8,7 @@ package designPatternLesson.singleton;
  * @Modified By:
  */
 public enum SingletonExample {
+    // 单例
     INSTANCE;
 
     public void leaveTheBuilding() {
