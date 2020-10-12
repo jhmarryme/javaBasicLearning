@@ -31,7 +31,7 @@
         <el-option
           v-for="item in categoryList"
           :key="item.value"
-          :value="item.value"
+          :value="item.label"
           :label="item.label + '(' + item.num + ')'"
         />
       </el-select>
@@ -68,6 +68,7 @@
       border
       fit
       highlight-current-row
+      :default-sort="defaultSort"
       @sort-change="sortChange"
     >
       <el-table-column
@@ -185,7 +186,7 @@
       :page.sync="listQuery.page"
       :limit.sync="listQuery.pageSize"
       :auto-scroll="false"
-      @pagination="getList"
+      @pagination="refresh"
     />
   </div>
 </template>
@@ -214,11 +215,23 @@ export default {
       list: [],
       tableKey: 0,
       isLoading: false,
-      total: 0
+      total: 0,
+      defaultSort: {}
     }
   },
   created() {
     this.parseQuery()
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log(to, from)
+    if (to.path === from.path) {
+      const newQuery = Object.assign({}, to.query)
+      const oldQuery = Object.assign({}, from.query)
+      if (JSON.stringify(newQuery) !== JSON.stringify(oldQuery)) {
+        this.getList()
+      }
+    }
+    next()
   },
   mounted() {
     this.getList()
@@ -226,12 +239,25 @@ export default {
   },
   methods: {
     parseQuery() {
+      const query = Object.assign({}, this.$route.query)
+      let sort = '+id'
       const listQuery = {
         page: 1,
         pageSize: 20,
-        sort: '+id'
+        sort
       }
-      this.listQuery = { ...listQuery, ...this.listQuery }
+      if (query) {
+        query.page && (query.page = +query.page)
+        query.pageSize && (query.pageSize = +query.pageSize)
+        query.sort && (sort = query.sort)
+      }
+      const sortSymbol = sort[0]
+      const sortColumn = sort.slice(1, sort.length)
+      this.defaultSort = {
+        prop: sortColumn,
+        order: sortSymbol === '+' ? 'ascending' : 'descending'
+      }
+      this.listQuery = { ...listQuery, ...query }
     },
     /**
        * 对listQuery里的查询内容 在结果中 进行 高亮显示
@@ -288,9 +314,17 @@ export default {
         this.categoryList = res.data
       })
     },
+    refresh() {
+      this.$router.push({
+        path: '/book/list',
+        query: this.listQuery
+      })
+    },
     handleFilter() {
       console.log('handleFilter')
-      this.getList()
+      this.listQuery.page = 1
+      this.refresh()
+      // this.getList()
     },
     handleCreate() {
       this.$router.push('/book/create')
