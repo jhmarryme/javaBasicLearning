@@ -38,7 +38,6 @@ public class Customer {
             double thisAmount = 0;
             // 取得一笔租借记。
             Rental each = (Rental) rentals.nextElement();
-            thisAmount = amountFor(each);
             // add frequent renter points （累计常客积点。
             frequentRenterPoints++;
             // add bonus for a two day new release rental
@@ -48,8 +47,8 @@ public class Customer {
             }
             // show figures for this rental（显示此笔租借记录）
             result += "\t" + each.getMovie().getTitle() + "\t"
-                    + String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
+                    + String.valueOf(each.getCharge()) + "\n";
+            totalAmount += each.getCharge();
         }
         // add footer lines（结尾打印）
         result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
@@ -58,30 +57,4 @@ public class Customer {
         return result;
     }
 
-    private double amountFor(Rental each) {
-        double thisAmount = 0;
-        // determine amounts for each line
-        // 取得影片出租价格
-        switch (each.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount += 2;
-                if (each.getDaysRented() > 2) {
-                    thisAmount += (each.getDaysRented() - 2) * 1.5;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount += each.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount += 1.5;
-                if (each.getDaysRented() > 3) {
-                    thisAmount += (each.getDaysRented() - 3) * 1.5;
-                }
-                break;
-            default:
-                thisAmount += 0;
-                break;
-        }
-        return thisAmount;
-    }
 }

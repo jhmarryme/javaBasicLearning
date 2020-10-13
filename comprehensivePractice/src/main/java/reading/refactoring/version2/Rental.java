@@ -24,4 +24,31 @@ public class Rental {
     public Movie getMovie() {
         return _movie;
     }
+
+    public double getCharge() {
+        double thisAmount = 0;
+        // determine amounts for aRental line
+        // 取得影片出租价格
+        switch (getMovie().getPriceCode()) {
+            case Movie.REGULAR:
+                thisAmount += 2;
+                if (getDaysRented() > 2) {
+                    thisAmount += (getDaysRented() - 2) * 1.5;
+                }
+                break;
+            case Movie.NEW_RELEASE:
+                thisAmount += getDaysRented() * 3;
+                break;
+            case Movie.CHILDRENS:
+                thisAmount += 1.5;
+                if (getDaysRented() > 3) {
+                    thisAmount += (getDaysRented() - 3) * 1.5;
+                }
+                break;
+            default:
+                thisAmount += 0;
+                break;
+        }
+        return thisAmount;
+    }
 }
