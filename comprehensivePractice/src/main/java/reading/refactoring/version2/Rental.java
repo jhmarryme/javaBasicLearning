@@ -51,4 +51,14 @@ public class Rental {
         }
         return thisAmount;
     }
+
+    public int getFrequentRenterPoints() {
+        // 累计常客积点 默认1, 属于NEW_RELEASE的电影并且借出天数大于1的 再加1
+        if ((this.getMovie().getPriceCode() == Movie.NEW_RELEASE)
+                && this.getDaysRented() > 1) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
 }
