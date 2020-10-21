@@ -7,7 +7,8 @@ import designPatternLesson.creational.builder.product.Actor;
 import org.junit.jupiter.api.Test;
 
 /**
- * description: 
+ * description: 建造者模式
+ *     分步骤创建复杂对象。 该模式允许你使用相同的创建代码生成不同类型和形式的对象。
  * @Author: Wjh
  * @Date: 2020/10/12 12:13
  * @Modified By:

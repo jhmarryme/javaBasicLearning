@@ -46,6 +46,7 @@ public class OptionalTestDrive {
 
         // 2. ofNullable
         Optional.ofNullable(student).ifPresent(System.out::println);
+
         Student emptyStudent = CreateUtils.createStudent(true);
         // Student(id=null, name=null, age=null, sex=null)
         Optional.ofNullable(emptyStudent).ifPresent(System.out::println);
