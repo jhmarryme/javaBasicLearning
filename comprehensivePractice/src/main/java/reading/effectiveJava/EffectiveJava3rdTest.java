@@ -1,9 +1,9 @@
-package effectiveJava;
+package reading.effectiveJava;
 
-import effectiveJava._10_equalswithrules.CaseInsensitiveString;
-import effectiveJava._2_builder.NutritionFacts;
-import effectiveJava._6_notnecessaryobject.RomanNumerals;
-import effectiveJava._3_singleton.SingletonWithEnum;
+import reading.effectiveJava._10_equalswithrules.CaseInsensitiveString;
+import reading.effectiveJava._2_builder.NutritionFacts;
+import reading.effectiveJava._6_notnecessaryobject.RomanNumerals;
+import reading.effectiveJava._3_singleton.SingletonWithEnum;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -39,8 +39,8 @@ public class EffectiveJava3rdTest {
         System.out.println("RomanNumerals.isRomanNumeral(\"IV\") = " + RomanNumerals.isRomanNumeral("IV"));
         System.out.println("RomanNumerals.isRomanNumeral(\"IV1\") = " + RomanNumerals.isRomanNumeral("IV1"));
 
-        long start = 0l;
-        long end = 0l;
+        long start = 0L;
+        long end = 0L;
 
         // 进行了自动装箱的运行时间 11431
         start = System.currentTimeMillis();

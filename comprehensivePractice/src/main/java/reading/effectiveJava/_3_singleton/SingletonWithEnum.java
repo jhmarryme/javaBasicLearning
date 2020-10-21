@@ -1,4 +1,4 @@
-package effectiveJava._3_singleton;
+package reading.effectiveJava._3_singleton;
 
 import lombok.*;
 

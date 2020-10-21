@@ -1,7 +1,7 @@
 package designPatternLesson.creational.singleton;
 
 /**
- * description: effectiveJava 推荐的单例模式
+ * description: reading.effectiveJava 推荐的单例模式
  *
  * @Author: Wjh
  * @Date: 2020/8/12 11:20

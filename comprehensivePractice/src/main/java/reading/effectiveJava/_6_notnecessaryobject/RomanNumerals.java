@@ -1,4 +1,4 @@
-package effectiveJava._6_notnecessaryobject;
+package reading.effectiveJava._6_notnecessaryobject;
 
 import java.util.regex.Pattern;
 

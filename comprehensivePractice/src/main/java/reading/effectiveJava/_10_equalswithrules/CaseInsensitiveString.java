@@ -1,4 +1,4 @@
-package effectiveJava._10_equalswithrules;
+package reading.effectiveJava._10_equalswithrules;
 
 import java.util.Objects;
 

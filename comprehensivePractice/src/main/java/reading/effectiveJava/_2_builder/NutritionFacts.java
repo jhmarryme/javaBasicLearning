@@ -1,4 +1,4 @@
-package effectiveJava._2_builder;
+package reading.effectiveJava._2_builder;
 
 import lombok.*;
 

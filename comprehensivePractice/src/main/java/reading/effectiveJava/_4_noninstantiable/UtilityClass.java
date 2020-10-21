@@ -1,4 +1,4 @@
-package effectiveJava._4_noninstantiable;
+package reading.effectiveJava._4_noninstantiable;
 
 /**
  * description: 4. 使用私有构造方法执行非实例化
