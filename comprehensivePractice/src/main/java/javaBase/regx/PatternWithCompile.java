@@ -34,14 +34,14 @@ public class PatternWithCompile {
         }
 
         // Java 9 以后寻找子串
-        /*List<String> collect = Pattern.compile(regex)
+        List<String> collect = Pattern.compile(regex)
                 .matcher(request)
                 .results()
                 .map(MatchResult::group)
                 .collect(Collectors.toList());
         collect.forEach( s1 ->
             System.out.println("s1 = " + s1)
-        );*/
+        );
 
     }
 }

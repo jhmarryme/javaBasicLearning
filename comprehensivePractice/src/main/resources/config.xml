@@ -6,12 +6,12 @@
     <manType>m</manType>
     <rebotType>r</rebotType>
 
-    <fileLoggerFactory>designPatternLesson.creational.factoryMethod.FileLoggerFactory</fileLoggerFactory>
-    <dataBaseLoggerFactory>designPatternLesson.creational.factoryMethod.DataBaseLoggerFactory</dataBaseLoggerFactory>
-    <macFactory>designPatternLesson.abstractFactory.MacFactory</macFactory>
-    <pcFactory>designPatternLesson.abstractFactory.PcFactory</pcFactory>
+    <fileLoggerFactory>reading.designPatternLesson.creational.factoryMethod.FileLoggerFactory</fileLoggerFactory>
+    <dataBaseLoggerFactory>reading.designPatternLesson.creational.factoryMethod.DataBaseLoggerFactory</dataBaseLoggerFactory>
+    <macFactory>reading.designPatternLesson.abstractFactory.MacFactory</macFactory>
+    <pcFactory>reading.designPatternLesson.abstractFactory.PcFactory</pcFactory>
 
-    <commandClassName>designPatternLesson.command.HelpCommand</commandClassName>
+    <commandClassName>reading.designPatternLesson.command.HelpCommand</commandClassName>
 </config>
 
 
