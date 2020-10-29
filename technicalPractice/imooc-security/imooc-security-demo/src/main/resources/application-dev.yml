@@ -7,8 +7,8 @@ spring:
   #    暂时关闭session配置
   session:
     store-type: none
-security:
-  basic:
-    enabled: false
+#security:
+#  basic:
+#    enabled: false
 swagger:
   enable: false
