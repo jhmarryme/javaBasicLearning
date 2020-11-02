@@ -1,4 +1,4 @@
-package reading.guava.baseUtil;
+package reading.guava.baseutil;
 
 import base.entity.Student;
 import com.google.common.base.Preconditions;
