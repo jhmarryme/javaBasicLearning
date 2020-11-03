@@ -32,7 +32,7 @@ public class MyUserDetailsService implements UserDetailsService {
                 true,
                 true,
                 true,
-                false,
+                true,
                 AuthorityUtils.commaSeparatedStringToAuthorityList("admin, super_admin"));
     }
 }
