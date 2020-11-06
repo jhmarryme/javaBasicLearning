@@ -45,9 +45,9 @@ public class UserController {
             direction = Sort.Direction.DESC) Pageable pageable) {
 
         // 使用反射工具类打印condition
-        System.out.println(ReflectionToStringBuilder.toString(condition, ToStringStyle.MULTI_LINE_STYLE));
+//        System.out.println(ReflectionToStringBuilder.toString(condition, ToStringStyle.MULTI_LINE_STYLE));
 
-        System.out.println(ReflectionToStringBuilder.toString(pageable, ToStringStyle.MULTI_LINE_STYLE));
+//        System.out.println(ReflectionToStringBuilder.toString(pageable, ToStringStyle.MULTI_LINE_STYLE));
 
         ArrayList<User> users = new ArrayList<>();
         users.add(new User());

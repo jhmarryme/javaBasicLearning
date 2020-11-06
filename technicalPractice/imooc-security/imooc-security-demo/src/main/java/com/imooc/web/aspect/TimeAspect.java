@@ -16,7 +16,7 @@ import java.util.Date;
  * @Modified By:
  */
 @Aspect
-@Component
+//@Component
 public class TimeAspect {
 
     @Around("execution(* com.imooc.web.controller.UserController.*(..))")
