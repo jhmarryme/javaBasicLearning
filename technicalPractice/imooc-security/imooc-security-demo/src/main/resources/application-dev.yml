@@ -11,4 +11,4 @@ spring:
 #  basic:
 #    enabled: false
 swagger:
-  enable: false
+  enable: true
