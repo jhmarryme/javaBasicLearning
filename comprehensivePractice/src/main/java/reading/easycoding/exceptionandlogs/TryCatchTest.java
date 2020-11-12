@@ -4,6 +4,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigDecimal;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -34,7 +40,7 @@ public class TryCatchTest {
         // 锁必须紧跟try代码块
         lock.lock();
         try {
-            // 如果在这里加锁, 当lock失败抛出异常后 会导致finally中的unlock也发生异常
+            // 如果在这里加锁, 当lock失败抛出异常(IllegalMonitorStateException)后 会导致finally中的unlock也发生异常, 真正加锁失败的异常会被覆盖
             // lock.lock();
         } finally {
             // 必须放到finally第一行。
@@ -77,4 +83,5 @@ public class TryCatchTest {
             System.out.println("finally中其他的操作会被执行");
         }
     }
+
 }
