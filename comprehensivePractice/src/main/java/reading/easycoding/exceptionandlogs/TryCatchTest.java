@@ -23,7 +23,7 @@ public class TryCatchTest {
     @Test
     @DisplayName("try-catch代码块中使用return语句并在finally中操作返回结果")
     public void whenUseReturnInCatch() {
-        // finally是在return表达式后运行,
+        // finally是try或catch中的return表达式后运行的
         System.out.println("finallyNotWork() = " + finallyNotWork());
     }
 
