@@ -1,4 +1,4 @@
-package reading.easycoding.datetype.collectionsandarrays;
+package reading.easycoding.datetype.collections.witharrays;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
