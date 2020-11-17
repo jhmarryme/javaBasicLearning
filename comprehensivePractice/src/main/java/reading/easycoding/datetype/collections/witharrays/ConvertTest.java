@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class ConvertTest {
 
-    private static int INITIAL_CAPACITY = 100 * 100 * 100;
+    private static final int INITIAL_CAPACITY = 100 * 100 * 100;
 
     @Test
     @DisplayName("数组正常转换为集合")
