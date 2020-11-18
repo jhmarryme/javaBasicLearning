@@ -19,7 +19,6 @@ import java.util.*;
  */
 public class HashCodeAndEqualsTest {
 
-
     @Test
     @DisplayName("重写equals后, 没有重写hashCode方法时")
     public void whenNotRewriteHashCode() {
@@ -33,6 +32,7 @@ public class HashCodeAndEqualsTest {
         System.out.println("set.size() = " + set.size());
 
     }
+
     @Test
     @DisplayName("重写equals后, 重写hashCode方法时")
     public void whenRewriteHashCode() {

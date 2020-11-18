@@ -17,29 +17,34 @@ import java.util.Arrays;
  * @Modified By:
  */
 public class ComparatorAndComparableTest {
-    private static final SearchResult apple;
-    private static final SearchResult honor;
+
+    /** 用于自定义比较 **/
+    private static final SearchResult HONOR;
+    /** 用于自定义比较 **/
+    private static final SearchResult APPLE;
+
     static {
-        apple = new SearchResult(10, 4);
-        honor = new SearchResult(10, 5);
+        APPLE = new SearchResult(10, 4);
+        HONOR = new SearchResult(10, 5);
     }
 
     @Test
     @DisplayName("自定义comparable")
-    public void customizeComparable(){
+    public void customizeComparable() {
 
-
-        System.out.println("apple.compareTo(honor) = " + apple.compareTo(honor));
+        // 根据对象本身定义的比较规则
+        System.out.println("apple.compareTo(honor) = " + APPLE.compareTo(HONOR));
 
     }
 
     @Test
     @DisplayName("自定义comparator")
     public void customizeComparator() {
-        ArrayList<SearchResult> list = new ArrayList<>(Arrays.asList(apple, honor));
+        ArrayList<SearchResult> list = new ArrayList<>(Arrays.asList(APPLE, HONOR));
         System.out.println("排序前:");
         list.forEach(System.out::println);
 
+        // 自定义 外部的比较规则
         list.sort((o1, o2) -> {
             if (o1.relativeRatio != o2.relativeRatio) {
                 return o1.relativeRatio < o2.relativeRatio ? 1 : -1;
@@ -72,7 +77,7 @@ public class ComparatorAndComparableTest {
         @Override
         public int compareTo(SearchResult o) {
             // 先比较相关度
-            if (this.relativeRatio!= o.relativeRatio) {
+            if (this.relativeRatio != o.relativeRatio) {
                 return this.relativeRatio > o.relativeRatio ? 1 : -1;
             }
 
