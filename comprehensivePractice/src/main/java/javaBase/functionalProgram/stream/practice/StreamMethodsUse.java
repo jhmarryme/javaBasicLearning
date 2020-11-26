@@ -126,7 +126,7 @@ public class StreamMethodsUse {
      * Stream<T> dropWhile(Predicate<? super T> predicate) 9
      */
     @Test
-    public void  extractingSubstreamsandCombiningStreams() {
+    public void extractingSubstreamsAndCombiningStreams() {
 
         // 为真时丢弃元素, 产生一个由第一个使该条件为假的字符开始的所有元素构成的流
         // 丢弃 不是以 'ca' 开头的
@@ -364,8 +364,13 @@ public class StreamMethodsUse {
         // 分为使用英语和使用其他语言的两类
         Map<Boolean, List<Locale>> englishAndOtherLocales = Stream.of(Locale.getAvailableLocales())
                 .collect(Collectors.partitioningBy(
-                        locale -> locale.getLanguage().equals("en")));
+                        locale -> "en".equals(locale.getLanguage())));
+        System.out.println("======================");
         englishAndOtherLocales.get(true)
+                .forEach(System.out::println);
+
+        System.out.println("======================");
+        englishAndOtherLocales.get(false)
                 .forEach(System.out::println);
     }
 
