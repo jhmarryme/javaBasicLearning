@@ -11,4 +11,6 @@ import lombok.Data;
 @Data
 public class BrowserProperties {
     private String loginPage = "/imooc-login.html";
+
+    private LoginType loginType = LoginType.JSON;
 }
