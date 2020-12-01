@@ -10,7 +10,13 @@ import lombok.Data;
  */
 @Data
 public class BrowserProperties {
+    /**  
+     * 提供默认的登录页面
+     */
     private String loginPage = "/imooc-login.html";
 
+    /**  
+     * 默认的登录返回类型为JSON, 可配置为REDIRECT
+     */
     private LoginType loginType = LoginType.JSON;
 }

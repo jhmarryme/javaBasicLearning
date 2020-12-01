@@ -5,8 +5,13 @@ spring:
     name: imooc-secutity
   profiles:
     active: dev
-#imooc:
-#  security:
+imooc:
+  security:
+    code:
+      image:
+        length: 6
+        width: 200
+        url: /user,/user/*
 #    browser:
 #      loginType: REDIRECT
 #      loginPage: /demo-login.html
