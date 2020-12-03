@@ -19,4 +19,9 @@ public class BrowserProperties {
      * 默认的登录返回类型为JSON, 可配置为REDIRECT
      */
     private LoginType loginType = LoginType.JSON;
+
+    /**
+     * 记住我的默认时间
+     */
+    private int tokenValiditySeconds = 3600;
 }
