@@ -1,6 +1,7 @@
 package com.imooc.security.core.validate.code;
 
-import javax.servlet.http.HttpServletRequest;
+import com.imooc.security.core.validate.code.base.ValidateCode;
+import org.springframework.web.context.request.ServletWebRequest;
 
 /**
  * description: 验证码生成器
@@ -14,7 +15,7 @@ public interface ValidateCodeGenerator {
      * 生成验证码的逻辑
      * <br/>
      * @param request
-     * @return com.imooc.security.core.validate.code.ImageCode
+     * @return com.imooc.security.core.validate.code.base.ImageCode
      */
-    ImageCode generate(HttpServletRequest request);
+    ValidateCode generate(ServletWebRequest request);
 }

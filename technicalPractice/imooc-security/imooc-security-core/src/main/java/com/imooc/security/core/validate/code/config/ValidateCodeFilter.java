@@ -1,6 +1,9 @@
-package com.imooc.security.core.validate.code;
+package com.imooc.security.core.validate.code.config;
 
 import com.imooc.security.core.properties.SecurityProperties;
+import com.imooc.security.core.validate.code.ValidateCodeProcessor;
+import com.imooc.security.core.validate.code.base.ImageCode;
+import com.imooc.security.core.validate.code.base.ValidateCodeException;
 import lombok.Data;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
@@ -41,21 +44,21 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
      */
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
-    /**  
+    /**
      * 验证请求url与配置的url是否匹配的工具类
      */
     private AntPathMatcher antPathMatcher = new AntPathMatcher();
 
-    /**  
+    /**
      * 系统配置
      */
     private SecurityProperties securityProperties;
 
-    /**  
+    /**
      * 存放需要拦截的urls
      */
     private Set<String> urls = new HashSet();
-    
+
     @Override
     public void afterPropertiesSet() throws ServletException {
         super.afterPropertiesSet();
@@ -64,7 +67,8 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     }
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
 
         boolean needValidate = urls.stream().anyMatch(url -> antPathMatcher.match(url.trim(), request.getRequestURI()));
 
@@ -83,7 +87,8 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
 
-        ImageCode codeInSession = (ImageCode) sessionStrategy.getAttribute(request, ValidateController.SESSION_KEY);
+        ImageCode codeInSession = (ImageCode) sessionStrategy.getAttribute(request,
+                ValidateCodeProcessor.SESSION_KEY_PREFIX);
 
         String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
 
@@ -96,7 +101,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         }
 
         if (codeInSession.isExpired()) {
-            sessionStrategy.removeAttribute(request, ValidateController.SESSION_KEY);
+            sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX);
             throw new ValidateCodeException("验证码已过期");
         }
 
@@ -104,7 +109,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
             throw new ValidateCodeException("验证码不匹配");
         }
 
-        sessionStrategy.removeAttribute(request, ValidateController.SESSION_KEY);
+        sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX);
     }
 
 }

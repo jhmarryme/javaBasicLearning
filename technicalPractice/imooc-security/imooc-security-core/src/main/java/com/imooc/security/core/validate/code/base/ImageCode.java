@@ -1,4 +1,4 @@
-package com.imooc.security.core.validate.code;
+package com.imooc.security.core.validate.code.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,13 +14,13 @@ import java.time.LocalDateTime;
  */
 @Data
 @AllArgsConstructor
-public class ImageCode {
+public class ImageCode extends ValidateCode {
 
     /**
      * 图片验证码
      */
     private BufferedImage image;
-    
+
     /**
      * 验证码
      */
@@ -32,20 +32,8 @@ public class ImageCode {
     private LocalDateTime expireTime;
 
     public ImageCode(BufferedImage image, String code, int expireIn) {
+        super(code, expireIn);
         this.image = image;
-        this.code = code;
-        this.expireTime = LocalDateTime.now().plusSeconds(expireIn);
     }
 
-    /**
-     * 验证码是否过期
-     * <br/>
-     * @author Jiahao Wang
-     * @date 2020/11/30 20:05
-     * @param  
-     * @return boolean
-     */
-    public boolean isExpired() {
-        return LocalDateTime.now().isAfter(expireTime);
-    }
 }

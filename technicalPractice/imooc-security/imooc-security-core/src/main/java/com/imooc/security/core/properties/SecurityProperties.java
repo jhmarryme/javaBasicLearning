@@ -18,7 +18,7 @@ public class SecurityProperties {
      */
     private BrowserProperties browser = new BrowserProperties();
 
-    /**  
+    /**
      * 验证码的属性
      */
     private ValidateCodeProperties code = new ValidateCodeProperties();

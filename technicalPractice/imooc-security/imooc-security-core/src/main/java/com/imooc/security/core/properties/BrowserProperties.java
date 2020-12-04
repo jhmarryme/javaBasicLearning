@@ -10,6 +10,7 @@ import lombok.Data;
  */
 @Data
 public class BrowserProperties {
+
     /**  
      * 提供默认的登录页面
      */
