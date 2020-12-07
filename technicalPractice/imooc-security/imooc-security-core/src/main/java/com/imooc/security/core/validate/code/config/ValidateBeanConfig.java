@@ -28,7 +28,7 @@ public class ValidateBeanConfig {
     private SecurityProperties securityProperties;
 
     /**
-     * 当不存在name为imageCodeGenerator的时, 创建一个
+     * 当不存在name为 imageCodeGenerator的bean时, 创建一个
      * 如果用户创建了, 则不创建该bean
      * <br/>
      * @author Jiahao Wang
@@ -45,7 +45,7 @@ public class ValidateBeanConfig {
     }
 
     /**
-     * 当不存在 实现了SmsCodeSender接口的类时, 创建一个
+     * 当不存在实现了 SmsCodeSender接口的类时, 创建一个
      * 如果用户实现了, 则不创建该bean
      * <br/>
      * @author Jiahao Wang

@@ -35,7 +35,8 @@ public class MyUserDetailsService implements UserDetailsService {
         String password = passwordEncoder.encode("123456");
         log.info("密码: {}", password);
         // 使用工具类将字符串转换为 需要的授权对象list
-        return new User(username,
+        return new User(
+                username,
                 password,
                 true,
                 true,

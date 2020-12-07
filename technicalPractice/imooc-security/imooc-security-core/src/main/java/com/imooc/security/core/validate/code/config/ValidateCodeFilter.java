@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * description: 
+ * description: 验证码处理 filter
  * @author: JiaHao Wang
  * @date: 2020/11/30 17:53
  * @modified By:
@@ -57,7 +57,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     /**
      * 存放需要拦截的urls
      */
-    private Set<String> urls = new HashSet();
+    private Set<String> urls = new HashSet<>();
 
     @Override
     public void afterPropertiesSet() throws ServletException {
@@ -81,10 +81,18 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
                 return;
             }
         }
-
         filterChain.doFilter(request, response);
     }
 
+    /**
+     * 验证码校验逻辑
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/7 11:34
+     * @param request
+     * @return void
+     * @throws
+     */
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
 
         ImageCode codeInSession = (ImageCode) sessionStrategy.getAttribute(request,

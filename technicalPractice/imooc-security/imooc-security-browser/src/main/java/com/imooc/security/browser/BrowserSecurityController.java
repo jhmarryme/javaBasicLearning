@@ -30,23 +30,32 @@ import java.util.Optional;
 @Slf4j
 public class BrowserSecurityController {
 
-    /** spring会把请求缓存到该对象 **/
+    /**
+     * spring会把请求缓存到该对象
+     */
     RequestCache requestCache = new HttpSessionRequestCache();
 
+    /**
+     * session工具类
+     */
     RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
+    /**
+     * 系统配置参数类
+     */
     @Autowired
     private SecurityProperties securityProperties;
 
     /**
-     * 当需要身份认证时，跳转到这里
-     *
-     * @Param: [request, response]
-     * @Return: java.lang.String
-     * @Author: Wjh
-     * @Since: 2020/11/9 9:08
-     * @Throws
-     **/
+     * 配置的认证引导页, 当用户未登录时, 判断访问的路径是否是 .html结尾, 如果是 跳转到配置的登录页
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/7 9:13
+     * @param request
+     * @param response
+     * @return com.imooc.security.browser.support.SimpleResponse
+     * @throws
+     */
     @RequestMapping("/authentication/require")
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public SimpleResponse requireAuthentication(HttpServletRequest request, HttpServletResponse response) {
@@ -55,7 +64,11 @@ public class BrowserSecurityController {
                         savedRequest -> {
                             if (StringUtils.endsWithIgnoreCase(savedRequest.getRedirectUrl(), ".html")) {
                                 try {
-                                    redirectStrategy.sendRedirect(request, response, securityProperties.getBrowser().getLoginPage());
+                                    redirectStrategy.sendRedirect(
+                                            request,
+                                            response,
+                                            securityProperties.getBrowser().getLoginPage()
+                                    );
                                 } catch (IOException e) {
                                     log.debug("处理请求url失败: {}", e.getMessage());
                                 }
