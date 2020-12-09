@@ -38,6 +38,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+        // 对密码 使用加密处理
         return new BCryptPasswordEncoder();
     }
 
@@ -47,10 +48,20 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    /**
+     * remember me 配置
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/7 9:15
+     * @param
+     * @return org.springframework.security.web.authentication.rememberme.PersistentTokenRepository
+     * @throws
+     */
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
         tokenRepository.setDataSource(dataSource);
+        // 在首次运行时 在数据库中创建表
         // tokenRepository.setCreateTableOnStartup(true);
         return tokenRepository;
     }
@@ -58,31 +69,39 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+        // 配置自定义的验证码处理过滤器
         ValidateCodeFilter filter = new ValidateCodeFilter();
         filter.setAuthenticationFailureHandler(imoocAuthenticationFailureHandler);
         filter.setSecurityProperties(securityProperties);
         // 需要手动执行
         filter.afterPropertiesSet();
 
+        // 在 UsernamePasswordAuthenticationFilter 前增加一个 ValidateCodeFilter 用于处理验证码逻辑
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
+                // 当未登录时, 跳转的路径
                     .loginPage("/authentication/require")
+                // 登录请求的处理路径
                     .loginProcessingUrl("/authentication/form")
+                // 认证 成功/失败 的处理逻辑
                     .successHandler(imoocAuthenticationSuccessHandler)
                     .failureHandler(imoocAuthenticationFailureHandler)
                     .and()
+                // 配置remember me功能
                 .rememberMe()
                     .tokenRepository(persistentTokenRepository())
                     .tokenValiditySeconds(securityProperties.getBrowser().getTokenValiditySeconds())
                     .userDetailsService(userDetailsService)
                     .and()
                 .authorizeRequests()
-                .antMatchers("/authentication/require",
-                        securityProperties.getBrowser().getLoginPage(),
-                        "/code/*").permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
+                // 不需要登录的路径
+                    .antMatchers("/authentication/require",
+                            securityProperties.getBrowser().getLoginPage(),
+                            "/code/*").permitAll()
+                // 其他所有请求都需要认证
+                    .anyRequest()
+                    .authenticated()
+                    .and()
                 .csrf().disable();
     }
 }
