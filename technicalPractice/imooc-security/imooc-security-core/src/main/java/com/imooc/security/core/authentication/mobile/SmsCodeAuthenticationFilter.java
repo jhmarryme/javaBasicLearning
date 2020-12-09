@@ -1,6 +1,5 @@
 package com.imooc.security.core.authentication.mobile;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -23,13 +22,13 @@ public class SmsCodeAuthenticationFilter extends AbstractAuthenticationProcessin
     private boolean postOnly = true;
 
     public SmsCodeAuthenticationFilter() {
+        // 匹配的路径
         super(new AntPathRequestMatcher("/authentication/mobile", "POST"));
     }
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
-        HttpStatus.BAD_GATEWAY
         if (this.postOnly && !request.getMethod().equals("POST")) {
             throw new AuthenticationServiceException("Authentication method not supported: " + request.getMethod());
         } else {
@@ -39,12 +38,23 @@ public class SmsCodeAuthenticationFilter extends AbstractAuthenticationProcessin
             }
 
             mobile = mobile.trim();
+            // 实例化 msCodeAuthenticationToken
             SmsCodeAuthenticationToken authRequest = new SmsCodeAuthenticationToken(mobile);
+            // 将请求的详情存入
             this.setDetails(request, authRequest);
+            // 交给 authenticationManager 处理
             return this.getAuthenticationManager().authenticate(authRequest);
         }
     }
 
+    /**
+     * 获取手机号
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/7 21:09
+     * @param request
+     * @return java.lang.String
+     */
     protected String obtainMobile(HttpServletRequest request) {
         return request.getParameter(this.mobileParameter);
     }

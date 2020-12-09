@@ -2,7 +2,7 @@ package com.imooc.security.core.validate.code.config;
 
 import com.imooc.security.core.properties.SecurityProperties;
 import com.imooc.security.core.validate.code.ValidateCodeProcessor;
-import com.imooc.security.core.validate.code.base.ImageCode;
+import com.imooc.security.core.validate.code.base.ValidateCode;
 import com.imooc.security.core.validate.code.base.ValidateCodeException;
 import lombok.Data;
 import org.apache.commons.lang.StringUtils;
@@ -27,12 +27,11 @@ import java.util.Set;
 
 /**
  * description: 验证码处理 filter
- * @author: JiaHao Wang
- * @date: 2020/11/30 17:53
- * @modified By:
+ * @author Jiahao Wang
+ * @date: 2020/12/7 21:20
  */
 @Data
-public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
+public class SmsCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     /**
      * 验证码校验失败处理器
@@ -63,7 +62,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     public void afterPropertiesSet() throws ServletException {
         super.afterPropertiesSet();
 
-        urls.addAll(Arrays.asList(securityProperties.getCode().getImage().getUrl().split(",")));
+        urls.addAll(Arrays.asList(securityProperties.getCode().getSmsCode().getUrl().split(",")));
     }
 
     @Override
@@ -95,10 +94,10 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
      */
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
 
-        ImageCode codeInSession = (ImageCode) sessionStrategy.getAttribute(request,
-                ValidateCodeProcessor.SESSION_KEY_PREFIX + "IMAGE");
+        ValidateCode codeInSession = (ValidateCode) sessionStrategy.getAttribute(request,
+                ValidateCodeProcessor.SESSION_KEY_PREFIX + "SMS");
 
-        String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
+        String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "smsCode");
 
         if (StringUtils.isBlank(codeInRequest)) {
             throw new ValidateCodeException("验证码的值不能为空");
@@ -109,7 +108,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         }
 
         if (codeInSession.isExpired()) {
-            sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX + "IMAGE");
+            sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX + "SMS");
             throw new ValidateCodeException("验证码已过期");
         }
 
@@ -117,7 +116,8 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
             throw new ValidateCodeException("验证码不匹配");
         }
 
-        sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX + "IMAGE");
+        sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX + "SMS");
     }
 
 }
+
