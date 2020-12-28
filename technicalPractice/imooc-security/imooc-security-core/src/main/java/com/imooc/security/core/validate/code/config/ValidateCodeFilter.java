@@ -27,6 +27,8 @@ import java.util.Set;
 
 /**
  * description: 验证码处理 filter
+ *      InitializingBean接口为bean提供了属性初始化后的处理方法，
+ *      它只包括afterPropertiesSet方法，凡是继承该接口的类，在bean的属性初始化后都会执行该方法。
  * @author: JiaHao Wang
  * @date: 2020/11/30 17:53
  * @modified By:
@@ -59,10 +61,14 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
      */
     private Set<String> urls = new HashSet<>();
 
+    /**
+     * 该方法是在属性设置后才调用的。
+     */
     @Override
     public void afterPropertiesSet() throws ServletException {
         super.afterPropertiesSet();
 
+        // 添加 配置文件中需要拦截的url 到系统配置中
         urls.addAll(Arrays.asList(securityProperties.getCode().getImage().getUrl().split(",")));
     }
 

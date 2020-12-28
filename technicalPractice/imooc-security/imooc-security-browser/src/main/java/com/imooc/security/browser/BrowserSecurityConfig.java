@@ -1,6 +1,8 @@
 package com.imooc.security.browser;
 
+import com.imooc.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.imooc.security.core.properties.SecurityProperties;
+import com.imooc.security.core.validate.code.config.SmsCodeFilter;
 import com.imooc.security.core.validate.code.config.ValidateCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -48,6 +50,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
+
     /**
      * remember me 配置
      * <br/>
@@ -70,14 +75,22 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         // 配置自定义的验证码处理过滤器
-        ValidateCodeFilter filter = new ValidateCodeFilter();
-        filter.setAuthenticationFailureHandler(imoocAuthenticationFailureHandler);
-        filter.setSecurityProperties(securityProperties);
+        ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
+        validateCodeFilter.setAuthenticationFailureHandler(imoocAuthenticationFailureHandler);
+        validateCodeFilter.setSecurityProperties(securityProperties);
         // 需要手动执行
-        filter.afterPropertiesSet();
+        validateCodeFilter.afterPropertiesSet();
 
-        // 在 UsernamePasswordAuthenticationFilter 前增加一个 ValidateCodeFilter 用于处理验证码逻辑
-        http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
+        SmsCodeFilter smsCodeFilter = new SmsCodeFilter();
+        smsCodeFilter.setAuthenticationFailureHandler(imoocAuthenticationFailureHandler);
+        smsCodeFilter.setSecurityProperties(securityProperties);
+        // 需要手动执行
+        smsCodeFilter.afterPropertiesSet();
+
+
+        // 在 UsernamePasswordAuthenticationFilter 前增加一个 ValidateCodeFilter/smsCodeFilter 用于处理图形验证码/短信验证码逻辑
+        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(smsCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 // 当未登录时, 跳转的路径
                     .loginPage("/authentication/require")
@@ -102,6 +115,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                     .anyRequest()
                     .authenticated()
                     .and()
-                .csrf().disable();
+                .csrf().disable()
+                .apply(smsCodeAuthenticationSecurityConfig);
     }
 }
