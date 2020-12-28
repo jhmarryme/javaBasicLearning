@@ -21,4 +21,14 @@ public interface ValidateCodeProcessor {
      */
     void create(ServletWebRequest request) throws Exception;
 
+    /**
+     * 校验验证码
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/28 12:38
+     * @param request
+     * @return void
+     */
+    void validate(ServletWebRequest request);
+
 }
