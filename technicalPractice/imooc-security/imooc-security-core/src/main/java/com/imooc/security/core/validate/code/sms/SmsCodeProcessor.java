@@ -14,7 +14,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @date: 2020/12/3 20:49
  * @modified By:
  */
-@Component("smsCodeProcessor")
+@Component("smsValidateCodeProcessor")
 public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode> {
 
     /**
@@ -29,4 +29,5 @@ public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode
 
         smsCodeSender.send(mobile, validateCode.getCode());
     }
+
 }

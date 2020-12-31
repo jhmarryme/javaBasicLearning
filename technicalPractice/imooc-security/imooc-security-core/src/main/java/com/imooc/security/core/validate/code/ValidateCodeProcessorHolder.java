@@ -2,7 +2,6 @@ package com.imooc.security.core.validate.code;
 
 import com.imooc.security.core.validate.code.base.ValidateCodeException;
 import com.imooc.security.core.validate.code.base.ValidateCodeTypeEnum;
-import com.imooc.security.core.validate.code.config.ValidateCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
@@ -22,6 +21,14 @@ public class ValidateCodeProcessorHolder {
         return findValidateCodeProcessor(type.toString().toLowerCase());
     }
 
+    /**
+     * 根据 类型 查找对应的校验码处理器
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/30 8:48
+     * @param type
+     * @return com.imooc.security.core.validate.code.ValidateCodeProcessor
+     */
     public ValidateCodeProcessor findValidateCodeProcessor(String type) {
         String name = type + ValidateCodeProcessor.class.getSimpleName();
 

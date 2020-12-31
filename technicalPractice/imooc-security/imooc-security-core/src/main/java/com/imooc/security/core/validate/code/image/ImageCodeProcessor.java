@@ -14,11 +14,12 @@ import java.io.IOException;
  * @date: 2020/12/3 20:53
  * @modified By:
  */
-@Component("imageCodeProcessor")
+@Component("imageValidateCodeProcessor")
 public class ImageCodeProcessor extends AbstractValidateCodeProcessor<ImageCode> {
 
     @Override
     protected void send(ServletWebRequest request, ImageCode imageCode) throws IOException {
         ImageIO.write(imageCode.getImage(), "JPEG", request.getResponse().getOutputStream());
     }
+
 }
