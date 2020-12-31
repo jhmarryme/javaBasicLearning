@@ -21,16 +21,6 @@ public class ImageCode extends ValidateCode {
      */
     private BufferedImage image;
 
-    /**
-     * 验证码
-     */
-    private String code;
-
-    /**
-     * 过期时间
-     */
-    private LocalDateTime expireTime;
-
     public ImageCode(BufferedImage image, String code, int expireIn) {
         super(code, expireIn);
         this.image = image;

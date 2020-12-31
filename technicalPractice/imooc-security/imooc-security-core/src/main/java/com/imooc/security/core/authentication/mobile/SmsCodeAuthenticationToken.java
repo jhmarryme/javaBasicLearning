@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import java.util.Collection;
 
 /**
- * description: 
+ * description: 认证后的token信息
  * @author: JiaHao Wang
  * @date: 2020/12/7 12:20
  * @modified By:

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * description: 
+ * description: 参考UsernamePasswordAuthenticationFilter编写
  * @author: JiaHao Wang
  * @date: 2020/12/7 12:29
  * @modified By:
@@ -38,7 +38,7 @@ public class SmsCodeAuthenticationFilter extends AbstractAuthenticationProcessin
             }
 
             mobile = mobile.trim();
-            // 实例化 msCodeAuthenticationToken
+            // 实例化 smsCodeAuthenticationToken
             SmsCodeAuthenticationToken authRequest = new SmsCodeAuthenticationToken(mobile);
             // 将请求的详情存入
             this.setDetails(request, authRequest);

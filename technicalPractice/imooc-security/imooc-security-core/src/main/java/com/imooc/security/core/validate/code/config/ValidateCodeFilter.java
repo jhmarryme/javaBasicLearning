@@ -1,12 +1,17 @@
 package com.imooc.security.core.validate.code.config;
 
+import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.properties.SecurityProperties;
+import com.imooc.security.core.validate.code.ValidateCodeProcessorHolder;
 import com.imooc.security.core.validate.code.ValidateCodeProcessor;
 import com.imooc.security.core.validate.code.base.ImageCode;
 import com.imooc.security.core.validate.code.base.ValidateCodeException;
+import com.imooc.security.core.validate.code.base.ValidateCodeTypeEnum;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
@@ -21,17 +26,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * description: 验证码处理 filter
+ *      InitializingBean接口为bean提供了属性初始化后的处理方法，
+ *      它只包括afterPropertiesSet方法，凡是继承该接口的类，在bean的属性初始化后都会执行该方法。
  * @author: JiaHao Wang
  * @date: 2020/11/30 17:53
  * @modified By:
  */
 @Data
+@Slf4j
 public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     /**
@@ -55,33 +61,72 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     private SecurityProperties securityProperties;
 
     /**
+     * 系统中的校验码处理器
+     */
+    @Autowired
+    private ValidateCodeProcessorHolder validateCodeProcessorHolder;
+
+    /**
      * 存放需要拦截的urls
      */
-    private Set<String> urls = new HashSet<>();
+    private Map<String, ValidateCodeTypeEnum> urlMap = new HashMap<>();
 
+    /**
+     * 该方法是在属性设置后才调用的。
+     */
     @Override
     public void afterPropertiesSet() throws ServletException {
         super.afterPropertiesSet();
 
-        urls.addAll(Arrays.asList(securityProperties.getCode().getImage().getUrl().split(",")));
+        // 添加图形验证码url
+        addUrlToMap(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM, ValidateCodeTypeEnum.IMAGE);
+        addUrlToMap(securityProperties.getCode().getImage().getUrl(), ValidateCodeTypeEnum.IMAGE);
+
+        // 添加短信验证码url
+        addUrlToMap(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE, ValidateCodeTypeEnum.SMS);
+        addUrlToMap(securityProperties.getCode().getSmsCode().getUrl(), ValidateCodeTypeEnum.SMS);
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
 
-        boolean needValidate = urls.stream().anyMatch(url -> antPathMatcher.match(url.trim(), request.getRequestURI()));
+        ValidateCodeTypeEnum type = getValidateCodeTypeEnum(request);
 
-        // 对指定路径的请求 校验验证码
-        if (needValidate) {
+        if (type != null) {
+            log.info("校验请求(" + request.getRequestURI() + ")中的验证码,验证码类型" + type);
             try {
-                validate(new ServletWebRequest(request));
+                validateCodeProcessorHolder.findValidateCodeProcessor(type).validate(new ServletWebRequest(request, response));
+                log.info("验证码校验通过");
             } catch (ValidateCodeException e) {
                 authenticationFailureHandler.onAuthenticationFailure(request, response, e);
                 return;
             }
         }
+
         filterChain.doFilter(request, response);
+    }
+
+    /**
+     * 获取校验码的类型，如果当前请求不需要校验，则返回null
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/28 12:49
+     * @param request
+     * @return com.imooc.security.core.validate.code.base.ValidateCodeTypeEnum
+     * @throws
+     */
+    private ValidateCodeTypeEnum getValidateCodeTypeEnum(HttpServletRequest request) {
+        ValidateCodeTypeEnum result = null;
+        if (!StringUtils.equalsIgnoreCase(request.getRequestURI(), "get")) {
+            Set<String> urls = urlMap.keySet();
+            for (String url: urls) {
+                if (antPathMatcher.match(url, request.getRequestURI())) {
+                    result = urlMap.get(url);
+                }
+            }
+        }
+        return result;
     }
 
     /**
@@ -118,6 +163,23 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         }
 
         sessionStrategy.removeAttribute(request, ValidateCodeProcessor.SESSION_KEY_PREFIX + "IMAGE");
+    }
+
+    /**
+     * 将系统中配置的需要校验验证码的URL根据校验的类型放入map
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/28 12:29
+     * @param urls
+     * @param type
+     * @return void
+     */
+    private void addUrlToMap(String urls, ValidateCodeTypeEnum type) {
+        if (StringUtils.isNotBlank(urls)) {
+            for (String url : StringUtils.split(urls, ",")) {
+                urlMap.put(url, type);
+            }
+        }
     }
 
 }
