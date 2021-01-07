@@ -14,7 +14,7 @@ public class BrowserProperties {
     /**  
      * 提供默认的登录页面
      */
-    private String loginPage = "/imooc-login.html";
+    private String loginPage = SecurityConstants.DEFAULT_LOGIN_PAGE_URL;
 
     /**  
      * 默认的登录返回类型为JSON, 可配置为REDIRECT

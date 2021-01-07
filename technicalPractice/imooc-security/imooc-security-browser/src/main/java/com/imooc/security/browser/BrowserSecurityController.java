@@ -1,6 +1,7 @@
 package com.imooc.security.browser;
 
 import com.imooc.security.browser.support.SimpleResponse;
+import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.properties.SecurityProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -10,7 +11,6 @@ import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
-import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,10 +21,9 @@ import java.io.IOException;
 import java.util.Optional;
 
 /**
- * description: 
- * @Author: Wjh
- * @Date: 2020/11/9 9:02
- * @Modified By:
+ * description: Browser认证配置
+ * @author Jiahao Wang
+ * @date 2020/11/9 9:02
  */
 @RestController
 @Slf4j
@@ -47,23 +46,24 @@ public class BrowserSecurityController {
     private SecurityProperties securityProperties;
 
     /**
-     * 配置的认证引导页, 当用户未登录时, 判断访问的路径是否是 .html结尾, 如果是 跳转到配置的登录页
+     * 配置的认证引导页, 当未登录时会访问这里
      * <br/>
      * @author Jiahao Wang
      * @date 2020/12/7 9:13
-     * @param request
-     * @param response
+     * @param request request对象
+     * @param response response对象
      * @return com.imooc.security.browser.support.SimpleResponse
-     * @throws
      */
-    @RequestMapping("/authentication/require")
+    @RequestMapping(SecurityConstants.DEFAULT_UNAUTHENTICATED_URL)
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public SimpleResponse requireAuthentication(HttpServletRequest request, HttpServletResponse response) {
         Optional.ofNullable(requestCache.getRequest(request, response))
                 .ifPresent(
                         savedRequest -> {
+                            // 当用户未登录时, 判断访问的路径是否是 .html结尾
                             if (StringUtils.endsWithIgnoreCase(savedRequest.getRedirectUrl(), ".html")) {
                                 try {
+                                    // 如果是 跳转到配置的登录页中
                                     redirectStrategy.sendRedirect(
                                             request,
                                             response,
