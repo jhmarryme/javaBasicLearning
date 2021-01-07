@@ -15,6 +15,7 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * description: 
@@ -91,7 +92,10 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
     @SuppressWarnings("unchecked")
     private C generate(ServletWebRequest request) {
         String type = getValidateCodeType().toString().toLowerCase();
-        ValidateCodeGenerator validateCodeGenerator = validateCodeGeneratorMap.get(type + "CodeGenerator");
+        String generateName = type + "CodeGenerator";
+        ValidateCodeGenerator validateCodeGenerator =
+                Optional.ofNullable(validateCodeGeneratorMap.get(generateName))
+                        .orElseThrow(() -> new ValidateCodeException("验证码生成器: " + generateName + "不存在"));
         return (C) validateCodeGenerator.generate(request);
     }
 
