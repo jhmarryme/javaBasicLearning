@@ -2,7 +2,6 @@ package com.imooc.security.browser;
 
 import com.imooc.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.imooc.security.core.properties.SecurityProperties;
-import com.imooc.security.core.validate.code.config.SmsCodeFilter;
 import com.imooc.security.core.validate.code.config.ValidateCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +20,7 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 import javax.sql.DataSource;
 
 /**
- * description: springsecurity 配置
+ * description: springSecurity 配置
  * @Author: Wjh
  * @Date: 2020/10/29 12:23
  * @Modified By:
@@ -38,12 +37,6 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private AuthenticationFailureHandler imoocAuthenticationFailureHandler;
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        // 对密码 使用加密处理
-        return new BCryptPasswordEncoder();
-    }
-
     @Autowired
     private DataSource dataSource;
 
@@ -56,14 +49,20 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private ValidateCodeFilter validateCodeFilter;
 
+    /**  
+     * 对密码 使用加密处理
+     */
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+    
     /**
      * rememberme 配置
      * <br/>
      * @author Jiahao Wang
      * @date 2020/12/7 9:15
-     * @param
      * @return org.springframework.security.web.authentication.rememberme.PersistentTokenRepository
-     * @throws
      */
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
@@ -96,7 +95,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 // 当未登录时, 跳转的路径
                     .loginPage("/authentication/require")
-                // 登录请求的处理路径
+                // 登录请求的处理路径, 提交username和password的URL, 默认配置 UsernamePasswordAuthenticationFilter中 login
                     .loginProcessingUrl("/authentication/form")
                 // 认证 成功/失败 的处理逻辑
                     .successHandler(imoocAuthenticationSuccessHandler)

@@ -16,9 +16,8 @@ import java.io.IOException;
 
 /**
  * description: 登录成功的处理逻辑
- * @author: JiaHao Wang
- * @date: 2020/11/30 18:47
- * @modified By:
+ * @author JiaHao Wang
+ * @date 2020/11/30 18:47
  */
 @Component("imoocAuthenticationSuccessHandler")
 @Slf4j
@@ -31,12 +30,14 @@ public class ImoocAuthenticationSuccessHandler extends SavedRequestAwareAuthenti
     private SecurityProperties securityProperties;
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+                                        Authentication authentication) throws IOException, ServletException {
 
         log.info("登录成功");
         // 登录的返回类型判断: 只对JSON的处理, REDIRECT采用框架默认的处理
         if (LoginType.JSON.equals(securityProperties.getBrowser().getLoginType())) {
             response.setContentType("application/json;charset=UTF-8");
+            // 将authentication信息显示, 调试用
             response.getWriter().write(objectMapper.writeValueAsString(authentication));
         } else {
             super.onAuthenticationSuccess(request, response, authentication);

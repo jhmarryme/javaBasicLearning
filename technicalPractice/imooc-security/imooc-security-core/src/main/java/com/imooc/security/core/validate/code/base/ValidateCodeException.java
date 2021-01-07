@@ -4,10 +4,9 @@ package com.imooc.security.core.validate.code.base;
 import org.springframework.security.core.AuthenticationException;
 
 /**
- * description: 
- * @author: JiaHao Wang
- * @date: 2020/11/30 17:56
- * @modified By:
+ * description: SpringSecurity认证异常类, 需要继承 {@code AuthenticationException}
+ * @author JiaHao Wang
+ * @date 2020/11/30 17:56
  */
 public class ValidateCodeException extends AuthenticationException {
 

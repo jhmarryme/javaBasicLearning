@@ -18,9 +18,8 @@ import java.io.IOException;
 
 /**
  * description: 登录失败的处理逻辑
- * @author: JiaHao Wang
- * @date: 2020/11/30 19:04
- * @modified By:
+ * @author JiaHao Wang
+ * @date 2020/11/30 19:04
  */
 @Component("imoocAuthenticationFailureHandler")
 @Slf4j
@@ -33,7 +32,8 @@ public class ImoocAuthenticationFailureHandler extends SimpleUrlAuthenticationFa
     private SecurityProperties securityProperties;
 
     @Override
-    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
+    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
+                                        AuthenticationException e) throws IOException, ServletException {
 
         log.info("登录失败");
         // 登录的返回类型判断: 只对JSON的处理, REDIRECT采用框架默认的处理

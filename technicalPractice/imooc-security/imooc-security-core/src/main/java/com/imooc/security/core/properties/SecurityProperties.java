@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * description: 框架的配置
+ * description: 框架的配置入口
  * @Author: Wjh
  * @Date: 2020/11/9 11:36
  * @Modified By:
@@ -14,12 +14,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class SecurityProperties {
 
     /**
-     * 项目相关配置
+     * 针对browser的项目相关配置
      */
     private BrowserProperties browser = new BrowserProperties();
 
     /**
-     * 验证码的属性
+     * 验证码的相关配置
      */
     private ValidateCodeProperties code = new ValidateCodeProperties();
 }

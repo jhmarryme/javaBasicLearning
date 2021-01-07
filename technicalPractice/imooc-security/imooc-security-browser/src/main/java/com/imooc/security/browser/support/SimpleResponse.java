@@ -4,15 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * description: 
- * @Author: Wjh
- * @Date: 2020/11/9 11:13
- * @Modified By:
+ * description: 简单的返回对象
+ * @author Wjh
+ * @date 2020/11/9 11:13
  */
 @Data
 @AllArgsConstructor
 public class SimpleResponse {
 
-    /** 响应数据 **/
+    /**
+     * 响应数据
+     */
     private Object data;
 }
