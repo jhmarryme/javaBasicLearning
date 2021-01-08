@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * description: 自定义拦截器, 使用@Component后还需要在配置类注册
- *
+ *      可以拿到控制器和方法, 但拿不到方法参数
  * @Author: Wjh
  * @Date: 2020/9/10 16:36
  * @Modified By:
@@ -29,7 +29,7 @@ public class TimeInterceptor implements HandlerInterceptor {
         System.out.println(((HandlerMethod) o).getMethod().getName());
 
         // 在request 存入数据
-        request.setAttribute("startTime", new Date().getTime());
+        request.setAttribute("startTime", System.currentTimeMillis());
         return true;
     }
 
@@ -39,7 +39,7 @@ public class TimeInterceptor implements HandlerInterceptor {
         System.out.println("postHandle");
         // 从request 取出数据
         Long start = (Long) request.getAttribute("startTime");
-        System.out.println("time interceptor 耗时:" + (new Date().getTime() - start));
+        System.out.println("time interceptor 耗时:" + (System.currentTimeMillis() - start));
     }
 
     @Override
@@ -47,7 +47,7 @@ public class TimeInterceptor implements HandlerInterceptor {
         System.out.println("afterCompletion");
         // 从request 取出数据
         Long start = (Long) request.getAttribute("startTime");
-        System.out.println("time interceptor 耗时:" + (new Date().getTime() - start));
+        System.out.println("time interceptor 耗时:" + (System.currentTimeMillis() - start));
         // 查看异常信息
         System.out.println("e is " + e);
     }
