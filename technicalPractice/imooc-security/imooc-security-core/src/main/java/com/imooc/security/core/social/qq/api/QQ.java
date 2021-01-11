@@ -1,7 +1,5 @@
 package com.imooc.security.core.social.qq.api;
 
-import java.io.IOException;
-
 /**
  * description: 
  * @author JiaHao Wang
@@ -9,5 +7,10 @@ import java.io.IOException;
  */
 public interface QQ {
 
-    QQUserInfo getQQUserInfo() throws Exception;
+    /**
+     * 获取 qq用户信息
+     * <br/>
+     * @return com.imooc.security.core.social.qq.api.QQUserInfo
+     */
+    QQUserInfo getQQUserInfo();
 }
