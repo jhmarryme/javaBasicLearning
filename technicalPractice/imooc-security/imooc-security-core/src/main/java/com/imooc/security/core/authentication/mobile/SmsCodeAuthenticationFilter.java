@@ -21,6 +21,10 @@ import javax.servlet.http.HttpServletResponse;
  * @modified By:
  */
 public class SmsCodeAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
+    
+    /**  
+     * 请求中的 参数名称
+     */
     public static final String SPRING_SECURITY_FORM_MOBILE_KEY = "mobile";
     private String mobileParameter = SPRING_SECURITY_FORM_MOBILE_KEY;
     private boolean postOnly = true;
@@ -36,6 +40,7 @@ public class SmsCodeAuthenticationFilter extends AbstractAuthenticationProcessin
         if (this.postOnly && !request.getMethod().equals("POST")) {
             throw new AuthenticationServiceException("Authentication method not supported: " + request.getMethod());
         } else {
+            // 从请求中取出手机号
             String mobile = this.obtainMobile(request);
             if (mobile == null) {
                 mobile = "";

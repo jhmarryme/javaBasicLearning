@@ -1,9 +1,7 @@
 package com.imooc.security.core.social.qq.connect;
 
 import com.imooc.security.core.social.qq.api.QQ;
-import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
-import org.springframework.social.oauth2.OAuth2ServiceProvider;
 
 /**
  * description: 
