@@ -1,21 +1,22 @@
 package com.imooc.security.browser;
 
+import com.imooc.security.core.authentication.AbstractChannelSecurityConfig;
 import com.imooc.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
+import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.properties.SecurityProperties;
-import com.imooc.security.core.validate.code.config.ValidateCodeFilter;
+import com.imooc.security.core.validate.code.ValidateCodeSecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
 
@@ -26,16 +27,10 @@ import javax.sql.DataSource;
  * @Modified By:
  */
 @Configuration
-public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
+public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
 
     @Autowired
     private SecurityProperties securityProperties;
-
-    @Autowired
-    private AuthenticationSuccessHandler imoocAuthenticationSuccessHandler;
-
-    @Autowired
-    private AuthenticationFailureHandler imoocAuthenticationFailureHandler;
 
     @Autowired
     private DataSource dataSource;
@@ -47,16 +42,19 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
 
     @Autowired
-    private ValidateCodeFilter validateCodeFilter;
+    private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
-    /**  
-     * 对密码 使用加密处理
+    @Autowired
+    private SpringSocialConfigurer imoocSpringSocialConfigurer;
+
+    /**
+     * 对密码 使用加密处理, 使用spring security 提供的实现
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    
+
     /**
      * rememberme 配置
      * <br/>
@@ -76,47 +74,35 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        // 配置自定义的验证码处理过滤器
-//        ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
-//        validateCodeFilter.setAuthenticationFailureHandler(imoocAuthenticationFailureHandler);
-//        validateCodeFilter.setSecurityProperties(securityProperties);
-        // 需要手动执行
-//        validateCodeFilter.afterPropertiesSet();
-//        SmsCodeFilter smsCodeFilter = new SmsCodeFilter();
-//        smsCodeFilter.setAuthenticationFailureHandler(imoocAuthenticationFailureHandler);
-//        smsCodeFilter.setSecurityProperties(securityProperties);
-//        // 需要手动执行
-//        smsCodeFilter.afterPropertiesSet();
+        // 开启表单登录相关配置
+        applyPasswordAuthenticationConfig(http);
 
-
-        // 在 UsernamePasswordAuthenticationFilter 前增加一个 ValidateCodeFilter/smsCodeFilter 用于处理图形验证码/短信验证码逻辑
-        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
-//            .addFilterBefore(smsCodeFilter, UsernamePasswordAuthenticationFilter.class)
-                .formLogin()
-                // 当未登录时, 跳转的路径
-                    .loginPage("/authentication/require")
-                // 登录请求的处理路径, 提交username和password的URL, 默认配置 UsernamePasswordAuthenticationFilter中 login
-                    .loginProcessingUrl("/authentication/form")
-                // 认证 成功/失败 的处理逻辑
-                    .successHandler(imoocAuthenticationSuccessHandler)
-                    .failureHandler(imoocAuthenticationFailureHandler)
-                    .and()
-                // 配置remember me功能
-                .rememberMe()
-                    .tokenRepository(persistentTokenRepository())
-                    .tokenValiditySeconds(securityProperties.getBrowser().getTokenValiditySeconds())
-                    .userDetailsService(userDetailsService)
-                    .and()
-                .authorizeRequests()
+        http
+            .apply(validateCodeSecurityConfig)
+                .and()
+            .apply(smsCodeAuthenticationSecurityConfig)
+                .and()
+            .apply(imoocSpringSocialConfigurer)
+                .and()
+            // 配置remember me功能
+            .rememberMe()
+                .tokenRepository(persistentTokenRepository())
+                .tokenValiditySeconds(securityProperties.getBrowser().getTokenValiditySeconds())
+                .userDetailsService(userDetailsService)
+                .and()
+            .authorizeRequests()
                 // 不需要登录的路径
-                    .antMatchers("/authentication/require",
-                            securityProperties.getBrowser().getLoginPage(),
-                            "/code/*").permitAll()
+                .antMatchers(
+                        SecurityConstants.DEFAULT_UNAUTHENTICATED_URL,
+                        SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE,
+                        SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*",
+                        securityProperties.getBrowser().getLoginPage()
+                ).permitAll()
                 // 其他所有请求都需要认证
-                    .anyRequest()
-                    .authenticated()
-                    .and()
-                .csrf().disable()
-                .apply(smsCodeAuthenticationSecurityConfig);
+                .anyRequest()
+                .authenticated()
+                .and()
+            .csrf()
+                .disable();
     }
 }

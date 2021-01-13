@@ -14,6 +14,10 @@ imooc:
         url: /authentication/form
       smsCode:
         url: /authentication/mobile
+    social:
+      qq:
+        appId: 100550231
+        appSecret: 4444444444444
 #    browser:
 #      loginType: REDIRECT
 #      loginPage: /demo-login.html

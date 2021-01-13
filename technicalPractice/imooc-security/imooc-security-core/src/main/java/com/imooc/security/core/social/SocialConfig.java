@@ -12,7 +12,7 @@ import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import javax.sql.DataSource;
 
 /**
- * description: 
+ * description: spring social 相关配置
  * @author JiaHao Wang
  * @date 2021/1/11 13:01
  */
@@ -23,8 +23,20 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+    /**
+     * 配置 UsersConnectionRepository
+     * <br/>
+     * @param connectionFactoryLocator 用于查找当前应该使用的connectionFactory
+     * @return org.springframework.social.connect.UsersConnectionRepository
+     */
     @Override
     public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
-        return new JdbcUsersConnectionRepository(dataSource, connectionFactoryLocator, Encryptors.noOpText());
+        // Encryptors用于将插入数据库的数据做加解密, 这里不做加密
+        JdbcUsersConnectionRepository repository =
+                new JdbcUsersConnectionRepository(dataSource, connectionFactoryLocator, Encryptors.noOpText());
+
+        // 默认的表名为 `UserConnection`, 实际为`imooc_UserConnection`, 需要设置前缀
+        repository.setTablePrefix("imooc_");
+        return repository;
     }
 }

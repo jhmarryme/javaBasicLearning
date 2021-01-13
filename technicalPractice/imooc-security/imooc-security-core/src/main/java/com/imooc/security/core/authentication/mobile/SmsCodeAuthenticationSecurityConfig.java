@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
  * description: 短信登录请求配置
  * @author JiaHao Wang
  * @date 2020/12/8 12:05
- * @modified By:
  */
 @Component
 public class SmsCodeAuthenticationSecurityConfig extends SecurityConfigurerAdapter<
@@ -48,7 +47,7 @@ public class SmsCodeAuthenticationSecurityConfig extends SecurityConfigurerAdapt
         SmsCodeAuthenticationProvider smsCodeAuthenticationProvider = new SmsCodeAuthenticationProvider();
         smsCodeAuthenticationProvider.setUserDetailsService(userDetailsService);
 
-        // 添加配置
+        // 添加配置 Provider & filter
         http.authenticationProvider(smsCodeAuthenticationProvider)
                 .addFilterAfter(smsCodeAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
