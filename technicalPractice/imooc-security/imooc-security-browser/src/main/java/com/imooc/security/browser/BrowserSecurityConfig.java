@@ -16,6 +16,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
 
@@ -43,8 +44,11 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
     @Autowired
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
+    @Autowired
+    private SpringSocialConfigurer imoocSpringSocialConfigurer;
+
     /**
-     * 对密码 使用加密处理
+     * 对密码 使用加密处理, 使用spring security 提供的实现
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -78,6 +82,8 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .and()
             .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
+            .apply(imoocSpringSocialConfigurer)
+                .and()
             // 配置remember me功能
             .rememberMe()
                 .tokenRepository(persistentTokenRepository())
@@ -95,7 +101,8 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 // 其他所有请求都需要认证
                 .anyRequest()
                 .authenticated()
-            .and()
-            .csrf().disable();
+                .and()
+            .csrf()
+                .disable();
     }
 }

@@ -1,6 +1,7 @@
 package com.imooc.security.core.properties;
 
 import lombok.Data;
+import org.springframework.boot.autoconfigure.social.SocialProperties;
 
 /**
  * description: 
@@ -8,11 +9,7 @@ import lombok.Data;
  * @date 2021/1/12 9:01
  */
 @Data
-public class QQProperties {
+public class QQProperties extends SocialProperties {
 
-    private String appId;
-
-    private String appSecret;
-
-    private String prividerId;
+    private String prividerId = "qq";
 }
