@@ -12,8 +12,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.social.security.SpringSocialConfigurer;
@@ -45,10 +43,12 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
     @Autowired
-    private SpringSocialConfigurer imoocSpringSocialConfigurer;
+    private SpringSocialConfigurer imoocSocialSecurityConfig;
 
     /**
      * 对密码 使用加密处理, 使用spring security 提供的实现
+     * <br/>
+     * @return org.springframework.security.crypto.password.PasswordEncoder
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -82,7 +82,7 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .and()
             .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
-            .apply(imoocSpringSocialConfigurer)
+            .apply(imoocSocialSecurityConfig)
                 .and()
             // 配置remember me功能
             .rememberMe()
