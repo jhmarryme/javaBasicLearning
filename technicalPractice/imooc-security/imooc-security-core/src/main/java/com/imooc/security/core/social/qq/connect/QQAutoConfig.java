@@ -31,8 +31,4 @@ public class QQAutoConfig extends SocialAutoConfigurerAdapter {
         return new QQConnectionFactory(qqProperties.getPrividerId(), qqProperties.getAppId(), qqProperties.getAppSecret());
     }
 
-    @Bean
-    public SpringSocialConfigurer imoocSpringSocialConfigurer() {
-        return new SpringSocialConfigurer();
-    }
 }
