@@ -16,8 +16,8 @@ imooc:
         url: /authentication/mobile
     social:
       qq:
-        appId: 100550231
-        appSecret: 4444444444444
+        appId: 101930634
+        appSecret: 8bd77811f967d28560b53e60bce2bb2d
 #    browser:
 #      loginType: REDIRECT
 #      loginPage: /demo-login.html
