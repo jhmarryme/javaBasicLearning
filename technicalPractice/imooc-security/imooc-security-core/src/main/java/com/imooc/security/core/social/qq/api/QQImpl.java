@@ -2,6 +2,8 @@ package com.imooc.security.core.social.qq.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
 import org.springframework.social.oauth2.TokenStrategy;
 
@@ -13,6 +15,8 @@ import java.io.IOException;
  * @date 2021/1/8 12:33
  */
 public class QQImpl extends AbstractOAuth2ApiBinding implements QQ {
+
+    private static final Logger LOG = LoggerFactory.getLogger(QQImpl.class);
 
     /**  
      * 获取openId的地址
@@ -41,12 +45,13 @@ public class QQImpl extends AbstractOAuth2ApiBinding implements QQ {
         // 获取 qq用户信息
         String url = String.format(URL_GET_USERINFO, appId, openId);
         String result = getRestTemplate().getForObject(url, String.class);
-
-        System.out.println(result);
+        LOG.info("获取qq用户信息的返回是{}", result);
         try {
-            return objectMapper.readValue(result, QQUserInfo.class);
+            QQUserInfo userInfo = objectMapper.readValue(result, QQUserInfo.class);
+            userInfo.setOpenId(openId);
+            return userInfo;
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.info("获取用户信息失败: {}", e.getMessage());
         }
         return null;
     }
@@ -58,8 +63,7 @@ public class QQImpl extends AbstractOAuth2ApiBinding implements QQ {
         // 根据accessToken 获取 openId
         String url = String.format(URL_GET_OPENID, accessToken);
         String result = getRestTemplate().getForObject(url, String.class);
-
-        System.out.println(result);
-        this.openId = StringUtils.substringBetween(result, "\"openid\"", "}");
+        LOG.info("根据accessToken获取openId的返回是{}", result);
+        this.openId = StringUtils.substringBetween(result, "\"openid\":\"", "\"}");
     }
 }
