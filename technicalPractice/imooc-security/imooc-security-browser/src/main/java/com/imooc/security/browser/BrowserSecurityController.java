@@ -60,6 +60,7 @@ public class BrowserSecurityController {
         Optional.ofNullable(requestCache.getRequest(request, response))
                 .ifPresent(
                         savedRequest -> {
+                            log.info("引发跳转的请求时: {}", savedRequest.getRedirectUrl());
                             // 当用户未登录时, 判断访问的路径是否是 .html结尾
                             if (StringUtils.endsWithIgnoreCase(savedRequest.getRedirectUrl(), ".html")) {
                                 try {
