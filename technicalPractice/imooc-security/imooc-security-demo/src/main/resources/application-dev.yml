@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://104.224.188.99:3307/imooc-security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://120.78.171.38:3306/imooc-security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
     username: root
-    password: root
+    password: jh541224
     driver-class-name: com.mysql.jdbc.Driver
   #    暂时关闭session配置
   session:
