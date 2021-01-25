@@ -1,6 +1,5 @@
 package com.imooc.security.core.validate.code.impl;
 
-import com.imooc.security.core.validate.code.base.ImageCode;
 import com.imooc.security.core.validate.code.base.ValidateCode;
 import com.imooc.security.core.validate.code.ValidateCodeGenerator;
 import com.imooc.security.core.validate.code.ValidateCodeProcessor;
@@ -19,9 +18,8 @@ import java.util.Optional;
 
 /**
  * description: 
- * @author: JiaHao Wang
- * @date: 2020/12/3 20:19
- * @modified By:
+ * @author JiaHao Wang
+ * @date 2020/12/3 20:19
  */
 public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> implements ValidateCodeProcessor {
 

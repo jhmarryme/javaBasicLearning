@@ -32,6 +32,7 @@ public class QQServiceProvider extends AbstractOAuth2ServiceProvider<QQ> {
 
     @Override
     public QQ getApi(String accessToken) {
+        // 为每一个用户创建一个不同的QQImpl
         return new QQImpl(accessToken, appId);
     }
 }

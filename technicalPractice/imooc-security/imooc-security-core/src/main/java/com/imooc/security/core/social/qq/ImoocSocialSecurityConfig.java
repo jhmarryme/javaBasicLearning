@@ -10,6 +10,9 @@ import org.springframework.social.security.SpringSocialConfigurer;
  */
 public class ImoocSocialSecurityConfig extends SpringSocialConfigurer {
 
+    /**
+     * 请求/回调地址前缀
+     */
     private final String filterProcessesUrl;
 
     public ImoocSocialSecurityConfig(String filterProcessesUrl) {

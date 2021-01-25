@@ -10,7 +10,8 @@ import org.springframework.social.oauth2.TokenStrategy;
 import java.io.IOException;
 
 /**
- * description: 
+ * description:
+ *      每一个用户都会创建一个QQImpl对象, 非单例
  * @author JiaHao Wang
  * @date 2021/1/8 12:33
  */
@@ -57,6 +58,7 @@ public class QQImpl extends AbstractOAuth2ApiBinding implements QQ {
     }
 
     public QQImpl(String accessToken, String appId) {
+        // 走完认证流程后qq会返回一个用户对应的accessToken令牌
         super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
         this.appId = appId;
 
