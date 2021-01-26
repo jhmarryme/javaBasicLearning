@@ -18,6 +18,7 @@ imooc:
       qq:
         appId: 101930634
         appSecret: 8bd77811f967d28560b53e60bce2bb2d
-#    browser:
+    browser:
+      signUpUrl: /demo-signUp.html
 #      loginType: REDIRECT
 #      loginPage: /demo-login.html

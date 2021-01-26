@@ -11,6 +11,11 @@ import lombok.Data;
 @Data
 public class BrowserProperties {
 
+    /**
+     * 提供默认的注册页面
+     */
+    private String signUpUrl = "/imooc-signUp.html";
+
     /**  
      * 提供默认的登录页面
      */

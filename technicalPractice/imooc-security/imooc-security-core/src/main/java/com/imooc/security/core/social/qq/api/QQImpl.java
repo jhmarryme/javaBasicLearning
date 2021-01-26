@@ -58,7 +58,7 @@ public class QQImpl extends AbstractOAuth2ApiBinding implements QQ {
     }
 
     public QQImpl(String accessToken, String appId) {
-        // 走完认证流程后qq会返回一个用户对应的accessToken令牌
+        // 走完认证流程后qq会返回一个用户对应的accessToken令牌, TokenStrategy:改变默认策略满足接口传参类型要求
         super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
         this.appId = appId;
 

@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.imooc.security.browser.support;
+
+import lombok.Data;
+
+/**
+ * description: 用于展示的用户信息
+ * @author Jiahao Wang
+ * @date 2021/1/26 8:57
+ */
+@Data
+public class SocialUserInfo {
+	
+	private String providerId;
+	
+	private String providerUserId;
+	
+	private String nickname;
+	
+	private String headImg;
+	
+}
