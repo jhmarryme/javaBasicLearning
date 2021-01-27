@@ -1,7 +1,8 @@
-package com.imooc.security.core.social.qq.connect;
+package com.imooc.security.core.social.qq.config;
 
 import com.imooc.security.core.properties.QQProperties;
 import com.imooc.security.core.properties.SecurityProperties;
+import com.imooc.security.core.social.qq.connect.QQConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter;

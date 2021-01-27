@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
  * @author JiaHao Wang
  * @date 2021/1/26 16:20
  */
-@Component
-public class DefaultConnectionSignUp implements ConnectionSignUp {
+//@Component
+public class DemoConnectionSignUp implements ConnectionSignUp {
     
     /**
      * 根据社交用户信息默认创建用户并返回用户唯一标识

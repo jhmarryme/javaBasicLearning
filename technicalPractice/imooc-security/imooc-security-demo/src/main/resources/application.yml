@@ -9,7 +9,7 @@ imooc:
   security:
     code:
       image:
-        length: 1
+        length: 2
         width: 600
         url: /authentication/form
       smsCode:
