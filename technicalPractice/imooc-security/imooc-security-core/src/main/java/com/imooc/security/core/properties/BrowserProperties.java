@@ -11,6 +11,9 @@ import lombok.Data;
 @Data
 public class BrowserProperties {
 
+
+    private SessionProperties session = new SessionProperties();
+
     /**
      * 提供默认的注册页面
      */

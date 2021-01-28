@@ -92,10 +92,10 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .userDetailsService(userDetailsService)
                 .and()
             .sessionManagement()
-                .invalidSessionUrl("/session/invalid")
-                .maximumSessions(1)
+                .invalidSessionUrl(securityProperties.getBrowser().getSession().getSessionInvalidUrl())
+                .maximumSessions(securityProperties.getBrowser().getSession().getMaximumSessions())
                 // 最大session时, 组织后续用户登录
-                .maxSessionsPreventsLogin(true)
+                .maxSessionsPreventsLogin(securityProperties.getBrowser().getSession().isMaxSessionsPreventsLogin())
                 .expiredSessionStrategy(new ImoocExpiredSessionStrategy())
                 .and()
                 .and()
@@ -107,8 +107,9 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                         SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*",
                         securityProperties.getBrowser().getLoginPage(),
                         securityProperties.getBrowser().getSignUpUrl(),
+                        securityProperties.getBrowser().getSession().getSessionInvalidUrl(),
                         // 该路径由于只有业务系统知道, 还需进一步抽取
-                        "/user/register", "/session/invalid"
+                        "/user/register"
                 ).permitAll()
                 // 其他所有请求都需要认证
                 .anyRequest()
