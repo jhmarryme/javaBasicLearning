@@ -7,12 +7,15 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
 
+/*
 public class MockServer {
 
-    /**
+    */
+/**
      * @param args
      * @throws IOException
-     */
+     *//*
+
     public static void main(String[] args) throws IOException {
         WireMock.configureFor(8062);
         WireMock.removeAllMappings();
@@ -27,4 +30,4 @@ public class MockServer {
         WireMock.stubFor(WireMock.get(WireMock.urlPathEqualTo(url)).willReturn(WireMock.aResponse().withBody(content).withStatus(200)));
     }
 
-}
+}*/
