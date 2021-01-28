@@ -34,6 +34,12 @@ public class QQAutoConfig extends SocialAutoConfigurerAdapter {
         return new QQConnectionFactory(qqProperties.getPrividerId(), qqProperties.getAppId(), qqProperties.getAppSecret());
     }
 
+    /**
+     * 提供绑定/解绑社交账号的视图
+     * connect为默认值, {providerId} +Connect: 解绑视图, + Connected: 绑定视图
+     * <br/>
+     * @return org.springframework.web.servlet.View
+     */
     @Bean({"connect/qqConnect", "connect/qqConnected"})
     @ConditionalOnMissingBean(name = "qqConnectedView")
     public View qqConnectedView() {

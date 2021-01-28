@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * description: 
+ * description: 查看社交账号绑定状态的视图
+ *      connect/status为默认值
  * @author JiaHao Wang
  * @date 2021/1/27 14:16
  */
@@ -27,6 +28,7 @@ public class ImoocConnectionStatusView extends AbstractView {
     @SuppressWarnings("unchecked")
     @Override
     protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // 从model中取出 社交账号绑定状态的数据
         Map<String, List<Connection<?>>> connectionMap = (Map<String, List<Connection<?>>>) model.get("connectionMap");
 
         Map<String, Boolean> result = new HashMap<>();

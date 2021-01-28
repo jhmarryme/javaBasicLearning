@@ -22,6 +22,12 @@ public class ImoocConnectView extends AbstractView {
     @Override
     protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.setContentType("text/html;charset=UTF-8");
-        response.getWriter().write("<h3>绑定成功</h3>");
+
+        // 绑定视图model中才含有connect
+        if (model.get("connections") == null) {
+            response.getWriter().write("<h3>解绑成功</h3>");
+        } else {
+            response.getWriter().write("<h3>绑定成功</h3>");
+        }
     }
 }
