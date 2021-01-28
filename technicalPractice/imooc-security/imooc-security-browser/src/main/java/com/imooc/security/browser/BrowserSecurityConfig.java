@@ -1,5 +1,6 @@
 package com.imooc.security.browser;
 
+import com.imooc.security.browser.session.ImoocExpiredSessionStrategy;
 import com.imooc.security.core.authentication.AbstractChannelSecurityConfig;
 import com.imooc.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.imooc.security.core.properties.SecurityConstants;
@@ -90,6 +91,14 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .tokenValiditySeconds(securityProperties.getBrowser().getTokenValiditySeconds())
                 .userDetailsService(userDetailsService)
                 .and()
+            .sessionManagement()
+                .invalidSessionUrl("/session/invalid")
+                .maximumSessions(1)
+                // 最大session时, 组织后续用户登录
+                .maxSessionsPreventsLogin(true)
+                .expiredSessionStrategy(new ImoocExpiredSessionStrategy())
+                .and()
+                .and()
             .authorizeRequests()
                 // 不需要登录的路径
                 .antMatchers(
@@ -99,7 +108,7 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                         securityProperties.getBrowser().getLoginPage(),
                         securityProperties.getBrowser().getSignUpUrl(),
                         // 该路径由于只有业务系统知道, 还需进一步抽取
-                        "/user/register"
+                        "/user/register", "/session/invalid"
                 ).permitAll()
                 // 其他所有请求都需要认证
                 .anyRequest()
