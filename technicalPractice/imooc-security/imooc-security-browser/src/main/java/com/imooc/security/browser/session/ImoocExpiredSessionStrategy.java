@@ -7,14 +7,23 @@ import javax.servlet.ServletException;
 import java.io.IOException;
 
 /**
- * description: 
+ * description: 并发登录引起的session失效
  * @author JiaHao Wang
  * @date 2021/1/28 17:26
  */
-public class ImoocExpiredSessionStrategy implements SessionInformationExpiredStrategy {
+public class ImoocExpiredSessionStrategy extends AbstractSessionStrategy implements SessionInformationExpiredStrategy {
+    public ImoocExpiredSessionStrategy(String destinationUrl) {
+        super(destinationUrl);
+    }
+
     @Override
     public void onExpiredSessionDetected(SessionInformationExpiredEvent eventØ) throws IOException, ServletException {
-        eventØ.getResponse().setContentType("application/json;charset=UTF-8");
-        eventØ.getResponse().getWriter().write("并发登录");
+        onSessionInvalid(eventØ.getRequest(), eventØ.getResponse());
     }
+
+    @Override
+    protected boolean isConcurrency() {
+        return true;
+    }
+
 }

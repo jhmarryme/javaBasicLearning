@@ -1,6 +1,7 @@
 package com.imooc.security.browser;
 
 import com.imooc.security.browser.session.ImoocExpiredSessionStrategy;
+import com.imooc.security.browser.session.ImoocInvalidSessionStrategy;
 import com.imooc.security.core.authentication.AbstractChannelSecurityConfig;
 import com.imooc.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.imooc.security.core.properties.SecurityConstants;
@@ -15,6 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.session.InvalidSessionStrategy;
+import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
@@ -45,6 +48,12 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
 
     @Autowired
     private SpringSocialConfigurer imoocSocialSecurityConfig;
+
+    @Autowired
+    private SessionInformationExpiredStrategy sessionInformationExpiredStrategy;
+
+    @Autowired
+    private InvalidSessionStrategy invalidSessionStrategy;
 
     /**
      * 对密码 使用加密处理, 使用spring security 提供的实现
@@ -92,11 +101,11 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .userDetailsService(userDetailsService)
                 .and()
             .sessionManagement()
-                .invalidSessionUrl(securityProperties.getBrowser().getSession().getSessionInvalidUrl())
+                .invalidSessionStrategy(invalidSessionStrategy)
                 .maximumSessions(securityProperties.getBrowser().getSession().getMaximumSessions())
                 // 最大session时, 组织后续用户登录
                 .maxSessionsPreventsLogin(securityProperties.getBrowser().getSession().isMaxSessionsPreventsLogin())
-                .expiredSessionStrategy(new ImoocExpiredSessionStrategy())
+                .expiredSessionStrategy(sessionInformationExpiredStrategy)
                 .and()
                 .and()
             .authorizeRequests()
@@ -107,7 +116,7 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                         SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*",
                         securityProperties.getBrowser().getLoginPage(),
                         securityProperties.getBrowser().getSignUpUrl(),
-                        securityProperties.getBrowser().getSession().getSessionInvalidUrl(),
+                        securityProperties.getBrowser().getSession().getSessionInvalidUrl() + ".html",
                         // 该路径由于只有业务系统知道, 还需进一步抽取
                         "/user/register"
                 ).permitAll()
