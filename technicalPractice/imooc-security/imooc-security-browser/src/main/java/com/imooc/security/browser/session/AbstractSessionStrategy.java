@@ -2,10 +2,7 @@ package com.imooc.security.browser.session;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.imooc.security.browser.support.SimpleResponse;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
