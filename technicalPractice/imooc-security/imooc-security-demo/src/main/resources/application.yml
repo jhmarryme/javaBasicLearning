@@ -1,5 +1,6 @@
 server:
   port: 8060
+#控制session的超时时间，单位：s，默认是30分钟，即30分钟内不做任何操作就会认为超时，然后清除session里的用户信息，最短为1分钟
   session:
     timeout: 60
 spring:

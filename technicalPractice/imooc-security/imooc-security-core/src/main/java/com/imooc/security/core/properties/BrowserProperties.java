@@ -19,6 +19,13 @@ public class BrowserProperties {
      */
     private String signUpUrl = "/imooc-signUp.html";
 
+    /**
+     * 不提供默认的退出页面
+     */
+    private String signOutUrl;
+
+
+
     /**  
      * 提供默认的登录页面
      */
