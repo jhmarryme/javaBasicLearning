@@ -124,6 +124,7 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                         SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*",
                         securityProperties.getBrowser().getLoginPage(),
                         securityProperties.getBrowser().getSignUpUrl(),
+                        securityProperties.getBrowser().getSignOutUrl(),
                         securityProperties.getBrowser().getSession().getSessionInvalidUrl() + ".html",
                         // 该路径由于只有业务系统知道, 还需进一步抽取
                         "/user/register"
