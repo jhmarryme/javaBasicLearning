@@ -23,6 +23,6 @@ imooc:
         appSecret: 8bd77811f967d28560b53e60bce2bb2d
     browser:
       signUpUrl: /demo-signUp.html
-      signOutUrl: /demo-signOut.html
+#      signOutUrl: /demo-signOut.html
 #      loginType: REDIRECT
 #      loginPage: /demo-login.html

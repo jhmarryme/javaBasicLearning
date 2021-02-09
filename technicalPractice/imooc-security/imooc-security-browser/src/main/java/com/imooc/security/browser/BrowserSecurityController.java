@@ -1,6 +1,6 @@
 package com.imooc.security.browser;
 
-import com.imooc.security.browser.support.SimpleResponse;
+import com.imooc.security.core.support.SimpleResponse;
 import com.imooc.security.browser.support.SocialUserInfo;
 import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.properties.SecurityProperties;
@@ -60,7 +60,7 @@ public class BrowserSecurityController {
      * @date 2020/12/7 9:13
      * @param request request对象
      * @param response response对象
-     * @return com.imooc.security.browser.support.SimpleResponse
+     * @return com.imooc.security.core.support.SimpleResponse
      */
     @RequestMapping(SecurityConstants.DEFAULT_UNAUTHENTICATED_URL)
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
