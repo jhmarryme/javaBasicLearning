@@ -6,7 +6,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   #    暂时关闭session配置
   session:
-    store-type: none
+    store-type: redis
+  redis:
+    host: 120.78.171.38
+    port: 6379
 #security:
 #  basic:
 #    enabled: false
