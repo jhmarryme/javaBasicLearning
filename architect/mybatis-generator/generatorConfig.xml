@@ -29,7 +29,8 @@
         <javaClientGenerator targetPackage="com.jhmarryme.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
         <!-- 数据库表 -->
-		<table tableName="carousel"></table>
+		<table tableName="stu"></table>
+<!--		<table tableName="carousel"></table>-->
 <!--		<table tableName="category"></table>-->
 <!--		<table tableName="items"></table>-->
 <!--		<table tableName="items_comments"></table>-->
