@@ -4,7 +4,7 @@
 #
 ############################################################
 server:
-  #  port: 8088
+  port: 7777
   tomcat:
     uri-encoding: UTF-8
   max-http-header-size: 80KB
@@ -20,7 +20,7 @@ spring:
   datasource:                                           # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP
     driver-class-name: com.mysql.jdbc.Driver          # mysql驱动
-    url: jdbc:mysql://120.78.171.38:3306/monolithic-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://1.14.140.53:3306/monolithic-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
     password: jh541224
     hikari:
