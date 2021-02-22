@@ -82,7 +82,7 @@ public class ImoocAuthenticationSuccessHandler extends SavedRequestAwareAuthenti
 
         response.setContentType("application/json;charset=UTF-8");
         // 将authentication信息显示, 调试用
-        response.getWriter().write(objectMapper.writeValueAsString(authentication));
+        response.getWriter().write(objectMapper.writeValueAsString(token));
 
     }
 

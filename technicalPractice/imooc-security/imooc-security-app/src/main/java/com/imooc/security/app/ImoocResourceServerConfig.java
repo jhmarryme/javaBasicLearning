@@ -41,33 +41,40 @@ public class ImoocResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-
         http.formLogin()
-//                .loginPage(SecurityConstants.DEFAULT_UNAUTHENTICATION_URL)
+                // 当未登录时, 跳转的路径
+                .loginPage(SecurityConstants.DEFAULT_UNAUTHENTICATED_URL)
+                // 登录请求的处理路径, 提交username和password的URL, 默认配置 UsernamePasswordAuthenticationFilter中 login
                 .loginProcessingUrl(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM)
+                // 认证 成功/失败 的处理逻辑
                 .successHandler(imoocAuthenticationSuccessHandler)
                 .failureHandler(imoocAuthenticationFailureHandler);
 
-        http//.apply(validateCodeSecurityConfig)
-                //  .and()
-                .apply(smsCodeAuthenticationSecurityConfig)
+        http
+            .apply(validateCodeSecurityConfig)
                 .and()
-                .apply(imoocSocialSecurityConfig)
+            .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
-                .authorizeRequests()
-                .antMatchers(
-//                        SecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
-                        SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE,
-                        securityProperties.getBrowser().getLoginPage(),
-                        SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX+"/*",
-                        securityProperties.getBrowser().getSignUpUrl(),
-                        securityProperties.getBrowser().getSession().getSessionInvalidUrl(),
-                        securityProperties.getBrowser().getSignOutUrl(),
-                        "/user/regist")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
+            .apply(imoocSocialSecurityConfig)
                 .and()
-                .csrf().disable();
+            .authorizeRequests()
+            // 不需要登录的路径
+            .antMatchers(
+                    SecurityConstants.DEFAULT_UNAUTHENTICATED_URL,
+                    SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE,
+                    SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*",
+                    securityProperties.getBrowser().getLoginPage(),
+                    securityProperties.getBrowser().getSignUpUrl(),
+//                        securityProperties.getBrowser().getSignOutUrl(),
+                    securityProperties.getBrowser().getSession().getSessionInvalidUrl() + ".html",
+                    // 该路径由于只有业务系统知道, 还需进一步抽取
+                    "/user/register"
+                ).permitAll()
+            // 其他所有请求都需要认证
+            .anyRequest()
+            .authenticated()
+            .and()
+            .csrf()
+            .disable();
     }
 }

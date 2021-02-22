@@ -10,6 +10,7 @@ spring:
   redis:
     host: 1.14.140.53
     port: 6379
+    password: jh541224
 security:
 #  basic:
 #    enabled: false
