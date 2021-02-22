@@ -27,4 +27,13 @@ public interface UsersService {
      * @return com.jhmarryme.pojo.Users
      */
     Users createUser(UserBO userBO);
+
+    /**
+     * 用户登录
+     * <br/>
+     * @param username 用户名
+     * @param password 加密后的密码
+     * @return com.jhmarryme.pojo.Users
+     */
+    Users queryUserForLogin(String username, String password);
 }

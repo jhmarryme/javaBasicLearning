@@ -7,6 +7,9 @@ import com.jhmarryme.pojo.bo.UserBO;
 import com.jhmarryme.service.UsersService;
 import com.jhmarryme.utils.DateUtil;
 import com.jhmarryme.utils.MD5Utils;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +25,7 @@ import java.util.Date;
  * @date 2021/2/16 10:46
  */
 @Service
+@Slf4j
 public class UsersServiceImpl implements UsersService {
 
     private static final String USER_FACE = "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_8_qAIlFXAAAcIhVPdSg994.png";
@@ -71,5 +75,20 @@ public class UsersServiceImpl implements UsersService {
         usersMapper.insert(user);
 
         return user;
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public Users queryUserForLogin(String username, String password) {
+
+        Example userExample = new Example(Users.class);
+        Example.Criteria userCriteria = userExample.createCriteria();
+
+        userCriteria.andEqualTo("username", username);
+        userCriteria.andEqualTo("password", password);
+
+        Users result = usersMapper.selectOneByExample(userExample);
+        log.info("查询的用户信息是:\n {}", ReflectionToStringBuilder.toString(result, ToStringStyle.MULTI_LINE_STYLE));
+        return result;
     }
 }
