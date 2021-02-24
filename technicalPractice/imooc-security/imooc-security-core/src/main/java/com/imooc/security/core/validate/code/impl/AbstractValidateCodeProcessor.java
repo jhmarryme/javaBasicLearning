@@ -1,5 +1,6 @@
 package com.imooc.security.core.validate.code.impl;
 
+import com.imooc.security.core.validate.code.ValidateCodeRepository;
 import com.imooc.security.core.validate.code.base.ValidateCode;
 import com.imooc.security.core.validate.code.ValidateCodeGenerator;
 import com.imooc.security.core.validate.code.ValidateCodeProcessor;
@@ -17,16 +18,12 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * description: 
+ * 抽象方法模式——算法骨架
+ * 对验证码的一些公有的业务逻辑进行抽离，做到复用
  * @author JiaHao Wang
  * @date 2020/12/3 20:19
  */
 public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> implements ValidateCodeProcessor {
-
-    /**
-     * 操作session的工具类
-     */
-    private final SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
     /**
      * 通过spring的依赖查找机制, 收集 {@link ValidateCodeGenerator} 接口的所有实现
@@ -34,10 +31,19 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
     @Autowired
     private Map<String, ValidateCodeGenerator> validateCodeGeneratorMap;
 
+    /**
+     * 验证码的存储介质
+     */
+    @Autowired
+    private ValidateCodeRepository validateCodeRepository;
+
     @Override
     public void create(ServletWebRequest request) throws Exception {
+        // 生成
         C validateCode = generate(request);
+        // 存储
         save(request, validateCode);
+        // 发送 （抽象方法 由具体的子类实现各自的发送逻辑）
         send(request, validateCode);
     }
 
@@ -47,11 +53,11 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 
         ValidateCodeTypeEnum validateCodeType = getValidateCodeType();
 
-        String sessionKey = getSessionKey();
-
-        C codeInSession = (C) sessionStrategy.getAttribute(request, sessionKey);
+        Optional<ValidateCode> codeOpt = validateCodeRepository.get(request, validateCodeType);
+        ValidateCode valCodeInStorage = codeOpt.orElseThrow(() -> new ValidateCodeException("验证码不存在"));
 
         String codeInRequest;
+
         try {
             codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(),
                     validateCodeType.getParamNameOnValidate());
@@ -63,21 +69,18 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
             throw new ValidateCodeException(validateCodeType + "验证码的值不能为空");
         }
 
-        if (codeInSession == null) {
-            throw new ValidateCodeException(validateCodeType + "验证码不存在");
-        }
-
-        if (codeInSession.isExpired()) {
-            sessionStrategy.removeAttribute(request, sessionKey);
+        if (valCodeInStorage.isExpired()) {
+            validateCodeRepository.remove(request, validateCodeType);
             throw new ValidateCodeException(validateCodeType + "验证码已过期");
         }
 
-        if (!StringUtils.equals(codeInSession.getCode(), codeInRequest)) {
+        if (!StringUtils.equals(valCodeInStorage.getCode(), codeInRequest)) {
             throw new ValidateCodeException(validateCodeType + "验证码不匹配");
         }
 
-        sessionStrategy.removeAttribute(request, sessionKey);
+        validateCodeRepository.remove(request, validateCodeType);
     }
+
 
     /**
      * 根据类型的不同 生成校验码
@@ -98,19 +101,6 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
     }
 
     /**
-     * 获取验证码的类型
-     * <br/>
-     * @author Jiahao Wang
-     * @date 2020/12/30 10:43
-     * @return com.imooc.security.core.validate.code.base.ValidateCodeTypeEnum
-     */
-    private ValidateCodeTypeEnum getValidateCodeType() {
-        String type = StringUtils.substringBefore(getClass().getSimpleName(), "CodeProcessor");
-        return ValidateCodeTypeEnum.valueOf(type.toUpperCase());
-    }
-
-
-    /**
      * 保存校验码到session
      * <br/>
      * @author Jiahao Wang
@@ -121,18 +111,7 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
      */
     private void save(ServletWebRequest request, C validateCode) {
         ValidateCode code = new ValidateCode(validateCode.getCode(), validateCode.getExpireTime());
-        sessionStrategy.setAttribute(request, getSessionKey(), code);
-    }
-
-    /**
-     * 构建验证码放入session时的key
-     * <br/>
-     * @author Jiahao Wang
-     * @date 2020/12/30 10:46
-     * @return java.lang.String
-     */
-    private String getSessionKey() {
-        return SESSION_KEY_PREFIX + getValidateCodeType().toString().toUpperCase();
+        validateCodeRepository.save(request, code, getValidateCodeType());
     }
 
     /**
@@ -146,4 +125,17 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
      * @throws Exception
      */
     protected abstract void send(ServletWebRequest request, C validateCode) throws Exception;
+
+    /**
+     * 获取验证码的类型
+     * <br/>
+     * @author Jiahao Wang
+     * @date 2020/12/30 10:43
+     * @return com.imooc.security.core.validate.code.base.ValidateCodeTypeEnum
+     */
+    private ValidateCodeTypeEnum getValidateCodeType() {
+        String type = StringUtils.substringBefore(getClass().getSimpleName(), "CodeProcessor");
+        return ValidateCodeTypeEnum.valueOf(type.toUpperCase());
+    }
+
 }
