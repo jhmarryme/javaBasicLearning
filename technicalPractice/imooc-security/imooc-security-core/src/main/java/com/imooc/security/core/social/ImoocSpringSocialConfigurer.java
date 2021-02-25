@@ -1,5 +1,6 @@
 package com.imooc.security.core.social;
 
+import lombok.Data;
 import org.springframework.social.security.SocialAuthenticationFilter;
 import org.springframework.social.security.SpringSocialConfigurer;
 
@@ -8,14 +9,17 @@ import org.springframework.social.security.SpringSocialConfigurer;
  * @author JiaHao Wang
  * @date 2021/1/19 9:43
  */
-public class ImoocSocialSecurityConfig extends SpringSocialConfigurer {
+@Data
+public class ImoocSpringSocialConfigurer extends SpringSocialConfigurer {
 
     /**
      * 请求/回调地址前缀
      */
     private final String filterProcessesUrl;
 
-    public ImoocSocialSecurityConfig(String filterProcessesUrl) {
+    private SocialAuthenticationFilterPostProcessor socialAuthenticationFilterPostProcessor;
+
+    public ImoocSpringSocialConfigurer(String filterProcessesUrl) {
         this.filterProcessesUrl = filterProcessesUrl;
     }
 
@@ -29,7 +33,9 @@ public class ImoocSocialSecurityConfig extends SpringSocialConfigurer {
     protected <T> T postProcess(T object) {
         SocialAuthenticationFilter filter = (SocialAuthenticationFilter) super.postProcess(object);
         filter.setFilterProcessesUrl(filterProcessesUrl);
-
+        if (socialAuthenticationFilterPostProcessor != null) {
+            socialAuthenticationFilterPostProcessor.process(filter);
+        }
         return (T) filter;
     }
 }

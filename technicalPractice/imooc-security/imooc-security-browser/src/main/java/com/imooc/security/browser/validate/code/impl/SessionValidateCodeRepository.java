@@ -5,6 +5,7 @@ import com.imooc.security.core.validate.code.base.ValidateCode;
 import com.imooc.security.core.validate.code.base.ValidateCodeTypeEnum;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import java.util.Optional;
@@ -14,6 +15,7 @@ import java.util.Optional;
  * @author JiaHao Wang
  * @date 2021/2/23 12:35
  */
+@Component
 public class SessionValidateCodeRepository implements ValidateCodeRepository {
 
     /**

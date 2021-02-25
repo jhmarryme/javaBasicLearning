@@ -37,6 +37,29 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Autowired(required = false)
     private ConnectionSignUp connectionSignUp;
 
+    @Autowired(required = false)
+    private SocialAuthenticationFilterPostProcessor socialAuthenticationFilterPostProcessor;
+
+    /**
+     * 创建一个bean对象
+     *      该bean用于往当前的过滤器链中添加一个过滤器, 用于拦截特定的请求, 引导用户进行社交登录
+     *      {@link SpringSocialConfigurer} 的configure方法 new了一个 {@link SocialAuthenticationFilter}
+     *      使用postProcess方法处理后, 将其添加到过滤器链中
+     *
+     *      在{@link com.imooc.security.browser.BrowserSecurityConfig} 中被引用
+     *      在{@link com.imooc.security.app.ImoocResourceServerConfig} 中被引用
+     * <br/>
+     * @return org.springframework.social.security.SpringSocialConfigurer
+     */
+    @Bean
+    public SpringSocialConfigurer imoocSpringSocialConfigurer() {
+        ImoocSpringSocialConfigurer configurer =
+                new ImoocSpringSocialConfigurer(securityProperties.getSocial().getFilterProcessesUrl());
+        configurer.signupUrl(securityProperties.getBrowser().getSignUpUrl());
+        configurer.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
+        return configurer;
+    }
+
     /**
      * 配置 UsersConnectionRepository
      * <br/>
@@ -58,24 +81,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
         return repository;
     }
 
-    /**
-     * 创建一个bean对象
-     *      该bean用于往当前的过滤器链中添加一个过滤器, 用于拦截特定的请求, 引导用户进行社交登录
-     *      {@link SpringSocialConfigurer} 的configure方法 new了一个 {@link SocialAuthenticationFilter}
-     *      使用postProcess方法处理后, 将其添加到过滤器链中
-     *      在{@link com.imooc.security.browser.BrowserSecurityConfig} 中被引用
-     * <br/>
-     * @return org.springframework.social.security.SpringSocialConfigurer
-     */
-    @Bean
-    public SpringSocialConfigurer imoocSocialSecurityConfig() {
-        ImoocSocialSecurityConfig socialSecurityConfig =
-                new ImoocSocialSecurityConfig(securityProperties.getSocial().getFilterProcessesUrl());
-        socialSecurityConfig.signupUrl(securityProperties.getBrowser().getSignUpUrl());
-        return socialSecurityConfig;
-    }
 
-    
     /**
      * 创建一个用于 社交登录相关操作的工具类
      *      - doPostSignUp() 用于完成注册

@@ -1,5 +1,6 @@
 package com.imooc.security.app;
 
+import com.imooc.security.app.social.openId.OpenIdAuthenticationSecurityConfig;
 import com.imooc.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.properties.SecurityProperties;
@@ -31,6 +32,9 @@ public class ImoocResourceServerConfig extends ResourceServerConfigurerAdapter {
     private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
 
     @Autowired
+    private OpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
+
+    @Autowired
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
     @Autowired
@@ -55,6 +59,8 @@ public class ImoocResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .and()
             .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
+            .apply(openIdAuthenticationSecurityConfig)
+                .and()
             .apply(imoocSocialSecurityConfig)
                 .and()
             .authorizeRequests()
@@ -62,6 +68,7 @@ public class ImoocResourceServerConfig extends ResourceServerConfigurerAdapter {
             .antMatchers(
                     SecurityConstants.DEFAULT_UNAUTHENTICATED_URL,
                     SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE,
+                    SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_OPENID,
                     SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*",
                     securityProperties.getBrowser().getLoginPage(),
                     securityProperties.getBrowser().getSignUpUrl(),
