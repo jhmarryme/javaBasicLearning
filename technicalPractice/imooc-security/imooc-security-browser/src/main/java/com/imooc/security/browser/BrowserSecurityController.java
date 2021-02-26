@@ -1,7 +1,7 @@
 package com.imooc.security.browser;
 
 import com.imooc.security.core.support.SimpleResponse;
-import com.imooc.security.browser.support.SocialUserInfo;
+import com.imooc.security.core.support.SocialUserInfo;
 import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.properties.SecurityProperties;
 import lombok.extern.slf4j.Slf4j;
@@ -92,7 +92,7 @@ public class BrowserSecurityController {
      * @author Jiahao Wang
      * @date 2021/1/26 17:15
      * @param request request
-     * @return com.imooc.security.browser.support.SocialUserInfo
+     * @return com.imooc.security.core.support.SocialUserInfo
      */
     @GetMapping("/social/user")
     public SocialUserInfo getSocialUserInfo(HttpServletRequest request) {

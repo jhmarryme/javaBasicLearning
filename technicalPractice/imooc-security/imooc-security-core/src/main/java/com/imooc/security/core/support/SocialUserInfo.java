@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.imooc.security.browser.support;
+package com.imooc.security.core.support;
 
 import lombok.Data;
 

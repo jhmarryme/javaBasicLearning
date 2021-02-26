@@ -55,7 +55,9 @@ public class SocialConfig extends SocialConfigurerAdapter {
     public SpringSocialConfigurer imoocSpringSocialConfigurer() {
         ImoocSpringSocialConfigurer configurer =
                 new ImoocSpringSocialConfigurer(securityProperties.getSocial().getFilterProcessesUrl());
+        // 指定SpringSocial/SpringSecurity跳向注册页面时的url为我们配置的url
         configurer.signupUrl(securityProperties.getBrowser().getSignUpUrl());
+        // 设置springsocial的认证成功处理器 -- app下可以返回token，browser下使用spring-security默认的
         configurer.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
         return configurer;
     }

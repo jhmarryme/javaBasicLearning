@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
- * 资源服务器
+ * 资源服务器 相关配置
  * @author Jiahao Wang
  * @date 2021/2/19 10:43
  */
@@ -75,7 +75,8 @@ public class ImoocResourceServerConfig extends ResourceServerConfigurerAdapter {
 //                        securityProperties.getBrowser().getSignOutUrl(),
                     securityProperties.getBrowser().getSession().getSessionInvalidUrl() + ".html",
                     // 该路径由于只有业务系统知道, 还需进一步抽取
-                    "/user/register"
+                    "/user/register",
+                    "/social/signUp"
                 ).permitAll()
             // 其他所有请求都需要认证
             .anyRequest()
