@@ -9,10 +9,9 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 /**
- * description: 
- * @Author: Wjh
- * @Date: 2020/9/10 19:55
- * @Modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/9/10 19:55
  */
 @Component
 public class QueueListener implements ApplicationListener<ContextRefreshedEvent> {

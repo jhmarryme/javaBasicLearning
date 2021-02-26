@@ -5,10 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * description: 模拟一个消息队列
- * @Author: Wjh
- * @Date: 2020/9/10 19:50
- * @Modified By:
+ * 模拟一个消息队列
+ * @author JiaHao Wang
+ * @date 2020/9/10 19:50
  */
 @Component
 public class MockQueue {

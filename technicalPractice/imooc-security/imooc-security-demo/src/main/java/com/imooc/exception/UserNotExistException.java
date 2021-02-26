@@ -3,11 +3,10 @@ package com.imooc.exception;
 import lombok.Data;
 
 /**
- * description: 异常信息
+ * 异常信息
  *
- * @Author: Wjh
- * @Date: 2020/9/10 17:51
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/10 17:51
  */
 @Data
 public class UserNotExistException extends RuntimeException {

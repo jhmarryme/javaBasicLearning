@@ -9,10 +9,9 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**
- * description: 短信验证码处理器
- * @author: JiaHao Wang
- * @date: 2020/12/3 20:49
- * @modified By:
+ * 短信验证码处理器
+ * @author JiaHao Wang
+ * @date 2020/12/3 20:49
  */
 @Component("smsValidateCodeProcessor")
 public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode> {

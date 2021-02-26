@@ -11,12 +11,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * description: 验证码相关的Bean配置
+ * 验证码相关的Bean配置
  *      方法1: imageCodeGenerator
  *      方法2: smsCodeGenerator
- * @author: JiaHao Wang
- * @date: 2020/12/1 17:30
- * @modified By:
+ * @author JiaHao Wang
+ * @date 2020/12/1 17:30
  */
 @Configuration
 public class ValidateBeanConfig {

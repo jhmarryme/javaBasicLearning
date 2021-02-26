@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * description: 简单的返回对象
+ * 简单的返回对象
  * @author Wjh
  * @date 2020/11/9 11:13
  */

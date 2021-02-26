@@ -4,10 +4,9 @@ import com.imooc.security.core.validate.code.base.ValidateCode;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**
- * description: 验证码生成器
- * @author: JiaHao Wang
- * @date: 2020/12/1 17:23
- * @modified By:
+ * 验证码生成器
+ * @author JiaHao Wang
+ * @date 2020/12/1 17:23
  */
 public interface ValidateCodeGenerator {
 

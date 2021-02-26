@@ -7,7 +7,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 import java.util.Optional;
 
 /**
- * description: 验证码存取器 接口
+ * 验证码存取器 接口
  * @author JiaHao Wang
  * @date 2021/2/23 12:20
  */

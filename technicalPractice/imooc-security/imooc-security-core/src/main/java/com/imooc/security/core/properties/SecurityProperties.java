@@ -4,10 +4,9 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * description: 框架的配置入口
- * @Author: Wjh
- * @Date: 2020/11/9 11:36
- * @Modified By:
+ * 框架的配置入口
+ * @author JiaHao Wang
+ * @date 2020/11/9 11:36
  */
 @ConfigurationProperties(prefix = "imooc.security")
 @Data

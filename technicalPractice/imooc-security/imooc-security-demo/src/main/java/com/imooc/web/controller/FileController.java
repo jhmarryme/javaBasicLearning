@@ -18,9 +18,8 @@ import java.util.Date;
 /**
  * description:
  *
- * @Author: Wjh
- * @Date: 2020/9/10 18:23
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/10 18:23
  */
 @RestController
 @RequestMapping("/file")
@@ -35,7 +34,7 @@ public class FileController {
      *
      * @Param: [file]
      * @Return: com.imooc.dto.FileInfo
-     * @Author: Wjh
+     * @author JiaHao Wang
      * @Since: 2020/9/10 18:28
      * @Throws
      **/
@@ -66,7 +65,7 @@ public class FileController {
      *
      * @Param: [id, request, response]
      * @Return: void
-     * @Author: Wjh
+     * @author JiaHao Wang
      * @Since: 2020/9/10 19:04
      * @Throws
      **/

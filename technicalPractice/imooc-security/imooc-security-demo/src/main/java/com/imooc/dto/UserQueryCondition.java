@@ -6,9 +6,8 @@ import lombok.Data;
 /**
  * description:
  *
- * @Author: Wjh
- * @Date: 2020/9/8 12:32
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/8 12:32
  */
 @Data
 public class UserQueryCondition {

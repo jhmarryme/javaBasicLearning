@@ -14,7 +14,7 @@ import org.springframework.social.connect.ConnectionFactory;
 import org.springframework.web.servlet.View;
 
 /**
- * description: qq相关配置, 
+ * qq相关配置,
  *      实现 {@link SocialAutoConfigurerAdapter}中createConnectionFactory方法
  *      当配置文件中存在imooc.security.social.qq.appId的时候, 该配置才会生效
  * @author JiaHao Wang

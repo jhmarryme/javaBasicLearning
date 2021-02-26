@@ -5,7 +5,7 @@ import org.springframework.social.security.SocialAuthenticationFilter;
 import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
- * description: 通过继承SpringSocialConfigurer, 重写postProcess方法修改配置
+ * 通过继承SpringSocialConfigurer, 重写postProcess方法修改配置
  * @author JiaHao Wang
  * @date 2021/1/19 9:43
  */

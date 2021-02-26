@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
- * description: 资源服务器
+ * 资源服务器
  * @author Jiahao Wang
  * @date 2021/2/19 10:43
  */

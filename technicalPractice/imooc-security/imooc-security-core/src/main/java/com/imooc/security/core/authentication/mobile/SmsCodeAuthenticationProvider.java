@@ -9,11 +9,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
- * description: 需要实现 {@code AuthenticationProvider}
+ * 需要实现 {@code AuthenticationProvider}
  *
- * @author: JiaHao Wang
- * @date: 2020/12/7 21:10
- * @modified By:
+ * @author JiaHao Wang
+ * @date 2020/12/7 21:10
  */
 @Data
 public class SmsCodeAuthenticationProvider implements AuthenticationProvider {

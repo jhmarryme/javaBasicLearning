@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.StandardCharsets;
 
 /**
- * description: 
+ *
  * @author JiaHao Wang
  * @date 2021/1/20 16:22
  */

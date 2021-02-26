@@ -24,10 +24,9 @@ import org.springframework.social.security.SpringSocialConfigurer;
 import javax.sql.DataSource;
 
 /**
- * description: springSecurity 配置
- * @Author: Wjh
- * @Date: 2020/10/29 12:23
- * @Modified By:
+ * springSecurity 配置
+ * @author JiaHao Wang
+ * @date 2020/10/29 12:23
  */
 @Configuration
 public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {

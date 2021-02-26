@@ -11,10 +11,9 @@ import org.springframework.web.context.request.async.DeferredResult;
 import java.util.concurrent.Callable;
 
 /**
- * description: 
- * @Author: Wjh
- * @Date: 2020/9/10 19:33
- * @Modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/9/10 19:33
  */
 @RestController
 public class AsyncController {
@@ -47,7 +46,7 @@ public class AsyncController {
      * 3. 线程1 处理消息并返回数据, 发送下单完成消息
      * 4. 监听器线程2 接收到下单完成消息, 将数据放到DeferredResult中, DeferredResult会自动将其响应
      *
-     * @Author: Wjh
+     * @author JiaHao Wang
      * @Since: 2020/9/10 23:19
      **/
     @RequestMapping("/order/deferred")

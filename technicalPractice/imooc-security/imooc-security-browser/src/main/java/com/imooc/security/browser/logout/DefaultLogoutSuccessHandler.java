@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * description: 默认的退出登陆逻辑
+ * 默认的退出登陆逻辑
  * @author JiaHao Wang
  * @date 2021/2/7 11:32
  */

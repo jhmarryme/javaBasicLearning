@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 /**
- * description: Browser认证配置
+ * Browser认证配置
  * @author Jiahao Wang
  * @date 2020/11/9 9:02
  */

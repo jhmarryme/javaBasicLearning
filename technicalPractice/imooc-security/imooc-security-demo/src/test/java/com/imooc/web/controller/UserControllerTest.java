@@ -20,11 +20,10 @@ import java.util.Date;
 
 
 /**
- * description: 针对restfulAPI的测试用例
+ * 针对restfulAPI的测试用例
  *
- * @Author: Wjh
- * @Date: 2020/9/8 12:20
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/8 12:20
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

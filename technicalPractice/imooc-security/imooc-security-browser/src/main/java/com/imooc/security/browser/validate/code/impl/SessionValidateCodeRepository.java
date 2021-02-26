@@ -11,7 +11,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 import java.util.Optional;
 
 /**
- * description: 基于session的 验证码存储器
+ * 基于session的 验证码存储器
  * @author JiaHao Wang
  * @date 2021/2/23 12:35
  */

@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import java.io.IOException;
 
 /**
- * description: 并发登录引起的session失效
+ * 并发登录引起的session失效
  * @author JiaHao Wang
  * @date 2021/1/28 17:26
  */

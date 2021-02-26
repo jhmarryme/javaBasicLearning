@@ -8,10 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 /**
- * description: 
- * @author: JiaHao Wang
- * @date: 2020/12/28 12:35
- * @modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/12/28 12:35
  */
 @Component
 public class ValidateCodeProcessorHolder {

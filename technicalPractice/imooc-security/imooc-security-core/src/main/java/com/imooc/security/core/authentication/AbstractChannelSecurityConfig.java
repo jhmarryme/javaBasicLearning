@@ -8,7 +8,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 /**
- * description: 表单登录的相关配置
+ * 表单登录的相关配置
  * @author JiaHao Wang
  * @date 2021/1/12 12:44
  */

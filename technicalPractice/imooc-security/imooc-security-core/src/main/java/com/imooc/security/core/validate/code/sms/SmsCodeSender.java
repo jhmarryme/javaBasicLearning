@@ -1,10 +1,9 @@
 package com.imooc.security.core.validate.code.sms;
 
 /**
- * description: 
- * @author: JiaHao Wang
- * @date: 2020/12/3 19:01
- * @modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/12/3 19:01
  */
 public interface SmsCodeSender {
 

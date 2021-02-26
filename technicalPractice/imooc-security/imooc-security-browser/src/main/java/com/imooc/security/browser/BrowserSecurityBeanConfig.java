@@ -14,7 +14,7 @@ import org.springframework.security.web.session.InvalidSessionStrategy;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 
 /**
- * description: 
+ *
  * @author JiaHao Wang
  * @date 2021/1/29 11:41
  */

@@ -3,7 +3,7 @@ package com.imooc.security.core.properties;
 import lombok.Data;
 
 /**
- * description: 
+ *
  * @author JiaHao Wang
  * @date 2021/1/12 9:01
  */

@@ -9,10 +9,9 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 
 /**
- * description: 图形验证码处理器
- * @author: JiaHao Wang
- * @date: 2020/12/3 20:53
- * @modified By:
+ * 图形验证码处理器
+ * @author JiaHao Wang
+ * @date 2020/12/3 20:53
  */
 @Component("imageValidateCodeProcessor")
 public class ImageCodeProcessor extends AbstractValidateCodeProcessor<ImageCode> {

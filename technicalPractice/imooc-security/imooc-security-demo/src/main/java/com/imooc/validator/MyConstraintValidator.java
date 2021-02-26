@@ -7,12 +7,11 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
- * description: 具体约束类
+ * 具体约束类
  *      MyConstraint: 验证的注解是什么, Object: 验证的数据类型是什么, 不需要使用@Component注解
  *
- * @Author: Wjh
- * @Date: 2020/9/9 13:07
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/9 13:07
  */
 public class MyConstraintValidator implements ConstraintValidator<MyConstraint, Object> {
 

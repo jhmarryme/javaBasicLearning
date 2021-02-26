@@ -5,7 +5,7 @@ import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.stereotype.Component;
 
 /**
- * description: 自动注册账户的业务逻辑
+ * 自动注册账户的业务逻辑
  * @author JiaHao Wang
  * @date 2021/1/26 16:20
  */

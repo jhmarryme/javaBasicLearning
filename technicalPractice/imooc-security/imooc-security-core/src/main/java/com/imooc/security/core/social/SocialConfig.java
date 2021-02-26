@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 import java.util.Optional;
 
 /**
- * description: spring social 相关配置
+ * spring social 相关配置
  * @author JiaHao Wang
  * @date 2021/1/11 13:01
  */

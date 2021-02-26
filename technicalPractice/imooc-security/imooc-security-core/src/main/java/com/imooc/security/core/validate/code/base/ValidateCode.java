@@ -8,10 +8,9 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * description: 
- * @author: JiaHao Wang
- * @date: 2020/12/3 18:55
- * @modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/12/3 18:55
  */
 @Data
 @AllArgsConstructor

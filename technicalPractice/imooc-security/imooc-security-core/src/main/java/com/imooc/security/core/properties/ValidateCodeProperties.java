@@ -3,10 +3,9 @@ package com.imooc.security.core.properties;
 import lombok.Data;
 
 /**
- * description: 
- * @author: JiaHao Wang
- * @date: 2020/12/1 12:16
- * @modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/12/1 12:16
  */
 @Data
 public class ValidateCodeProperties {

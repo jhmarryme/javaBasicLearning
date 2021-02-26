@@ -6,7 +6,7 @@ import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Template;
 
 /**
- * description: 服务提供商
+ * 服务提供商
  * @author JiaHao Wang
  * @date 2021/1/11 11:39
  */

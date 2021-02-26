@@ -3,10 +3,9 @@ package com.imooc.security.core.properties;
 import lombok.Data;
 
 /**
- * description: 
- * @Author: Wjh
- * @Date: 2020/11/9 11:23
- * @Modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/11/9 11:23
  */
 @Data
 public class BrowserProperties {

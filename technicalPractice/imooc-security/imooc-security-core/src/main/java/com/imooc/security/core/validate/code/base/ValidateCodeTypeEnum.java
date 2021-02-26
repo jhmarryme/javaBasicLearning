@@ -3,7 +3,7 @@ package com.imooc.security.core.validate.code.base;
 import com.imooc.security.core.properties.SecurityConstants;
 
 /**
- * description: 
+ *
  * @author JiaHao Wang
  * @date 2020/12/28 12:10
  */

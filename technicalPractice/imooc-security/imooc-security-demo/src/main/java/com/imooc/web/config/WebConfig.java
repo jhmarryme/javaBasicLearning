@@ -12,11 +12,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.ArrayList;
 
 /**
- * description: 自定义配置类
+ * 自定义配置类
  *
- * @Author: Wjh
- * @Date: 2020/9/10 16:05
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/10 16:05
  */
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {

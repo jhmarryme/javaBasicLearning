@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * description: session 默认超时失效策略
+ * session 默认超时失效策略
  * @author JiaHao Wang
  * @date 2021/1/29 11:44
  */

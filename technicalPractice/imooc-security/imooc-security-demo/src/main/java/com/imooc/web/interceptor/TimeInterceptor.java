@@ -10,11 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 /**
- * description: 自定义拦截器, 使用@Component后还需要在配置类注册
+ * 自定义拦截器, 使用@Component后还需要在配置类注册
  *      可以拿到控制器和方法, 但拿不到方法参数
- * @Author: Wjh
- * @Date: 2020/9/10 16:36
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/10 16:36
  */
 @Component
 public class TimeInterceptor implements HandlerInterceptor {

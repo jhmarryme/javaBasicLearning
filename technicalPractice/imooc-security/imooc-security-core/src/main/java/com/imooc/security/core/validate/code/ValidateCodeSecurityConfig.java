@@ -9,7 +9,7 @@ import org.springframework.security.web.authentication.preauth.AbstractPreAuthen
 import org.springframework.stereotype.Component;
 
 /**
- * description: 验证码过滤器配置类
+ * 验证码过滤器配置类
  * @author JiaHao Wang
  * @date 2021/1/12 12:22
  */

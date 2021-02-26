@@ -9,10 +9,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**
- * description: 
- * @author: JiaHao Wang
- * @date: 2020/12/3 19:23
- * @modified By:
+ *
+ * @author JiaHao Wang
+ * @date 2020/12/3 19:23
  */
 @Component("smsCodeGenerator")
 public class SmsCodeGenerator implements ValidateCodeGenerator {

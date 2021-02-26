@@ -14,10 +14,9 @@ import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
 
 /**
- * description: 配置用户信息校验逻辑
- * @Author: Wjh
- * @Date: 2020/10/29 12:35
- * @Modified By:
+ * 配置用户信息校验逻辑
+ * @author JiaHao Wang
+ * @date 2020/10/29 12:35
  */
 @Component
 @Slf4j

@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * description: 通用异常处理
+ * 通用异常处理
  * @author Jiahao Wang
  * @date 2020/9/10 17:50
  */

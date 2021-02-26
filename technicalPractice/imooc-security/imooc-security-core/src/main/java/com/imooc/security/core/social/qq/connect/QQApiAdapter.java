@@ -7,7 +7,7 @@ import org.springframework.social.connect.ConnectionValues;
 import org.springframework.social.connect.UserProfile;
 
 /**
- * description: 用于将 qq提供的数据 适配为 业务需要的数据
+ * 用于将 qq提供的数据 适配为 业务需要的数据
  * @author JiaHao Wang
  * @date 2021/1/11 12:51
  */

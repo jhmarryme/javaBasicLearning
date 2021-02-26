@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * description: 登录失败的处理逻辑
+ * 登录失败的处理逻辑
  * @author JiaHao Wang
  * @date 2020/11/30 19:04
  */

@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * description: 登录成功的处理逻辑
+ * 登录成功的处理逻辑
  * @author JiaHao Wang
  * @date 2020/11/30 18:47
  */

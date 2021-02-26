@@ -4,7 +4,7 @@ import com.imooc.security.core.social.qq.api.QQ;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 
 /**
- * description: 工厂类, 用于创建Connection
+ * 工厂类, 用于创建Connection
  * @author JiaHao Wang
  * @date 2021/1/11 12:58
  */

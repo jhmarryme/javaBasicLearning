@@ -13,10 +13,9 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**
- * description: 图形验证码生成器
- * @author: JiaHao Wang
- * @date: 2020/12/1 17:24
- * @modified By:
+ * 图形验证码生成器
+ * @author JiaHao Wang
+ * @date 2020/12/1 17:24
  */
 @Data
 public class ImageCodeGenerator implements ValidateCodeGenerator {

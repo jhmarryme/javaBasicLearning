@@ -10,11 +10,10 @@ import javax.validation.constraints.Past;
 import java.util.Date;
 
 /**
- * description: User对象
+ * User对象
  *
- * @Author: Wjh
- * @Date: 2020/9/8 12:25
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/8 12:25
  */
 @Data
 public class User {

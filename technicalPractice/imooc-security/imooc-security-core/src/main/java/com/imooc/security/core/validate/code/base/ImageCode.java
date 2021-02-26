@@ -7,10 +7,9 @@ import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
 
 /**
- * description: 图片验证码
- * @Author: Wjh
- * @Date: 2020/11/30 12:29
- * @Modified By:
+ * 图片验证码
+ * @author JiaHao Wang
+ * @date 2020/11/30 12:29
  */
 @Data
 @AllArgsConstructor

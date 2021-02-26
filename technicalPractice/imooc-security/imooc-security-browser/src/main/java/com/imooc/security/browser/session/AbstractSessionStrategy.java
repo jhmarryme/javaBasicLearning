@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * description: session失效策略处理
+ * session失效策略处理
  * @author JiaHao Wang
  * @date 2021/1/29 11:27
  */

@@ -5,13 +5,12 @@ import java.io.IOException;
 import java.util.Date;
 
 /**
- * description: 自定义过滤器, 如果使用@Component 则不需要额外配置
+ * 自定义过滤器, 如果使用@Component 则不需要额外配置
  *      过滤器的优先级会高于拦截器
  *      可以拿到原始的请求, 但无法获取请求控制器和控制器中的方法信息
  *
- * @Author: Wjh
- * @Date: 2020/9/10 15:57
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/10 15:57
  */
 public class TimeFilter implements Filter {
     @Override

@@ -14,7 +14,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.stereotype.Component;
 
 /**
- * description: 短信登录请求配置
+ * 短信登录请求配置
  * @author JiaHao Wang
  * @date 2020/12/8 12:05
  */

@@ -5,7 +5,7 @@ package com.imooc.security.core.properties;
 
 
 /**
- * description: 系统常量
+ * 系统常量
  * @author Jiahao Wang
  * @date 2020/12/28 12:15
  */

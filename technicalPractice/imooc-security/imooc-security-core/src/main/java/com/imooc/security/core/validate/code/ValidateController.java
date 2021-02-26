@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
- * description: 验证码业务
+ * 验证码业务
  * @author Jiahao Wang
- * @date: 2020/11/30 12:37
+ * @date 2020/11/30 12:37
  */
 @RestController
 public class ValidateController {

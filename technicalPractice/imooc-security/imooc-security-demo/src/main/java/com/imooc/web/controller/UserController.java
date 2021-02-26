@@ -28,9 +28,8 @@ import java.util.List;
 /**
  * description:
  *
- * @Author: Wjh
- * @Date: 2020/9/8 12:20
- * @Modified By:
+ * @author JiaHao Wang
+ * @date 2020/9/8 12:20
  */
 @RestController
 @RequestMapping("/user")

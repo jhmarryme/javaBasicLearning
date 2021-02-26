@@ -24,12 +24,11 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * description: 验证码处理 filter
+ * 验证码处理 filter
  *      InitializingBean接口为bean提供了属性初始化后的处理方法，
  *      它只包括afterPropertiesSet方法，凡是继承该接口的类，在bean的属性初始化后都会执行该方法。
- * @author: JiaHao Wang
- * @date: 2020/11/30 17:53
- * @modified By:
+ * @author JiaHao Wang
+ * @date 2020/11/30 17:53
  */
 @Data
 @Slf4j

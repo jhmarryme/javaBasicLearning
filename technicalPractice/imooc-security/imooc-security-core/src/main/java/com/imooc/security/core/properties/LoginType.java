@@ -1,10 +1,9 @@
 package com.imooc.security.core.properties;
 
 /**
- * description: 登录的返回类型枚举
- * @author: JiaHao Wang
- * @date: 2020/11/30 19:21
- * @modified By:
+ * 登录的返回类型枚举
+ * @author JiaHao Wang
+ * @date 2020/11/30 19:21
  */
 public enum LoginType {
 

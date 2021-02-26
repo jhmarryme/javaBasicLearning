@@ -7,7 +7,7 @@ import org.springframework.social.security.SocialAuthenticationFilter;
 import org.springframework.stereotype.Component;
 
 /**
- * description: 设置app下springSocial走的成功处理器
+ * 设置app下springSocial走的成功处理器
  * @author JiaHao Wang
  * @date 2021/2/25 15:07
  */

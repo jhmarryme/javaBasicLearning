@@ -15,7 +15,7 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 /**
- * description: 基于redis的验证码存取器
+ * 基于redis的验证码存取器
  * @author Jiahao Wang
  * @date 2021/2/23 12:28
  */

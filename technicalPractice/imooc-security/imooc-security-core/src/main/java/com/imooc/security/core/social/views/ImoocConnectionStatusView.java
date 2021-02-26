@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * description: 查看社交账号绑定状态的视图
+ * 查看社交账号绑定状态的视图
  *      connect/status为默认值
  * @author JiaHao Wang
  * @date 2021/1/27 14:16
