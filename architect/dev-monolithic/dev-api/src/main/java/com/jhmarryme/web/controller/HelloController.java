@@ -1,5 +1,6 @@
 package com.jhmarryme.web.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
@@ -14,10 +15,15 @@ import javax.servlet.http.HttpSession;
  */
 @ApiIgnore
 @RestController
+@Slf4j
 public class HelloController {
 
     @GetMapping("/hello")
     public Object hello() {
+        log.info("info hello");
+        log.warn("warn hello");
+        log.error("error hello");
+        log.debug("debug hello");
         return "hello world";
     }
 
