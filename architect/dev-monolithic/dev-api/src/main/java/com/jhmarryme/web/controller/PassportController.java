@@ -3,8 +3,7 @@ package com.jhmarryme.web.controller;
 import com.jhmarryme.pojo.Users;
 import com.jhmarryme.pojo.bo.UserBO;
 import com.jhmarryme.service.UsersService;
-import com.jhmarryme.utils.CommonResult;
-import com.jhmarryme.utils.MD5Utils;
+import com.jhmarryme.utils.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
@@ -43,7 +42,9 @@ public class PassportController {
     }
     @ApiOperation(value = "注册用户", notes = "注册", httpMethod = "POST")
     @PostMapping("/regist")
-    public CommonResult regist(@RequestBody UserBO userBO) {
+    public CommonResult regist(@RequestBody UserBO userBO,
+                               HttpServletRequest request,
+                               HttpServletResponse response) {
 
         String username = userBO.getUsername();
         String password = userBO.getPassword();
@@ -74,6 +75,7 @@ public class PassportController {
 
         // 4. 实现注册
         Users userResult = usersService.createUser(userBO);
+        CookieUtils.setCookie(request, response, "user", JsonUtil.objectToJson(setNullProperty(userResult)), true);
 
         return CommonResult.ok();
     }
@@ -100,6 +102,8 @@ public class PassportController {
         if (userResult == null) {
             return CommonResult.errorMsg("用户名或密码不正确");
         }
+
+        CookieUtils.setCookie(request, response, "user", JsonUtil.objectToJson(setNullProperty(userResult)), true);
 
         return CommonResult.ok(userResult);
     }
