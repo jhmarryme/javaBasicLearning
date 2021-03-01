@@ -30,6 +30,15 @@ public class SerializedTest {
     }
 
     @Test
+    @DisplayName("序列化 - null")
+    public void whenSerializeNullValues() {
+
+        Gson gson = new GsonBuilder().create();
+        System.out.println(gson.toJson(null));
+
+    }
+
+    @Test
     @DisplayName("保留static transient volatile字段")
     public void whenKeepStaticAndTransientSuccess() {
         Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.STATIC,
