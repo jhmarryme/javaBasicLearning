@@ -16,6 +16,7 @@ public class EnumTestDrive {
     public void whenGetEnumValueSuccess() {
         // 当没有重写toString方法时都会打印 VALID_NAME
         System.out.println(EnumItem.VALID_NAME);
+        System.out.println(EnumItem.VALID_NAME.name());
         System.out.println(EnumItem.VALID_NAME.toString());
     }
 }
