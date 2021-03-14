@@ -14,20 +14,28 @@ import java.util.List;
 public interface CategoryMapper extends MyMapper<Category> {
 
     @Select("SELECT id, name, type, father_id FROM category WHERE father_id=#{rootCatId}")
-    @Results(id = "subCatMap",
-             value = {
+    @Results(
+            id = "subCatMap",
+            value = {
                 @Result(id = true, column = "id", property = "id"),
                 @Result(column = "name", property = "name"),
                 @Result(column = "type", property = "type"),
                 @Result(column = "father_id", property = "fatherId"),
                 @Result(column = "id", property = "subCatList", many = @Many(select = "com.jhmarryme.mapper.CategoryMapper.selectById"))
-             }
+            }
     )
     public List<CategoryVO> getSubCatList(Integer rootCatId);
 
-    @Select("SELECT id as subId, name as subName, type as subType, father_id as subFatherId " +
-            "FROM category WHERE father_id=#{id}")
+    @Select("SELECT id, name, type, father_id FROM category WHERE father_id=#{id}")
+    @Results(
+            id = "seleceByIdMap",
+            value = {
+                    @Result(id = true, column = "id", property = "subId"),
+                    @Result(column = "name", property = "subName"),
+                    @Result(column = "type", property = "subType"),
+                    @Result(column = "father_id", property = "subFatherId")
+            }
+    )
     public List<SubCategoryVO> selectById(Integer id);
-
 
 }

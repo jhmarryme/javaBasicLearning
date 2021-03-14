@@ -4,6 +4,7 @@ package com.jhmarryme.service;
 
 import com.jhmarryme.pojo.Category;
 import com.jhmarryme.pojo.vo.CategoryVO;
+import com.jhmarryme.pojo.vo.NewItemsVO;
 
 import java.util.List;
 
@@ -21,12 +22,12 @@ public interface CategoryService {
      * @return
      */
     public List<CategoryVO> getSubCatList(Integer rootCatId);
-//
-//    /**
-//     * 查询首页每个一级分类下的6条最新商品数据
-//     * @param rootCatId
-//     * @return
-//     */
-//    public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);
+
+    /**
+     * 查询首页每个一级分类下的6条最新商品数据
+     * @param rootCatId
+     * @return
+     */
+    public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);
 
 }
