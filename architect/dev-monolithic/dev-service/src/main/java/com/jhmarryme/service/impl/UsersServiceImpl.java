@@ -88,7 +88,7 @@ public class UsersServiceImpl implements UsersService {
         userCriteria.andEqualTo("password", password);
 
         Users result = usersMapper.selectOneByExample(userExample);
-        log.info("查询的用户信息是:\n {}", ReflectionToStringBuilder.toString(result, ToStringStyle.MULTI_LINE_STYLE));
+//        log.info("查询的用户信息是:\n {}", ReflectionToStringBuilder.toString(result, ToStringStyle.MULTI_LINE_STYLE));
         return result;
     }
 }
