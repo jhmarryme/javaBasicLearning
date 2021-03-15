@@ -5,6 +5,7 @@ import com.jhmarryme.pojo.ItemsImg;
 import com.jhmarryme.pojo.ItemsParam;
 import com.jhmarryme.pojo.ItemsSpec;
 import com.jhmarryme.pojo.vo.CommentLevelCountsVO;
+import com.jhmarryme.utils.PagedGridResult;
 
 import java.util.List;
 
@@ -64,15 +65,15 @@ public interface ItemService {
           * @param itemId
           */
     CommentLevelCountsVO queryCommentCounts(String itemId);
-//
-//    /**
-//     * 根据商品id查询商品的评价（分页）
-//     * @param itemId
-//     * @param level
-//     * @return
-//     */
-//    public PagedGridResult queryPagedComments(String itemId, Integer level,
-//                                              Integer page, Integer pageSize);
+
+    /**
+     * 根据商品id查询商品的评价（分页）
+     * @param itemId
+     * @param level
+     * @return
+     */
+    public PagedGridResult queryPagedComments(String itemId, Integer level,
+                                              Integer page, Integer pageSize);
 //
 //    /**
 //     * 搜索商品列表

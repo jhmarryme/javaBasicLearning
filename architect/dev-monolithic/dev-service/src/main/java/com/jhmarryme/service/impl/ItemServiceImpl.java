@@ -1,10 +1,15 @@
 package com.jhmarryme.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.jhmarryme.enums.CommentLevel;
 import com.jhmarryme.mapper.*;
 import com.jhmarryme.pojo.*;
 import com.jhmarryme.pojo.vo.CommentLevelCountsVO;
+import com.jhmarryme.pojo.vo.ItemCommentVO;
 import com.jhmarryme.service.ItemService;
+import com.jhmarryme.utils.DesensitizationUtil;
+import com.jhmarryme.utils.PagedGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -26,8 +31,8 @@ public class ItemServiceImpl implements ItemService {
     private ItemsParamMapper itemsParamMapper;
     @Autowired
     private ItemsCommentsMapper itemsCommentsMapper;
-//    @Autowired
-//    private ItemsMapperCustom itemsMapperCustom;
+    @Autowired
+    private ItemsMapperCustom itemsMapperCustom;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -91,42 +96,38 @@ public class ItemServiceImpl implements ItemService {
         }
         return itemsCommentsMapper.selectCount(condition);
     }
-//
-//    @Transactional(propagation = Propagation.SUPPORTS)
-//    @Override
-//    public PagedGridResult queryPagedComments(String itemId,
-//                                                  Integer level,
-//                                                  Integer page,
-//                                                  Integer pageSize) {
-//
-//        Map<String, Object> map = new HashMap<>();
-//        map.put("itemId", itemId);
-//        map.put("level", level);
-//
-//        // mybatis-pagehelper
-//
-//        /**
-//         * page: 第几页
-//         * pageSize: 每页显示条数
-//         */
-//        PageHelper.startPage(page, pageSize);
-//
-//        List<ItemCommentVO> list = itemsMapperCustom.queryItemComments(map);
-//        for (ItemCommentVO vo : list) {
-//            vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
-//        }
-//
-//        return setterPagedGrid(list, page);
-//    }
-//    private PagedGridResult setterPagedGrid(List<?> list, Integer page) {
-//        PageInfo<?> pageList = new PageInfo<>(list);
-//        PagedGridResult grid = new PagedGridResult();
-//        grid.setPage(page);
-//        grid.setRows(list);
-//        grid.setTotal(pageList.getPages());
-//        grid.setRecords(pageList.getTotal());
-//        return grid;
-//    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult queryPagedComments(String itemId,
+                                              Integer level,
+                                              Integer page,
+                                              Integer pageSize) {
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("itemId", itemId);
+        map.put("level", level);
+        // page: 第几页
+        // pageSize: 每页显示条数
+        PageHelper.startPage(page, pageSize);
+
+        List<ItemCommentVO> list = itemsMapperCustom.queryItemComments(map);
+        for (ItemCommentVO vo : list) {
+            vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
+        }
+
+        return setterPagedGrid(list, page);
+    }
+
+    private PagedGridResult setterPagedGrid(List<?> list, Integer page) {
+        PageInfo<?> pageList = new PageInfo<>(list);
+        PagedGridResult grid = new PagedGridResult();
+        grid.setPage(page);
+        grid.setRows(list);
+        grid.setTotal(pageList.getPages());
+        grid.setRecords(pageList.getTotal());
+        return grid;
+    }
 //
 //    @Transactional(propagation = Propagation.SUPPORTS)
 //    @Override
