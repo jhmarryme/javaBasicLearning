@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.social.connect.web.ProviderSignInUtils;
@@ -51,8 +52,27 @@ public class UserController {
         appSignUpUtils.doPostSignUp(new ServletWebRequest(request), user.getUsername());
     }
 
+    /**
+     * 使用jwt替换默认令牌后, 由于通过JWT生成的Authentication对象里的principal为一个字符串而不是UserDetails对象的原因，请求下面这个接口将获取不到任何信息
+     */
     @GetMapping("/me")
     public Object me(@AuthenticationPrincipal UserDetails user) {
+        return user;
+    }
+
+    /***
+     * JWT 情况下获取的principal是一个字符串
+     * @param user
+     */
+    @GetMapping("/me/jwt")
+    public Object getCurrentUserWithJwt(@AuthenticationPrincipal String user) {
+        // 只获取User对象
+        return user;
+    }
+
+    @GetMapping("/me/authentication")
+    public Object getCurrentUserWithJwt(Authentication user) {
+        // 只获取User对象
         return user;
     }
 
