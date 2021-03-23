@@ -5,9 +5,13 @@ import com.imooc.dto.User;
 import com.imooc.dto.UserQueryCondition;
 import com.imooc.exception.UserNotExistException;
 import com.imooc.security.app.utils.AppSignUpUtils;
+import com.imooc.security.core.properties.SecurityProperties;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import io.swagger.annotations.*;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +28,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +50,9 @@ public class UserController {
 
     @Autowired
     private ProviderSignInUtils providerSignInUtils;
+
+    @Autowired
+    private SecurityProperties securityProperties;
 
     @PostMapping("/register")
     public void regist(User user, HttpServletRequest request) {
@@ -71,10 +79,22 @@ public class UserController {
     }
 
     @GetMapping("/me/authentication")
-    public Object getCurrentUserWithJwt(Authentication user) {
-        // 只获取User对象
-        return user;
+    public Object getCurrentUserWithJwt(Authentication authentication, HttpServletRequest request) throws UnsupportedEncodingException {
+        //从请求头中获取到JWT
+        String token = StringUtils.substringAfter(request.getHeader("Authorization"), "Bearer ");
+        //借助密钥对JWT进行解析,注意由于JWT生成时编码格式用的UTF-8（看源码可以追踪到）
+        //但Jwts工具用到的默认编码格式不是，所以要设置其编码格式为UTF-8
+        Claims claims = Jwts.parser()
+                .setSigningKey(securityProperties.getOauth2().getJwtSigningKey().getBytes("UTF-8"))
+                .parseClaimsJws(token).getBody();
+        //取出扩展信息，并打印
+        String company = (String) claims.get("company");
+
+        System.err.println(company);
+        return authentication;
     }
+
+
 
     @GetMapping
     @JsonView(User.UserSimpleView.class)
