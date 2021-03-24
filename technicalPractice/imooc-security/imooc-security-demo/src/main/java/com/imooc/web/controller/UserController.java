@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.imooc.dto.User;
 import com.imooc.dto.UserQueryCondition;
 import com.imooc.exception.UserNotExistException;
-import com.imooc.security.app.utils.AppSignUpUtils;
+//import com.imooc.security.app.utils.AppSignUpUtils;
 import com.imooc.security.core.properties.SecurityProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -45,8 +45,8 @@ public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
-    @Autowired
-    private AppSignUpUtils appSignUpUtils;
+//    @Autowired
+//    private AppSignUpUtils appSignUpUtils;
 
     @Autowired
     private ProviderSignInUtils providerSignInUtils;
@@ -56,8 +56,8 @@ public class UserController {
 
     @PostMapping("/register")
     public void regist(User user, HttpServletRequest request) {
-//        providerSignInUtils.doPostSignUp(user.getUsername(), new ServletWebRequest(request));
-        appSignUpUtils.doPostSignUp(new ServletWebRequest(request), user.getUsername());
+        providerSignInUtils.doPostSignUp(user.getUsername(), new ServletWebRequest(request));
+//        appSignUpUtils.doPostSignUp(new ServletWebRequest(request), user.getUsername());
     }
 
     /**
