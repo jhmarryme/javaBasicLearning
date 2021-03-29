@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * 真正去校验OpenId和providerId封装的OpenIdAuthenticationToken的类
  * 参考 {@code SmsCodeAuthenticationProvider}
  * @author Jiahao Wang
  * @date 2021/2/25 13:25
