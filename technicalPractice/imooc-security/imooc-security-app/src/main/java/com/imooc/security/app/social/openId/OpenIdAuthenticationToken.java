@@ -8,6 +8,8 @@ import java.util.Collection;
 
 /**
  * 基于简化模式返回的openId 社交登录token
+ *
+ * 模仿UsernamePasswordAuthenticationToken --- 该token用来封装登陆信息
  * @author Jiahao Wang
  * @date 2021/2/24 17:34
  */
@@ -15,7 +17,10 @@ public class OpenIdAuthenticationToken extends AbstractAuthenticationToken {
 
     private static final long serialVersionUID = SpringSecurityCoreVersion.SERIAL_VERSION_UID;
 
+    /** 即openId */
     private final Object principal;
+
+    /** providerId用来区分是哪个服务提供商 */
     private String providerId;
 
     public OpenIdAuthenticationToken(String openId, String providerId) {

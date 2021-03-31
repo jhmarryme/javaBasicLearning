@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * 用于处理校验openId校验的Filter
+ *
  * 参考{@code SmsCodeAuthenticationFilter} 编写
  * @author Jiahao Wang
  * @date 2021/2/25 13:25

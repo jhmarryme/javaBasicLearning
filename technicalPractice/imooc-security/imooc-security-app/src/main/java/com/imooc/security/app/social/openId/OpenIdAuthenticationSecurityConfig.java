@@ -12,6 +12,11 @@ import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
 
+/**
+ * 校验openId的配置类---》将校验规则等配置到spring-security过滤器链中
+ * @author Jiahao Wang
+ * @date 2021/3/22 16:27
+ */
 @Component
 public class OpenIdAuthenticationSecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain,
         HttpSecurity> {
