@@ -21,7 +21,8 @@ public class BaseController {
 
     // 微信支付成功 -> 支付中心 -> 天天吃货平台
     //                       |-> 回调通知的url
-    String payReturnUrl = "http://api.z.mukewang.com/foodie-dev-api/orders/notifyMerchantOrderPaid";
+//    String payReturnUrl = "http://api.z.mukewang.com/foodie-dev-api/orders/notifyMerchantOrderPaid";
+    String payReturnUrl = "http://2k6h9d.natappfree.cc/orders/notifyMerchantOrderPaid";
 
     // 用户上传头像的位置
     public static final String IMAGE_USER_FACE_LOCATION = File.separator + "workspaces" +
@@ -36,7 +37,12 @@ public class BaseController {
 
     /**
      * 用于验证用户和订单是否有关联关系，避免非法用户调用
-     * @return
+     *
+     * @author Jiahao Wang
+     * @date 2021/4/5 1:00 下午
+     * @param userId userId
+     * @param orderId orderId
+     * @return com.jhmarryme.utils.CommonResult
      */
     public CommonResult checkUserOrder(String userId, String orderId) {
         Orders order = myOrdersService.queryMyOrder(userId, orderId);
