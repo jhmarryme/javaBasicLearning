@@ -14,8 +14,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
-                .addResourceLocations("classpath:/META-INF/resources/")  // 映射swagger2
-                .addResourceLocations("file:/home/jhmarryme/develop/workspace/images/");  // 映射本地静态资源
+                // 映射swagger2
+                .addResourceLocations("classpath:/META-INF/resources/")
+                // 映射本地静态资源
+                .addResourceLocations("file:/home/jhmarryme/develop/workspace/images/");
     }
 
     @Bean
