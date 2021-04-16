@@ -21,10 +21,10 @@ public class CorsConfig {
 //        config.addAllowedOrigin("http://center.z.mukewang.com:8080");
 //        config.addAllowedOrigin("http://shop.z.mukewang.com");
 //        config.addAllowedOrigin("http://center.z.mukewang.com");
-        config.addAllowedOrigin("http://center.architect.jhmarryme.top:8080");
-        config.addAllowedOrigin("http://shop.architect.jhmarryme.top:8080");
-        config.addAllowedOrigin("http://center.architect.jhmarryme.top");
-        config.addAllowedOrigin("http://shop.architect.jhmarryme.top");
+        config.addAllowedOrigin("http://center.architect.study.jhmarryme.top:8080");
+        config.addAllowedOrigin("http://shop.architect.study.jhmarryme.top:8080");
+        config.addAllowedOrigin("http://center.architect.study.jhmarryme.top");
+        config.addAllowedOrigin("http://shop.architect.study.jhmarryme.top");
 
         // 设置是否发送cookie信息
         config.setAllowCredentials(true);
