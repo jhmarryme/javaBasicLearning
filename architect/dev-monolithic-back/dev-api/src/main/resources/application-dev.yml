@@ -7,6 +7,17 @@ spring:
   datasource:                                           # 数据源的相关配置
     url: jdbc:mysql://1.14.140.53:3306/monolithic-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     password: jh541224
+  redis:
+    database: 1
+    host: 1.14.140.53
+    port: 6379
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 10
+        max-wait: 100000
+    timeout: 5000
+    password: jh541224
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

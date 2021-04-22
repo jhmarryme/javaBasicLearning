@@ -8,9 +8,12 @@ import com.jhmarryme.pojo.vo.NewItemsVO;
 import com.jhmarryme.service.CarouselService;
 import com.jhmarryme.service.CategoryService;
 import com.jhmarryme.utils.CommonResult;
+import com.jhmarryme.utils.JsonUtils;
+import com.jhmarryme.utils.RedisOperator;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,10 +33,21 @@ public class IndexController {
     @Autowired
     private CategoryService categoryService;
 
+    @Autowired
+    private RedisOperator redisOperator;
+
     @ApiOperation(value = "获取首页轮播图列表", notes = "获取首页轮播图列表", httpMethod = "GET")
     @GetMapping("/carousel")
     public CommonResult carousel() {
-        List<Carousel> list = carouselService.queryAll(YesOrNo.YES.type);
+        String carouselStr = redisOperator.get("carousel");
+        List<Carousel> list;
+        if (StringUtils.isBlank(carouselStr)) {
+            // 需要存入缓存
+            list = carouselService.queryAll(YesOrNo.YES.type);
+            redisOperator.set("carousel", JsonUtils.objectToJson(list));
+        } else {
+            list = JsonUtils.jsonToList(carouselStr, Carousel.class);
+        }
         return CommonResult.ok(list);
     }
 
@@ -45,7 +59,16 @@ public class IndexController {
     @ApiOperation(value = "获取商品分类(一级分类)", notes = "获取商品分类(一级分类)", httpMethod = "GET")
     @GetMapping("/cats")
     public CommonResult cats() {
-        List<Category> list = categoryService.queryAllRootLevelCat();
+
+        String catsStr = redisOperator.get("cats");
+        List<Category> list;
+        if (StringUtils.isBlank(catsStr)) {
+            list = categoryService.queryAllRootLevelCat();
+            redisOperator.set("cats", JsonUtils.objectToJson(list));
+        } else {
+            list = JsonUtils.jsonToList(catsStr, Category.class);
+        }
+
         return CommonResult.ok(list);
     }
 
@@ -54,12 +77,19 @@ public class IndexController {
     public CommonResult subCat(
             @ApiParam(name = "rootCatId", value = "一级分类id", required = true)
             @PathVariable Integer rootCatId) {
-
         if (rootCatId == null) {
             return CommonResult.errorMsg("分类不存在");
         }
 
-        List<CategoryVO> list = categoryService.getSubCatList(rootCatId);
+        String catsStr = redisOperator.get("cats");
+        List<CategoryVO> list;
+        if (StringUtils.isBlank(catsStr)) {
+            list = categoryService.getSubCatList(rootCatId);
+            redisOperator.set("cats", JsonUtils.objectToJson(list));
+        } else {
+            list = JsonUtils.jsonToList(catsStr, CategoryVO.class);
+        }
+
         return CommonResult.ok(list);
     }
 
