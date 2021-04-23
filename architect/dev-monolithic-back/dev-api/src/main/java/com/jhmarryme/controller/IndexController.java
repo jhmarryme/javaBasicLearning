@@ -36,6 +36,11 @@ public class IndexController {
     @Autowired
     private RedisOperator redisOperator;
 
+    /**
+     * 1. 后台运营系统，一旦广告（轮播图）发生更改，就可以删除缓存，然后重置
+     * 2. 定时重置，比如每天凌晨三点重置
+     * 3. 每个轮播图都有可能是一个广告，每个广告都会有一个过期时间，过期了，再重置
+     */
     @ApiOperation(value = "获取首页轮播图列表", notes = "获取首页轮播图列表", httpMethod = "GET")
     @GetMapping("/carousel")
     public CommonResult carousel() {
@@ -81,11 +86,11 @@ public class IndexController {
             return CommonResult.errorMsg("分类不存在");
         }
 
-        String catsStr = redisOperator.get("cats");
+        String catsStr = redisOperator.get("subCat:" + rootCatId);
         List<CategoryVO> list;
         if (StringUtils.isBlank(catsStr)) {
             list = categoryService.getSubCatList(rootCatId);
-            redisOperator.set("cats", JsonUtils.objectToJson(list));
+            redisOperator.set("subCat:" + rootCatId, JsonUtils.objectToJson(list));
         } else {
             list = JsonUtils.jsonToList(catsStr, CategoryVO.class);
         }
