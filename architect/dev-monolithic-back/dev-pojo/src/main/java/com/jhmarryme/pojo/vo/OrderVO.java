@@ -1,23 +1,17 @@
 package com.jhmarryme.pojo.vo;
 
+import com.jhmarryme.pojo.bo.ShopcartBO;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
 public class OrderVO {
 
     private String orderId;
+
     private MerchantOrdersVO merchantOrdersVO;
 
-    public String getOrderId() {
-        return orderId;
-    }
+    private List<ShopcartBO> toBeRemovedShopcatdList;
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
-
-    public MerchantOrdersVO getMerchantOrdersVO() {
-        return merchantOrdersVO;
-    }
-
-    public void setMerchantOrdersVO(MerchantOrdersVO merchantOrdersVO) {
-        this.merchantOrdersVO = merchantOrdersVO;
-    }
 }
