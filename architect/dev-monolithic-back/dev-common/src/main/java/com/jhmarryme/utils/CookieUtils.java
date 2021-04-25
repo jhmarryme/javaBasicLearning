@@ -278,9 +278,20 @@ public final class CookieUtils {
 
             final String[] domains = serverName.split("\\.");
             int len = domains.length;
+
+
+
             if (len > 3 && !isIp(serverName)) {
             	// www.xxx.com.cn
-                domainName = "." + domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1];
+//                domainName = "." + domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1];
+                // www.xxx.study.com.cn
+                domainName = "";
+                for (int i = 1; i < domains.length; i++) {
+
+                    // tomcat版本不同, 规则不同, 解决使用tomcat8后出现异常: An invalid domain [] was specified for this cookie[方式2]
+//                    domainName += (i == 1 ? "" : ".") + domains[i];
+                    domainName += "." + domains[i];
+                }
             } else if (len <= 3 && len > 1) {
                 // xxx.com or xxx.cn
                 domainName = "." + domains[len - 2] + "." + domains[len - 1];
