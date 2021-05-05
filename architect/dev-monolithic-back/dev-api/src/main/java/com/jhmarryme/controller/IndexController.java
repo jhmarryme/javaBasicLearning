@@ -15,6 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -90,7 +91,12 @@ public class IndexController {
         List<CategoryVO> list;
         if (StringUtils.isBlank(catsStr)) {
             list = categoryService.getSubCatList(rootCatId);
-            redisOperator.set("subCat:" + rootCatId, JsonUtils.objectToJson(list));
+            if (CollectionUtils.isEmpty(list)) {
+                // 没有数据就缓存一个空数组, 避免出现缓存穿透
+                redisOperator.set("subCat:" + rootCatId, JsonUtils.objectToJson(list), 5*60);
+            } else {
+                redisOperator.set("subCat:" + rootCatId, JsonUtils.objectToJson(list));
+            }
         } else {
             list = JsonUtils.jsonToList(catsStr, CategoryVO.class);
         }
