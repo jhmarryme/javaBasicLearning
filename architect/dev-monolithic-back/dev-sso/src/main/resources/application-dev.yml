@@ -1,7 +1,5 @@
 server:
-  port: 7777
-  servlet:
-    context-path: /foodie-dev-api
+  port: 8090
 
 spring:
   datasource:                                           # 数据源的相关配置
