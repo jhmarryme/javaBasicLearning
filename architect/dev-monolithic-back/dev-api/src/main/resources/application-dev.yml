@@ -16,7 +16,7 @@ spring:
 #   redis 单机配置
     database: 1
     host: 1.14.140.53
-    port: 6380
+    port: 6379
     jedis:
       pool:
         max-active: 100
