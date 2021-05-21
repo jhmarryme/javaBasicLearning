@@ -1,11 +1,8 @@
 package com.jhmaryme.test;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.DateFormat;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
+import org.springframework.data.elasticsearch.annotations.*;
 
 import java.time.LocalDateTime;
 
@@ -16,6 +13,12 @@ import java.time.LocalDateTime;
  */
 @Document(indexName = "stu")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Mapping(mappingPath = "es/mappings/stu-mappings.json")
+@Setting(settingPath = "es/mappings/stu-settings.json")
+@ToString
 public class Stu {
     /**
      *  id：作用在成员变量，标记一个字段为id主键；一般id字段或是域不需要存储也不需要分词；
@@ -28,16 +31,12 @@ public class Stu {
      store = true时，该字段的value会存储在一个跟_source平级的独立Field域中；同时也会存储在_source中，所以有两份拷贝。
      那么我们在什么样的业务场景下使用store field功能？
      */
-    @Field(store = true)
     private String name;
-    @Field(store = true)
     private Integer age;
-    @Field(store = true)
     private String desc;
-    @Field(store = true,type = FieldType.Keyword)
     private String sign;
-    @Field(store = true)
     private Float money;
-    @Field(type = FieldType.Date, format = DateFormat.date)
+//    @Field(type = FieldType.Date, format = DateFormat.date_optional_time)
+    @Field(type = FieldType.Date, format = DateFormat.custom, pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime birthday;
 }

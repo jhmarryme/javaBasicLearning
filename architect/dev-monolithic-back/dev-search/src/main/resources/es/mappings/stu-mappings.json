@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "birthday": {
+      "type": "date"
+    },
+    "money": {
+      "store": true,
+      "type": "float"
+    },
+    "stuId": {
+      "type": "long"
+    },
+    "name": {
+      "store": true,
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "ignore_above": 256,
+          "type": "keyword"
+        }
+      }
+    },
+    "sign": {
+      "store": true,
+      "type": "keyword"
+    },
+    "_class": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "ignore_above": 256,
+          "type": "keyword"
+        }
+      }
+    },
+    "age": {
+      "store": true,
+      "type": "integer"
+    },
+    "desc": {
+      "store": true,
+      "type": "text"
+    }
+  }
+}
