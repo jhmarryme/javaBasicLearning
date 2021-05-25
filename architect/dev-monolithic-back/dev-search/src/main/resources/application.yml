@@ -16,15 +16,8 @@ spring:
       pool-name: DateSourceHikariCP     # 连接池名字
       max-lifetime: 1800000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
       connection-test-query: SELECT 1
-
-  data:
-    elasticsearch:
-      client:
-        reactive:
-          username: elastic
-          password: changeme
   elasticsearch:
     rest:
-      uris: 1.14.140.53:9200
+      uris: 159.75.92.78:9200
       username: elastic
       password: changeme
