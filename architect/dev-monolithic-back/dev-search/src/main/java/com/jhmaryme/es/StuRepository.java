@@ -1,16 +1,13 @@
-package com.jhmaryme.test;
+package com.jhmaryme.es;
 
 
-import org.springframework.data.domain.Page;
+import com.jhmaryme.es.pojo.Stu;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.annotations.Highlight;
 import org.springframework.data.elasticsearch.annotations.HighlightField;
 import org.springframework.data.elasticsearch.annotations.HighlightParameters;
-import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.data.elasticsearch.core.SearchPage;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-
-import java.util.List;
 
 /**
  *

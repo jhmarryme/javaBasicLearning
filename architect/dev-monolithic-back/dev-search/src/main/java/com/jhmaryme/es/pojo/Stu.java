@@ -1,4 +1,4 @@
-package com.jhmaryme.test;
+package com.jhmaryme.es.pojo;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

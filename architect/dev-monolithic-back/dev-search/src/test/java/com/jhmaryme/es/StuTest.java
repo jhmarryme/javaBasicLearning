@@ -1,6 +1,7 @@
-package com.jhmaryme.test;
+package com.jhmaryme.es;
 
 import com.jhmaryme.SearchApplication;
+import com.jhmaryme.es.pojo.Stu;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
