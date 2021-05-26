@@ -2,10 +2,12 @@ package com.jhmaryme.test;
 
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.annotations.Highlight;
 import org.springframework.data.elasticsearch.annotations.HighlightField;
 import org.springframework.data.elasticsearch.annotations.HighlightParameters;
 import org.springframework.data.elasticsearch.core.SearchHit;
+import org.springframework.data.elasticsearch.core.SearchPage;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import java.util.List;
@@ -23,6 +25,7 @@ public interface StuRepository extends ElasticsearchRepository<Stu, Long> {
      * @date 2021/5/25 12:19
      * @param name name
      * @param age age
+     * @param of
      * @return java.util.List<org.springframework.data.elasticsearch.core.SearchHit < com.jhmaryme.test.Stu>>
      */
     @Highlight(
@@ -37,6 +40,6 @@ public interface StuRepository extends ElasticsearchRepository<Stu, Long> {
             )
 
     )
-    List<SearchHit<Stu>> findByNameOrAge(String name, int age);
+    SearchPage<Stu> findByNameOrAge(String name, int age, PageRequest of);
 
 }

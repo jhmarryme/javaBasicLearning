@@ -36,7 +36,7 @@ public class Stu {
     private String desc;
     private String sign;
     private Float money;
-//    @Field(type = FieldType.Date, format = DateFormat.date_optional_time)
-    @Field(type = FieldType.Date, format = DateFormat.custom, pattern = "uuuu-MM-dd HH:mm:ss")
+    @Field(type = FieldType.Date, format = DateFormat.date_optional_time)
+//    @Field(type = FieldType.Date, format = DateFormat.custom, pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime birthday;
 }

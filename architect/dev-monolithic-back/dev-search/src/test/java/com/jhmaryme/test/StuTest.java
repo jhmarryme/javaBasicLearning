@@ -11,14 +11,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.elasticsearch.core.SearchHitSupport;
 import org.springframework.data.elasticsearch.core.*;
 import org.springframework.data.elasticsearch.core.document.Document;
 import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
 import org.springframework.data.elasticsearch.core.query.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  *
@@ -83,6 +86,39 @@ class StuTest {
     }
 
     @Test
+    @DisplayName("批量新增doc")
+    public void whenBulkInsertDocSuccess() {
+        List<IndexQuery> indexQueryList = new ArrayList<>();
+        Stream.iterate(0, integer -> integer + 1)
+                .limit(1000)
+                .forEach(integer -> {
+                    Stu stu = createStu();
+                    IndexQuery indexQuery = new IndexQueryBuilder()
+                            .withId(stu.getStuId().toString())
+                            .withObject(stu)
+                            .build();
+                    indexQueryList.add(indexQuery);
+                });
+//        IndexCoordinates indexCoordinates = restTemplate.getIndexCoordinatesFor(Stu.class);
+        IndexCoordinates indexCoordinates = IndexCoordinates.of("stu");
+        List<IndexedObjectInformation> bulkIndex = restTemplate.bulkIndex(indexQueryList, indexCoordinates);
+        bulkIndex.forEach(System.out::println);
+    }
+
+    @Test
+    @DisplayName("另一种批量新增doc")
+    public void whenAnotherBulkInsertDocSuccess() {
+        List<Stu> stuList = new ArrayList<>();
+        Stream.iterate(0, integer -> integer + 1)
+                .limit(1000)
+                .forEach(integer -> {
+                    stuList.add(createStu());
+                });
+        Iterable<Stu> stus = stuRepository.saveAll(stuList);
+        stus.forEach(System.out::println);
+    }
+
+    @Test
     @DisplayName("根据id获取doc")
     public void whenGetDocByIdSuccess() {
         // 已过时
@@ -105,6 +141,12 @@ class StuTest {
     }
 
     @Test
+    @DisplayName("删除所有")
+    public void whenDeleteAllDocSuccess() {
+        stuRepository.deleteAll();
+    }
+
+    @Test
     @DisplayName("查询所有文档")
     public void whenSearchAllDocSuccess() {
         SearchHits<Stu> stuSearchHits = restTemplate.search(Query.findAll(), Stu.class);
@@ -117,20 +159,23 @@ class StuTest {
         NativeSearchQuery query = new NativeSearchQueryBuilder()
 //                .withQuery(QueryBuilders.matchQuery("age", 11111))
                 // 分页
-                .withPageable(PageRequest.of(0,2))
+                .withPageable(PageRequest.of(10, 20))
                 .build();
         SearchHits<Stu> search = restTemplate.search(query, Stu.class);
+        // 通过`SearchHitSupport`获取到分页信息
+        SearchPage<Stu> searchPage = SearchHitSupport.searchPageFor(search, query.getPageable());
         // 取出查询结果的Stu部分
-        List<Stu> result = search.stream().map(SearchHit::getContent).collect(Collectors.toList());
+        List<Stu> result = searchPage.getSearchHits().stream().map(SearchHit::getContent).collect(Collectors.toList());
         search.stream().forEach(System.out::println);
         log.info("总条数: {}", search.getTotalHits());
+        log.info("分页信息: {}", searchPage.getPageable());
     }
 
     @Test
     @DisplayName("通过repository查询并高亮")
     public void whenRepositoryQuerySuccess() {
-        List<SearchHit<Stu>> oareKvn = stuRepository.findByNameOrAge("oareKvn", 11111);
-        Assertions.assertNotNull(oareKvn);
+        SearchPage<Stu> searchPage = stuRepository.findByNameOrAge("spider", 18, PageRequest.of(0, 10));
+        Assertions.assertNotNull(searchPage);
     }
 
     private Stu createStu() {
@@ -140,7 +185,7 @@ class StuTest {
                 .money(RandomUtils.nextFloat(10f, 2000f))
                 .sign("i am spider man " + RandomStringUtils.randomAlphabetic(7))
                 .desc("i am save man " + RandomStringUtils.randomAlphabetic(7))
-                .birthday(LocalDateTime.now())
+                .birthday(LocalDateTime.now().minusYears(RandomUtils.nextInt(10, 40)))
                 .build();
     }
 }
