@@ -16,6 +16,7 @@
 		<module>dev-api</module>
         <module>dev-sso</module>
         <module>dev-search</module>
+        <module>dev-fdfs</module>
     </modules>
 
 	<!--
