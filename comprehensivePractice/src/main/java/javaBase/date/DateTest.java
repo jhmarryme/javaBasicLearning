@@ -1,7 +1,10 @@
 package javaBase.date;
 
+import lombok.SneakyThrows;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -14,65 +17,48 @@ import java.util.Date;
  * @Modified By:
  */
 public class DateTest {
-    /*
-     * description: 日期简单格式化操作
-     * @Author: Wjh
-     * @Date: 2020/8/27 9:28
-     */
+
     @Test
-    public void transform() {
-        // 打印当前时间
-        System.out.println("LocalTime.now() = " + LocalTime.now());
-        // 打印当前日期
-        System.out.println("LocalDate.now() = " + LocalDate.now());
-        // 将当前时间格式化后打印
-        System.out.println("LocalDateTime.now().format(DateTimeFormatter.ofPattern(\"yyyy:MM:dd:HH:mm:ss\")) = "
-                + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy:MM:dd:HH:mm:ss")));
-
-        // 字符串 -> LocalTime
-        LocalTime parse = LocalTime.parse("13:00", DateTimeFormatter.ISO_TIME);
-
-        // 格式化当前日期
-        System.out.println("LocalTime.now().format(DateTimeFormatter.ISO_TIME) = "
-                + LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
-
-        LocalTime time = LocalTime.now();
-        LocalDate date = LocalDate.now();
-        // 将localDate和localTime 组合为localDateTime
-        LocalDateTime of = LocalDateTime.of(date, time);
-        System.out.println("of.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) = " + of.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-        System.out.println("of.format(DateTimeFormatter.ISO_DATE_TIME) = " + of.format(DateTimeFormatter.ISO_DATE_TIME));
-        // 格式化输出
-        System.out.println("of.format(DateTimeFormatter.ofPattern(\"yyyy:MM:dd\")) = " + of.format(DateTimeFormatter.ofPattern("yyyy:MM:dd")));
-
-        // hh 12小时制, HH 24小时制
-        System.out.println("LocalDateTime.parse(\"2019:08:29:14:22:01\", DateTimeFormatter.ofPattern(\"yyyy:MM:dd:HH:mm:ss\")) = "
-                + LocalDateTime.parse("2019:08:29:14:22:01", DateTimeFormatter.ofPattern("yyyy:MM:dd:HH:mm:ss")));
-
-
-
-        // 通过LocalDateTime 创建一个Date对象
-        Date dateFromLocalDateTime =  new Date(LocalDateTime.now().plusYears(1L).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+    @DisplayName("date基本用法")
+    public void useDate() {
+        // 获取当前时间:
+        Date date = new Date();
+        // 必须加上1900
+        System.out.println(date.getYear() + 1900);
+        // 0~11，必须加上1
+        System.out.println(date.getMonth() + 1);
+        // 1~31，不能加1
+        System.out.println(date.getDate());
+        // 转换为String:
+        System.out.println(date.toString());
+        // 转换为GMT时区:
+        System.out.println(date.toGMTString());
+        // 转换为本地时区:
+        System.out.println(date.toLocaleString());
     }
 
-    /*
-     * description: 计算时间差
-     * @Author: Wjh
-     * @Date: 2020/8/27 9:28
-     */
+    @SneakyThrows
     @Test
-    public void conpute() {
-        LocalDateTime now = LocalDateTime.now();
-        LocalDateTime now1 = LocalDateTime.now();
-        LocalDateTime time = now.minusDays(2);
+    @DisplayName("date的处理")
+    public void handleDate() {
+        // 获取当前时间:
+        Date date = new Date();
 
-        // 获取两个时间之前的差
-        Duration between = Duration.between(time, now1);
-        System.out.println("between.toDays() = " + between.toDays());
-        System.out.println("between.toHours() = " + between.toHours());
-        System.out.println("between.toMinutes() = " + between.toMinutes());
+        // 1. 使用自定义格式将date格式化为字符串
+        var sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(sdf.format(date));
 
-        System.out.println("Duration.between(LocalTime.now().minusMinutes(14), LocalTime.now()).toMinutes() = " + Duration.between(LocalTime.now().minusMinutes(14), LocalTime.now()).toMinutes());
+        // 2. 使用预定义格式将date格式化为字符串
+        // M：输出9
+        // MM：输出09
+        // MMM：输出Sep / 9月
+        // MMMM：输出September / 九月
+        sdf = new SimpleDateFormat("E MMMM dd, yyyy");
+        System.out.println(sdf.format(date));
+
+        // 将字符串格式化为date
+        Date parse = sdf.parse("2021-06-18 12:00:12");
+        System.out.println(parse);
+
     }
-
 }

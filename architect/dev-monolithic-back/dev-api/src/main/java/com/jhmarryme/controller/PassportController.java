@@ -3,6 +3,7 @@ package com.jhmarryme.controller;
 import com.jhmarryme.pojo.Users;
 import com.jhmarryme.pojo.bo.ShopcartBO;
 import com.jhmarryme.pojo.bo.UserBO;
+import com.jhmarryme.pojo.vo.UsersVO;
 import com.jhmarryme.service.UserService;
 import com.jhmarryme.utils.*;
 import io.swagger.annotations.Api;
@@ -82,12 +83,13 @@ public class PassportController extends BaseController {
         // 4. 实现注册
         Users userResult = userService.createUser(userBO);
 
-        userResult = setNullProperty(userResult);
-
+        // 生成用户token，存入redis会话
+//        userResult = setNullProperty(userResult);
+        UsersVO usersVO = conventUsersVO(userResult);
         CookieUtils.setCookie(request, response, "user",
-                JsonUtils.objectToJson(userResult), true);
+                JsonUtils.objectToJson(usersVO), true);
 
-        // TODO 生成用户token，存入redis会话
+
         // 同步购物车数据
         synchShopcartData(userResult.getId(), request, response);
 
@@ -116,14 +118,13 @@ public class PassportController extends BaseController {
         if (userResult == null) {
             return CommonResult.errorMsg("用户名或密码不正确");
         }
-
-        userResult = setNullProperty(userResult);
+        // 生成用户token，存入redis会话
+//        userResult = setNullProperty(userResult);
+        UsersVO usersVO = conventUsersVO(userResult);
 
         CookieUtils.setCookie(request, response, "user",
-                JsonUtils.objectToJson(userResult), true);
+                JsonUtils.objectToJson(usersVO), true);
 
-
-        // TODO 生成用户token，存入redis会话
         // 同步购物车数据
         synchShopcartData(userResult.getId(), request, response);
 
@@ -229,7 +230,9 @@ public class PassportController extends BaseController {
         // 清除用户的相关信息的cookie
         CookieUtils.deleteCookie(request, response, "user");
 
-        // TODO 用户退出登录，需要清空购物车
+        // 用户退出登录，清除redis中user的会话信息
+        redisOperator.del(REDIS_USER_TOKEN + ":" + userId);
+
         // 分布式会话中需要清除用户数据
         CookieUtils.deleteCookie(request, response, FOODIE_SHOPCART);
 

@@ -14,7 +14,10 @@
 		<module>dev-mapper</module>
 		<module>dev-service</module>
 		<module>dev-api</module>
-	</modules>
+        <module>dev-sso</module>
+        <module>dev-search</module>
+        <module>dev-fdfs</module>
+    </modules>
 
 	<!--
 		1. 聚合工程里可以分为顶级项目（顶级工程、父工程）与子工程，这两者的关系其实就是父子继承的关系
@@ -26,12 +29,12 @@
 	<packaging>pom</packaging>
 
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
-		<relativePath />
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -71,11 +74,23 @@
 			<optional>true</optional>
 		</dependency>
 
+        <!-- 引入 spring-session 依赖 -->
+<!--        <dependency>-->
+<!--        <groupId>org.springframework.session</groupId>-->
+<!--        <artifactId>spring-session-data-redis</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- 引入spring安全框架 -->
+<!--        <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-security</artifactId>-->
+<!--        </dependency>-->
+
 		<!-- mysql驱动 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.41</version>
+			<version>5.1.47</version>
 		</dependency>
 		<!-- mybatis -->
 		<dependency>
@@ -166,6 +181,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 	</dependencies>
 

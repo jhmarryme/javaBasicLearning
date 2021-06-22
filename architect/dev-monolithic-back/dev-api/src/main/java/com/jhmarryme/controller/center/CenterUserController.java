@@ -3,6 +3,7 @@ package com.jhmarryme.controller.center;
 import com.jhmarryme.controller.BaseController;
 import com.jhmarryme.pojo.Users;
 import com.jhmarryme.pojo.bo.center.CenterUserBO;
+import com.jhmarryme.pojo.vo.UsersVO;
 import com.jhmarryme.resource.FileUpload;
 import com.jhmarryme.service.center.CenterUserService;
 import com.jhmarryme.utils.CookieUtils;
@@ -127,11 +128,13 @@ public class CenterUserController extends BaseController {
         // 更新用户头像到数据库
         Users userResult = centerUserService.updateUserFace(userId, finalUserFaceUrl);
 
-        userResult = setNullProperty(userResult);
-        CookieUtils.setCookie(request, response, "user",
-                JsonUtils.objectToJson(userResult), true);
+//        userResult = setNullProperty(userResult);
 
-        // TODO 后续要改，增加令牌token，会整合进redis，分布式会话
+        // 增加令牌token，会整合进redis，分布式会话
+        UsersVO usersVO = conventUsersVO(userResult);
+
+        CookieUtils.setCookie(request, response, "user",
+                JsonUtils.objectToJson(usersVO), true);
 
         return CommonResult.ok();
     }
@@ -157,11 +160,13 @@ public class CenterUserController extends BaseController {
 
         Users userResult = centerUserService.updateUserInfo(userId, centerUserBO);
 
-        userResult = setNullProperty(userResult);
+//        userResult = setNullProperty(userResult);
+        // 增加令牌token，会整合进redis，分布式会话
+        UsersVO usersVO = conventUsersVO(userResult);
         CookieUtils.setCookie(request, response, "user",
-                JsonUtils.objectToJson(userResult), true);
+                JsonUtils.objectToJson(usersVO), true);
 
-        // TODO 后续要改，增加令牌token，会整合进redis，分布式会话
+
 
         return CommonResult.ok();
     }
