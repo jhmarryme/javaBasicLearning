@@ -509,6 +509,39 @@ public class StreamMethodsUse {
 
     }
 
+    @Test
+    public void distinctBySpecificField() {
+        List<User> userData = getUserData();
+        // 通过 username 去重
+        ArrayList<User> distinctByUserName = userData.stream().collect(
+                Collectors.collectingAndThen(
+                        Collectors.toCollection(
+                                () -> new TreeSet<>(Comparator.comparing(User::getUserName))
+                        ),
+                        ArrayList::new
+                )
+        );
+        // 通过 username 和address 去重
+        ArrayList<User> distinctByUserNameAndAddress = userData.stream().collect(
+                Collectors.collectingAndThen(
+                        Collectors.toCollection(
+                                () -> new TreeSet<>(Comparator.comparing(user -> user.getUserName() + ";" + user.getAddress()))
+                        ),
+                        ArrayList::new
+                )
+        );
+        // 通过 username 和address 去重并排序
+        List<User> distinctAndSortByUserNameAndAddress = userData.stream().collect(
+                Collectors.collectingAndThen(
+                        Collectors.toCollection(
+                                () -> new TreeSet<>(Comparator.comparing(user -> user.getUserName() + ";" + user.getAddress()))
+                        ),
+                        usersTreeSet -> usersTreeSet.stream().sorted().collect(Collectors.toList())
+                )
+        );
+    }
+
+
     /**
      * 并行流
      * 一: 1.14 卷2 p39 11th
