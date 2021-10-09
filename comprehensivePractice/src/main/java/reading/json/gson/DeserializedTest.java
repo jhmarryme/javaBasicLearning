@@ -1,6 +1,8 @@
 package reading.json.gson;
 
-import base.entity.json.*;
+import base.entity.json.News;
+import base.entity.json.Person;
+import base.entity.json.Weather;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import org.junit.jupiter.api.DisplayName;
@@ -65,6 +67,7 @@ public class DeserializedTest {
                 //过滤指定的字段名
                 return f.getName().contains("vacation") || f.getName().contains("remark");
             }
+
             @Override
             public boolean shouldSkipClass(Class<?> clazz) {
                 return false;
@@ -83,9 +86,9 @@ public class DeserializedTest {
     @DisplayName("排除Modifier为指定类型的字段")
     public void whenExcludeFieldsWithModifiersSuccess() {
         // 排除protected 字段
-            Gson gson = new GsonBuilder()
-                    .excludeFieldsWithModifiers(Modifier.PROTECTED)
-                    .create();
+        Gson gson = new GsonBuilder()
+                .excludeFieldsWithModifiers(Modifier.PROTECTED)
+                .create();
     }
 
     @Test
@@ -117,12 +120,12 @@ public class DeserializedTest {
     @DisplayName("简单的序列化集合 反序列化")
     public void whenSimpleListDeserializedSuccess() {
         Gson gson = new Gson();
-        List<String> list =new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add("好好学习");
         list.add("天天向上");
         String json = gson.toJson(list);
         String[] anotherStr = gson.fromJson("[\"沉默\",\"王二\"]", String[].class);
-        List<String> listResult = gson.fromJson(json,List.class);
+        List<String> listResult = gson.fromJson(json, List.class);
 
         assertNotNull(anotherStr);
         assertNotNull(listResult);
@@ -144,7 +147,7 @@ public class DeserializedTest {
                 ""
         );
     }
-    
+
     @Test
     @DisplayName("多态对象List反序列化")
     public void whenPolyMorphicObjectListDeserializedSuccess() {

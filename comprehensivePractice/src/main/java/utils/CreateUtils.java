@@ -25,7 +25,6 @@ public class CreateUtils {
      * @Since: 2020/9/2 12:15
      **/
     public static Student createStudent(boolean isEmpty) {
-        new Student();
         return isEmpty ? new Student() : Student.builder().age(24).id(4).name("wjh").sex("男").build();
     }
 
