@@ -1,7 +1,7 @@
 package reading.designPatternLesson.creational.prototype.shallowClone;
 
 /**
- * description: 
+ * description:
  * @Author: Wjh
  * @Date: 2020/10/12 12:54
  * @Modified By:

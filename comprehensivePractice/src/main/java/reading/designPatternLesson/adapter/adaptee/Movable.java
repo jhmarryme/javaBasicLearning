@@ -1,7 +1,7 @@
 package reading.designPatternLesson.adapter.adaptee;
 
 /**
- * description: 
+ * description:
  * @Author: Wjh
  * @Date: 2020/11/12 16:32
  * @Modified By:

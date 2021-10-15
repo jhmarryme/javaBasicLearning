@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
  * @Modified By:
  */
 public class PatternWithCompile {
+
     @Test
     public void useSimpleRegx() {
         String request = "astwt=dasd&&asd&twt=asd&asd&&&%$#twt=@$@twt=asd1122&&&&@^123";

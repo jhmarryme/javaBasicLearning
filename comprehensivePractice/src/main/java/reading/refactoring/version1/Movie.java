@@ -1,7 +1,7 @@
 package reading.refactoring.version1;
 
 /**
- * description: 
+ * description:
  * @Author: Wjh
  * @Date: 2020/10/12 8:40
  * @Modified By:
