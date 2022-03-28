@@ -1,4 +1,4 @@
-package reading.geekConcurrent.ch02;
+package reading.geekConcurrent.ch02.p18StampedLock;
 
 import java.util.concurrent.locks.StampedLock;
 

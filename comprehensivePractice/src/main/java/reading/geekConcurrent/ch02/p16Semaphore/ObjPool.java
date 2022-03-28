@@ -1,4 +1,4 @@
-package reading.geekConcurrent.ch02;
+package reading.geekConcurrent.ch02.p16Semaphore;
 
 import java.util.List;
 import java.util.Vector;

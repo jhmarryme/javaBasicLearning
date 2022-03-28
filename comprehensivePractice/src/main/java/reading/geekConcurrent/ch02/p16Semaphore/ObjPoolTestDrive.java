@@ -1,4 +1,4 @@
-package reading.geekConcurrent.ch02;
+package reading.geekConcurrent.ch02.p16Semaphore;
 
 import base.entity.Student;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
@@ -12,7 +12,7 @@ import utils.CreateUtils;
  * @author JiaHao Wang
  * @date 2022/3/18 下午2:01
  */
-public class ObjPoolTest {
+public class ObjPoolTestDrive {
     @Test
     @DisplayName("模拟取出一个资源池的资源并使用")
     public void whenSuccess() {
