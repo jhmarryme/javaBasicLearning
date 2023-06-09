@@ -12,16 +12,16 @@
     <artifactId>spring-security5-demo</artifactId>
 
     <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>com.jhmarryme.security</groupId>-->
+<!--            <artifactId>spring-security5-browser</artifactId>-->
+<!--            <version>${jhmarryme.security.version}</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>com.jhmarryme.security</groupId>
-            <artifactId>spring-security5-browser</artifactId>
-            <version>${jhmarryme.security.version}</version>
-        </dependency>
-        <!--<dependency>
             <groupId>com.jhmarryme.security</groupId>
             <artifactId>spring-security5-app</artifactId>
             <version>${jhmarryme.security.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

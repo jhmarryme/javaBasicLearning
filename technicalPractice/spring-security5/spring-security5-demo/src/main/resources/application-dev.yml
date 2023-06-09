@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://1.14.140.53:3306/imooc-security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://1.14.140.53:30010/imooc-security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
     username: root
     password: jh541224
     driver-class-name: com.mysql.jdbc.Driver
@@ -9,7 +9,7 @@ spring:
     store-type: redis
   redis:
     host: 1.14.140.53
-    port: 6379
+    port: 30020
     password: jh541224
     database: 0
 security:
